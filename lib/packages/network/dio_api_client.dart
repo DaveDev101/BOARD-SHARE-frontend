@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:boardshare/packages/network/query_json_response.dart';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
@@ -8,7 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'api_exception.dart';
-import 'json_response.dart';
+import 'modification_json_response.dart';
 
 final dioProvider = Provider(DioApiClient.new);
 
@@ -34,26 +35,38 @@ class DioApiClient {
     }
 
     _dio.interceptors.add(InterceptorsWrapper(
-      onResponse: (response, handler) async {
+      onRequest: (options, handler) {
         if (kDebugMode) {
-          print('------------- response headers:');
-          print(response.headers);
-          print('------------- ----------------------------------------------');
+          print("📡 Sending Request to: ${options.baseUrl}${options.path}");
+          print(options.headers);
+          print(options.method);
+          print(options.cancelToken);
+          print(options.queryParameters);
         }
-        if (response.headers.map.containsKey('set-Cookie')) {
-          print("Received Cookies: ${response.headers['Set-Cookie']}");
+        return handler.next(options);
+      },
+      onResponse: (response, handler) async {
+        // if (response.headers.map.containsKey('Set-Cookie')) {
+        //   print("Received Cookies: ${response.headers['Set-Cookie']}");
+        // }
+        if (kDebugMode) {
+          print("📌 Received Cookies: ${response.headers['Set-Cookie']}");
+          print(response.statusCode);
+          print(response.headers);
+          print(response.realUri);
+          print(response.data);
         }
         return handler.next(response);
       },
     ));
   }
 
-  Future<T> fetchData<T>(
-    String urlTemplate, {
+  Future<Response> _get(
+    String urlTemplate,
     String? token,
-    required T Function(Map<String, dynamic>) fromJson,
     dynamic requestData,
-  }) async {
+    CancelToken? cancelToken,
+  ) async {
     // String finalUrl = '$apiBaseUrl$urlTemplate';
     String finalUrl = urlTemplate;
 
@@ -61,7 +74,12 @@ class DioApiClient {
     // if so, make path parameter and query string
     if (requestData != null) {
       // convert Freezed model into JSON
-      final Map<String, dynamic> requestMap = requestData.toJson();
+      Map<String, dynamic> requestMap;
+      if (requestData is Map<String, dynamic>) {
+        requestMap = requestData;
+      } else {
+        requestMap = requestData.toJson();
+      }
 
       // extract id and place it into path parameter
       if (urlTemplate.contains(':id') && !requestMap.containsKey('id')) {
@@ -75,28 +93,66 @@ class DioApiClient {
 
       // make query string and attach to the url
       final queryString = Uri(queryParameters: requestMap).query;
+
+      if (kDebugMode) {
+        print('==> fetchData().queryString: $queryString');
+      }
+
       if (queryString.isNotEmpty) {
         finalUrl = '$finalUrl?$queryString';
       }
     }
 
-    // final response = await http.get(
-    final response = await _dio.get(
+    // return finalUrl;
+
+    return await _dio.get(
       finalUrl,
+      cancelToken: cancelToken,
       options: Options(
         headers: {
           if (token != null) HttpHeaders.authorizationHeader: 'Bearer $token',
         },
+        validateStatus: (status) {
+          return status! < 500; // 500 이상만 예외 발생
+        },
       ),
     );
+  }
+
+  Future<QueryJsonResponseS<T>> fetchSingle<T>(
+    String urlTemplate, {
+    String? token,
+    dynamic
+        requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
+    required T Function(Map<String, dynamic>) fromJsonT,
+    CancelToken? cancelToken,
+  }) async {
+    final response = await _get(urlTemplate, token, requestData, cancelToken);
+    // final response = await http.get(
 
     if (response.statusCode == HttpStatus.ok) {
-      print(response.data.runtimeType);
-      print(response.data.toString());
-
-      final Map<String, dynamic> jsonResponse = response.data ?? {};
+      final jsonResponse = response.data ?? {};
+      // final Map<String, dynamic> jsonResponse = response.data ?? {};
       // json.decode(response.data ?? {});
-      return fromJson(jsonResponse);
+
+      if (kDebugMode) {
+        print('');
+        print('');
+        print('');
+        print(
+            'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}');
+        print(
+            'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}');
+        print('');
+        print('');
+        print('');
+        print(jsonResponse['data']);
+        print('');
+        print('');
+        print('');
+      }
+
+      return QueryJsonResponseS.fromJson(jsonResponse, fromJsonT);
     } else {
       throw ApiException(response.statusCode ?? 0,
           '[http]Failed to GET data: ${response.data}');
@@ -105,12 +161,55 @@ class DioApiClient {
     }
   }
 
-  Future<JsonResponse<T>> sendData<T>(
+  Future<QueryJsonResponseL<T>> fetchList<T>(
+    String urlTemplate, {
+    String? token,
+    dynamic
+        requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
+    required T Function(Map<String, dynamic>) fromJsonT,
+    CancelToken? cancelToken,
+  }) async {
+    final response = await _get(urlTemplate, token, requestData, cancelToken);
+    // final response = await http.get(
+
+    if (response.statusCode == HttpStatus.ok) {
+      final jsonResponse = response.data ?? {};
+      // final Map<String, dynamic> jsonResponse = response.data ?? {};
+      // json.decode(response.data ?? {});
+
+      if (kDebugMode) {
+        print('');
+        print('');
+        print('');
+        print(
+            'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}');
+        print(
+            'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}');
+        print('');
+        print('');
+        print('');
+        print(jsonResponse['data']);
+        print('');
+        print('');
+        print('');
+      }
+
+      return QueryJsonResponseL.fromJson(jsonResponse, fromJsonT);
+    } else {
+      throw ApiException(response.statusCode ?? 0,
+          '[http]Failed to GET data: ${response.data}');
+      // throw Exception(
+      //     '[http]Failed to GET data: [${response.statusCode}] ${response.body}');
+    }
+  }
+
+  Future<ModificationJsonResponse<T>> sendData<T>(
     String url, {
     required String method,
     String? token,
-    required T Function(Map<String, dynamic>) fromJsonT,
     required dynamic requestData, // Freezed Model
+    required T Function(Map<String, dynamic>) fromJsonT,
+    CancelToken? cancelToken,
   }) async {
     // Uri uri = Uri.parse(url);
     Map<String, String> headers = {
@@ -130,27 +229,46 @@ class DioApiClient {
     try {
       switch (method) {
         case 'POST':
-          response = await _dio.post(url,
-              options: Options(headers: headers), data: body);
+          response = await _dio.post(
+            url,
+            cancelToken: cancelToken,
+            options: Options(
+              headers: headers,
+              validateStatus: (status) {
+                return status! < 500; // 500 이상만 예외 발생
+              },
+            ),
+            data: body,
+          );
           break;
         case 'PUT':
-          response = await _dio.put(url,
-              options: Options(headers: headers), data: body);
+          response = await _dio.put(
+            url,
+            cancelToken: cancelToken,
+            options: Options(
+              headers: headers,
+              validateStatus: (status) {
+                return status! < 500; // 500 이상만 예외 발생
+              },
+            ),
+            data: body,
+          );
           break;
         case 'PATCH':
-          response = await _dio.patch(url,
-              options: Options(headers: headers), data: body);
+          response = await _dio.patch(
+            url,
+            cancelToken: cancelToken,
+            options: Options(
+              headers: headers,
+              validateStatus: (status) {
+                return status! < 500; // 500 이상만 예외 발생
+              },
+            ),
+            data: body,
+          );
           break;
         default:
           throw Exception('[http] sendData() argument error');
-      }
-
-      if (kDebugMode) {
-        print('--------- Cookie -------------');
-        // print(response.headers.containsKey('Set-Cookie'));
-        // print(response.headers.containsKey('Content-Type'));
-        print(response.headers);
-        print('');
       }
 
       if (response.statusCode == HttpStatus.ok ||
@@ -159,7 +277,7 @@ class DioApiClient {
         // final responseBody =
         //     response.data.isNotEmpty ? json.decode(response.data) : {};
         // response.data.isNotEmpty ? json.decode(response.data) : {};
-        final jsonResponse = JsonResponse<T>.fromJson(
+        final jsonResponse = ModificationJsonResponse<T>.fromJson(
           // responseBody as Map<String, dynamic>,
           (response.data ?? {}) as Map<String, dynamic>,
           (data) => fromJsonT(data),
@@ -187,13 +305,18 @@ class DioApiClient {
     String url, {
     required String id,
     String? token,
+    CancelToken? cancelToken,
   }) async {
     final Response response = await _dio.delete(
       url,
+      cancelToken: cancelToken,
       options: Options(
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           if (token != null) HttpHeaders.authorizationHeader: 'Bearer $token',
+        },
+        validateStatus: (status) {
+          return status! < 500; // 500 이상만 예외 발생
         },
       ),
     );

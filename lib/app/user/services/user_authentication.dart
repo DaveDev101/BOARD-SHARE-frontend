@@ -11,5 +11,5 @@ abstract class UserAuthentication {
       {required String email, required String password});
   Future<(String, SigninResult)> verifyAndSignIn(
       {required String email, required String password, required String code});
-  // void signOut();
+  Future<void> signOut();
 }

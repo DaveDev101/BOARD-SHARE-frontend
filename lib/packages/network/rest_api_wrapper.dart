@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:boardshare/packages/network/api_exception.dart';
-import 'package:boardshare/packages/network/json_response.dart';
+import 'package:boardshare/packages/network/modification_json_response.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
@@ -57,7 +57,7 @@ Future<T> fetchData<T>(
   }
 }
 
-Future<JsonResponse<T>> sendData<T>(
+Future<ModificationJsonResponse<T>> sendData<T>(
   String url, {
   required String method,
   String? token,
@@ -108,7 +108,7 @@ Future<JsonResponse<T>> sendData<T>(
       final responseBody =
           response.body.isNotEmpty ? json.decode(response.body) : {};
       // response.data.isNotEmpty ? json.decode(response.data) : {};
-      final jsonResponse = JsonResponse<T>.fromJson(
+      final jsonResponse = ModificationJsonResponse<T>.fromJson(
         responseBody as Map<String, dynamic>,
         (data) => fromJsonT(data),
       );

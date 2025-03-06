@@ -1,16 +1,13 @@
-import 'dart:convert';
-
 import 'package:boardshare/packages/core/colors.dart';
 import 'package:boardshare/packages/core/portal_controller.dart';
-import 'package:boardshare/packages/network/dio_api_client.dart';
 import 'package:boardshare/packages/ui_components/buttons.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_portal/flutter_portal.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../core/sizes.dart';
-import '../data_models/mock_home.dart';
 
 class _HomeDropDownItems {
   const _HomeDropDownItems({required this.icon, required this.title});
@@ -22,10 +19,13 @@ class _HomeDropDownItems {
 final _homeDropDownItems = [
   _HomeDropDownItems(icon: Icons.crop_square, title: '상징'),
   _HomeDropDownItems(icon: Icons.dashboard, title: '의사소통판'),
+  _HomeDropDownItems(icon: Icons.book_online, title: '한스피크 자료'),
 ];
 
 class DHomeSearchField extends HookConsumerWidget {
-  const DHomeSearchField({super.key});
+  const DHomeSearchField({super.key, required this.height});
+
+  final double height;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,9 +34,38 @@ class DHomeSearchField extends HookConsumerWidget {
     final selectedItem = useState<_HomeDropDownItems>(_homeDropDownItems[0]);
     final controller = useTextEditingController();
 
+    Future<void> handleSubmit() async {
+      final query = controller.text.trim();
+      debugPrint('search term: $query');
+
+      // var r1 = await ref
+      //     .read(dioProvider)
+      //     .fetchData('/user/home', fromJson: MockHome.fromJson);
+      //
+      // if (kDebugMode) {
+      //   print('');
+      //   print('');
+      //   print(r1);
+      //   print('');
+      //   print('OKAY');
+      //   print('');
+      // }
+
+      // var r2 = await ref.read(postServicesProvider).searchSymbols(
+      //     searchTerm: controller.text, taxonomyTerms: ['term001', 'term002']);
+
+      if (kDebugMode) {
+        // print(r2.data);
+        // print(r2.data.runtimeType);
+        print('');
+        print('OKAY');
+        print('');
+      }
+    }
+
     return Container(
-      constraints: BoxConstraints(maxWidth: kMaxWidth - 300),
-      height: kFEHeight,
+      constraints: BoxConstraints(maxWidth: kMaxWidth - 400),
+      height: height,
       margin: const EdgeInsets.symmetric(horizontal: kMargin),
       padding: const EdgeInsets.symmetric(horizontal: kPadding),
       decoration: BoxDecoration(
@@ -55,7 +84,7 @@ class DHomeSearchField extends HookConsumerWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Left DropDown Menu: 상징, 의사소통판
           SizedBox(
@@ -112,48 +141,14 @@ class DHomeSearchField extends HookConsumerWidget {
                 hintText: '6,000여 개 AAC 컨텐츠 검색...',
                 border: InputBorder.none,
               ),
+              onEditingComplete: handleSubmit,
             ),
           ),
           VerticalDivider(color: kBColor),
           // 오른쪽 돋보기 아이콘
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () async {
-              final query = controller.text.trim();
-              debugPrint('search term: $query');
-
-              var r1 = await ref
-                  .read(dioProvider)
-                  .fetchData('/user/home', fromJson: MockHome.fromJson);
-
-              print(r1.id);
-              if (r1.id == null) print('NULL');
-
-              var mockHome = MockHome(
-                  status: 'status0', message: 'message1', version: 'version2');
-
-              MockHome r;
-
-              print(mockHome.toJson());
-              print(mockHome.toJson().runtimeType);
-              print(jsonEncode(mockHome.toJson()));
-              print(jsonEncode(mockHome.toJson()).runtimeType);
-              //
-              // try {
-              //   r = await fetchData(
-              //     'http://localhost:8080/api/v1/user/home',
-              //     fromJson: MockHome.fromJson,
-              //     requestData: mockHome,
-              //   );
-              //
-              //   debugPrint(r.toString());
-              //   debugPrint(r.message);
-              // } on ApiException catch (e) {
-              //   print(e.statusCode);
-              // } catch (e) {
-              //   print(e);
-              // }
-            },
+            onPressed: handleSubmit,
           ),
         ],
       ),
