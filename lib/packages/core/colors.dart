@@ -53,3 +53,6 @@ final kThemeDark = ThemeData(
 
 // BorderColor
 final kBColor = Color(0xFFDBDFE1);
+
+// background colors
+final kBgColor = Color(0xFFE8EAED);

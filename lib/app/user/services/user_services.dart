@@ -172,4 +172,11 @@ class UserServices implements UserAuthentication {
       rethrow;
     }
   }
+
+  @override
+  Future<void> signOut() async {
+    // await ref.read(dioProvider).
+    // TODO: implement signOut
+    throw UnimplementedError();
+  }
 }

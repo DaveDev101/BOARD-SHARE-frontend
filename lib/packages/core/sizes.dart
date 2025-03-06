@@ -3,6 +3,7 @@ const kMaxWidth = 1320.0;
 
 // app bar
 const kAppBarExtendedHeight = 540.0;
+const kAppBarHeightE = 144.0;
 const kAppBarHeight = 112.0;
 
 // padding, margin
@@ -16,4 +17,5 @@ const kDMargin = 10.0;
 
 // Form Fields
 const kFHeight = 40.0;
-const kFEHeight = 52.0;
+const kEFHeight = 48.0;
+const kEEFHeight = 60.0;

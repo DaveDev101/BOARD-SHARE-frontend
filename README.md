@@ -13,6 +13,13 @@ AAC BOARD share web client app
     flutter_web_plugins:
       sdk: flutter
 
+### DIO
+% flutter pub add dio
+
+### secure storage
+% flutter pub add flutter_secure_storage
+% flutter pub add flutter_secure_storage_web
+
 ### flutter_riverpod
 % flutter pub add flutter_riverpod
 % flutter pub add riverpod_annotation

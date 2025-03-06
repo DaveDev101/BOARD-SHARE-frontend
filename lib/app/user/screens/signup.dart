@@ -11,10 +11,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../packages/network/api_exception.dart';
 
 final _formKey = GlobalKey<FormState>();
-String _email = '';
-String _password = '';
-String _name = '';
-String _code = '';
+// String _email = '';
+// String _password = '';
+// String _name = '';
+// String _code = '';
 
 class Signup extends HookConsumerWidget {
   const Signup({super.key});
@@ -34,21 +34,119 @@ class Signup extends HookConsumerWidget {
 
     final signedInMsg = useState('');
 
+    final emailController = useTextEditingController();
+    final passwordController = useTextEditingController();
+    final nameController = useTextEditingController();
+    final codeController = useTextEditingController();
+
+    final emailFocusNode = useFocusNode();
+    final passwordFocusNode = useFocusNode();
+    final nameFocusNode = useFocusNode();
+    final codeFocusNode = useFocusNode();
+
     useEffect(() {
       signinCtl.when(
         data: (data) {
-          print('=> signed in: $data');
           signedInMsg.value = 'SUCCESS';
         },
         error: (err, stack) {
-          print('=> error: $err');
           signedInMsg.value = '$err';
         },
-        loading: () => print('...loading...'),
+        loading: () {},
       );
 
-      return () {};
+      return null;
     }, [signinCtl]);
+
+    useEffect(() {
+      Future.microtask(
+          () => FocusScope.of(context).requestFocus(emailFocusNode));
+      return () {
+        emailFocusNode.dispose();
+        passwordFocusNode.dispose();
+        nameFocusNode.dispose();
+        codeFocusNode.dispose();
+      };
+    }, []);
+
+    // handle submit
+    Future<void> handleSubmit() async {
+      // set temp state true
+      isValidating.value = true;
+      // clear email duplication warning
+      emailDuplicated.value = false;
+      // clear email verification error warning
+      invalidCode.value = false;
+
+      // validate input values and check if term is agreed
+      if (!_formKey.currentState!.validate() || !agreed.value) {
+        if (kDebugMode) {
+          print('isValidating: ${isValidating.value}, agreed: ${agreed.value}');
+        }
+        return;
+      }
+
+      try {
+        // prepare sending
+        isSending.value = true;
+        // save input values to the temp values which will be sent to the service method
+        _formKey.currentState!.save();
+
+        // sign up
+        if (!showNext.value) {
+          int userId;
+          String code;
+          try {
+            (userId, code) = await ref.read(userServicesProvider).signUp(
+                  email: emailController.text,
+                  password: passwordController.text,
+                  displayName: nameController.text,
+                );
+
+            // snack bar notification
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text('인증코드가 전송되었습니다. 메일함을 확인하세요. [$code]'),
+            ));
+
+            uId.value = userId;
+            showNext.value = true;
+          } on ApiException catch (e) {
+            if (e.message.contains('duplicate key')) {
+              emailDuplicated.value = true;
+              return;
+            }
+          }
+        }
+
+        // verify the code
+        else {
+          final result = await ref.read(userServicesProvider).verifySignUpCode(
+                userId: uId.value,
+                orgId: 1,
+                code: codeController.text,
+              );
+
+          if (result == 'invalid code') {
+            invalidCode.value = true;
+            return;
+          }
+
+          // sign in
+          await ref.read(signinControllerProvider.notifier).signIn(
+                emailController.text,
+                passwordController.text,
+              );
+
+          if (signedInMsg.value == 'SUCCESS') {
+            context.go('/');
+          }
+        }
+      } finally {
+        // clear all the temporary state
+        isValidating.value = false;
+        isSending.value = false;
+      }
+    }
 
     return Scaffold(
       body: Padding(
@@ -104,6 +202,8 @@ class Signup extends HookConsumerWidget {
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
+                      controller: emailController,
+                      focusNode: emailFocusNode,
                       decoration: InputDecoration(
                         hintText: 'email@domain.com',
                       ),
@@ -117,8 +217,11 @@ class Signup extends HookConsumerWidget {
                         }
                         return null;
                       },
-                      onSaved: (value) {
-                        _email = value ?? '';
+                      // onSaved: (value) {
+                      //   _email = value ?? '';
+                      // },
+                      onFieldSubmitted: (value) {
+                        FocusScope.of(context).requestFocus(passwordFocusNode);
                       },
                     ),
                     SizedBox(height: kESpace),
@@ -127,48 +230,55 @@ class Signup extends HookConsumerWidget {
                     Text('비밀 번호',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: '8자 이상, 대문자, 숫자 반드시 포함',
-                        ),
-                        enabled: !showNext.value,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return '비밀 번호를 입력하세요.';
-                          } else if (value.length < 8) {
-                            return '비밃 번호는 8자 이상 입력해 주세요.';
-                          } else if (!RegExp(r'[A-Z]').hasMatch(value)) {
-                            return '1개 이상의 대문자를 포함해야 합니다.';
-                          } else if (!RegExp(r'[0-9]').hasMatch(value)) {
-                            return '1개 이상의 숫자를 포함해야 합니다.';
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          _password = value ?? '';
-                        }),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      controller: passwordController,
+                      focusNode: passwordFocusNode,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: '8자 이상, 대문자, 숫자 반드시 포함',
+                      ),
+                      enabled: !showNext.value,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '비밀 번호를 입력하세요.';
+                        } else if (value.length < 8) {
+                          return '비밃 번호는 8자 이상 입력해 주세요.';
+                        } else if (!RegExp(r'[A-Z]').hasMatch(value)) {
+                          return '1개 이상의 대문자를 포함해야 합니다.';
+                        } else if (!RegExp(r'[0-9]').hasMatch(value)) {
+                          return '1개 이상의 숫자를 포함해야 합니다.';
+                        }
+                        return null;
+                      },
+                      // onSaved: (value) {
+                      //   _password = value ?? '';
+                      // }),
+                      onFieldSubmitted: (value) {
+                        FocusScope.of(context).requestFocus(nameFocusNode);
+                      },
+                    ),
                     SizedBox(height: kESpace),
 
                     // field #3 display name
                     Text('이름', style: TextStyle(fontWeight: FontWeight.bold)),
                     TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        decoration: InputDecoration(
-                          hintText: '다른 사용자들이 볼 수 있는 이름 입력해 주세요.',
-                        ),
-                        enabled: !showNext.value,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return '이름을 입력하세요.';
-                          } else if (value.length < 2) {
-                            return '적어도 2자 이상의 이름이어야 합니다.';
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          _name = value ?? '';
-                        }),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      controller: nameController,
+                      focusNode: nameFocusNode,
+                      decoration: InputDecoration(
+                        hintText: '다른 사용자들이 볼 수 있는 이름 입력해 주세요.',
+                      ),
+                      enabled: !showNext.value,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return '이름을 입력하세요.';
+                        } else if (value.length < 2) {
+                          return '적어도 2자 이상의 이름이어야 합니다.';
+                        }
+                        return null;
+                      },
+                      onFieldSubmitted: (value) => handleSubmit(),
+                    ),
                     SizedBox(height: kESpace * 2),
 
                     // field #4 agree to terms of service
@@ -217,6 +327,8 @@ class Signup extends HookConsumerWidget {
                     if (showNext.value)
                       TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
+                        controller: codeController,
+                        focusNode: codeFocusNode,
                         decoration: InputDecoration(
                           hintText: '이메일로 전송받은 인증 코드를 입력하세요.',
                           focusedBorder: UnderlineInputBorder(
@@ -232,9 +344,10 @@ class Signup extends HookConsumerWidget {
                           }
                           return null;
                         },
-                        onSaved: (value) {
-                          _code = value ?? '';
-                        },
+                        // onSaved: (value) {
+                        //   _code = value ?? '';
+                        // },
+                        onFieldSubmitted: (value) => handleSubmit(),
                       ),
                     if (showNext.value) SizedBox(height: kESpace * 3),
 
@@ -248,109 +361,7 @@ class Signup extends HookConsumerWidget {
                               backgroundColor: showNext.value
                                   ? Color(0xFF007AFF)
                                   : Colors.black),
-                          onPressed: isSending.value
-                              ? () {}
-                              : () async {
-                                  // set temp state true
-                                  isValidating.value = true;
-                                  // clear email duplication warning
-                                  emailDuplicated.value = false;
-                                  // clear email verification error warning
-                                  invalidCode.value = false;
-
-                                  // validate input values and check if term is agreed
-                                  if (!_formKey.currentState!.validate() ||
-                                      !agreed.value) {
-                                    if (kDebugMode) {
-                                      print(
-                                          'isValidating: ${isValidating.value}, agreed: ${agreed.value}');
-                                    }
-                                    return;
-                                  }
-
-                                  try {
-                                    // prepare sending
-                                    isSending.value = true;
-                                    // save input values to the temp values which will be sent to the service method
-                                    _formKey.currentState!.save();
-
-                                    // sign up
-                                    if (!showNext.value) {
-                                      int userId;
-                                      String code;
-                                      try {
-                                        (userId, code) = await ref
-                                            .read(userServicesProvider)
-                                            .signUp(
-                                              email: _email,
-                                              password: _password,
-                                              displayName: _name,
-                                            );
-
-                                        // snack bar notification
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(SnackBar(
-                                          content: Text(
-                                              '인증코드가 전송되었습니다. 메일함을 확인하세요. [$code]'),
-                                        ));
-
-                                        if (kDebugMode) {
-                                          print('=====> code: $code');
-                                        }
-
-                                        uId.value = userId;
-                                        showNext.value = true;
-                                      } on ApiException catch (e) {
-                                        if (e.message
-                                            .contains('duplicate key')) {
-                                          emailDuplicated.value = true;
-                                          return;
-                                        }
-                                      }
-                                    }
-
-                                    // verify the code
-                                    else {
-                                      final result = await ref
-                                          .read(userServicesProvider)
-                                          .verifySignUpCode(
-                                            userId: uId.value,
-                                            orgId: 1,
-                                            code: _code,
-                                          );
-                                      if (kDebugMode) {
-                                        print('verification result: $result');
-                                      }
-                                      if (result == 'invalid code') {
-                                        if (kDebugMode) {
-                                          print('!!! invalid code');
-                                        }
-                                        invalidCode.value = true;
-                                        return;
-                                      }
-
-                                      if (kDebugMode) {
-                                        print('---> verified!!! --------');
-                                        print(
-                                            '===> email: $_email, password: $_password, code: $_code, result: $result');
-                                      }
-
-                                      // sign in
-                                      await ref
-                                          .read(
-                                              signinControllerProvider.notifier)
-                                          .signIn(_email, _password);
-
-                                      if (signedInMsg.value == 'SUCCESS') {
-                                        context.go('/');
-                                      }
-                                    }
-                                  } finally {
-                                    // clear all the temporary state
-                                    isValidating.value = false;
-                                    isSending.value = false;
-                                  }
-                                },
+                          onPressed: isSending.value ? () {} : handleSubmit,
                           child: isSending.value
                               ? const CircularProgressIndicator(
                                   color: Colors.white,
