@@ -52,8 +52,9 @@ class PostServices implements AACSymbolManager {
             fromJsonT: AACSymbol.fromJson,
           );
 
-      if (kDebugMode)
+      if (kDebugMode) {
         print('-==> searchSymbol().res.runtimeType: ${res.runtimeType}');
+      }
 
       return res;
     } on ApiException catch (ae) {
@@ -77,8 +78,9 @@ class PostServices implements AACSymbolManager {
             fromJsonT: AACSymbol.fromJson,
           );
 
-      if (kDebugMode)
+      if (kDebugMode) {
         print('-==> getSymbol().res.runtimeType: ${res.runtimeType}');
+      }
 
       return res;
     } on ApiException catch (ae) {

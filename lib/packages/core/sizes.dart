@@ -6,6 +6,9 @@ const kAppBarExtendedHeight = 540.0;
 const kAppBarHeightE = 144.0;
 const kAppBarHeight = 112.0;
 
+// footer
+const kFooterHeight = 160.0;
+
 // padding, margin
 const kPadding = 16.0;
 const kSpace = kPadding / 2;

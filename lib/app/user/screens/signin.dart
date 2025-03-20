@@ -40,7 +40,8 @@ class Signin extends HookConsumerWidget {
         isSending.value = false;
         if (signinResult.$1.isEmpty) {
           signedInMsg.value = 'SUCCESS';
-          context.go('/');
+          // context.go('/');
+          return;
         } else if (signinResult.$1.contains('invalid credentials')) {
           if (kDebugMode) {
             print('=====> invalid credentials');

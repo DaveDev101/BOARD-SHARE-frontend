@@ -1,7 +1,5 @@
 import 'package:boardshare/packages/core/sizes.dart';
-import 'package:boardshare/packages/ui_components/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../packages/ui_components/bars.dart';
@@ -107,7 +105,6 @@ class ContentLayout extends HookConsumerWidget {
 
 class _OldRayOut extends HookConsumerWidget {
   const _OldRayOut({
-    super.key,
     required this.child,
   });
 
