@@ -17,12 +17,12 @@ void main() {
   );
 }
 
-class BoardShareApp extends StatelessWidget {
+class BoardShareApp extends ConsumerWidget {
   const BoardShareApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Portal(
       child: MaterialApp.router(
         title: 'BOARD-SHARE',
@@ -34,40 +34,8 @@ class BoardShareApp extends StatelessWidget {
             child: child!,
           );
         },
-        routerConfig: router,
+        routerConfig: createRouter(ref),
       ),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              'Counter example !!!',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            ElevatedButton(onPressed: () {}, child: Text('Button'))
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

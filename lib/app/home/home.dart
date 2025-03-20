@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../packages/ui_components/bars.dart';
+import '../../packages/ui_components/footer.dart';
 
 class HomeScreen extends HookConsumerWidget {
   HomeScreen({super.key});
@@ -74,7 +75,11 @@ class HomeScreen extends HookConsumerWidget {
                 ),
               ),
             );
-          })
+          }),
+          // Footer
+          SliverToBoxAdapter(
+            child: DFooter(dark: true),
+          ),
         ],
       ),
     );

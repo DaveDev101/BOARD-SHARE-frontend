@@ -1,9 +1,11 @@
+import 'package:boardshare/packages/core/fonts.dart';
 import 'package:flutter/material.dart';
 
 // Themes
 final kThemeBright = ThemeData(
   useMaterial3: true,
   brightness: Brightness.light,
+  textTheme: daveTextTheme,
   colorScheme: ColorScheme.fromSeed(
     seedColor: Color(0xFF1D1137),
     brightness: Brightness.light,
@@ -32,6 +34,7 @@ final kThemeBright = ThemeData(
 final kThemeDark = ThemeData(
   useMaterial3: true,
   brightness: Brightness.dark,
+  textTheme: daveTextTheme,
   colorScheme: ColorScheme.fromSeed(
     seedColor: Color(0xFF2A0636),
     brightness: Brightness.dark,

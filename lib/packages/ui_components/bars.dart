@@ -11,6 +11,65 @@ import '../core/sizes.dart';
 import 'buttons.dart';
 import 'forms.dart';
 
+class MenuBar extends StatelessWidget {
+  const MenuBar({
+    super.key,
+    bool? dark,
+  }) : _dark = dark ?? false;
+
+  final bool _dark;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SizedBox(width: kSpace),
+        DIconButton(
+            icon: Icons.home,
+            title: '',
+            dark: _dark,
+            func: () => context.go('/')),
+        SizedBox(width: kDSpace),
+        DButton(
+            title: '상징',
+            dark: _dark,
+            func: () => context.go('/content/symbols')),
+        SizedBox(width: kDSpace),
+        DButton(
+            title: '의사소통판',
+            dark: _dark,
+            func: () => context.go('/content/boards')),
+        SizedBox(width: kDSpace),
+        DButton(title: '한스피크자료', dark: _dark, func: () {}),
+        SizedBox(width: kDSpace),
+        DButton(title: '구독', dark: _dark, func: () {}),
+        SizedBox(width: kDSpace),
+        DIconButton(
+            icon: Icons.more_horiz, title: '', dark: _dark, func: () {}),
+        Spacer(),
+        DUserBar(darkBg: _dark),
+        // DButton(
+        //   title: '로그인',
+        //   dark: true,
+        //   transparent: true,
+        //   func: () {
+        //     context.go('/sign-in');
+        //   },
+        // ),
+        // SizedBox(width: kDSpace),
+        // DButton(
+        //     title: '가입',
+        //     dark: false,
+        //     func: () {
+        //       context.go('/sign-up');
+        //     }),
+        SizedBox(width: kSpace),
+      ],
+    );
+  }
+}
+
 class DExtendedHomeAppBar extends StatelessWidget {
   const DExtendedHomeAppBar({
     super.key,
@@ -37,48 +96,7 @@ class DExtendedHomeAppBar extends StatelessWidget {
           SizedBox(height: kMargin),
           Container(
             constraints: BoxConstraints(maxWidth: kMaxWidth),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(width: kSpace),
-                DIconButton(
-                    icon: Icons.home, title: '', dark: true, func: () {}),
-                SizedBox(width: kDSpace),
-                DButton(
-                    title: '상징',
-                    dark: true,
-                    func: () {
-                      context.go('/content/symbols');
-                    }),
-                SizedBox(width: kDSpace),
-                DButton(title: '의사소통판', dark: true, func: () {}),
-                SizedBox(width: kDSpace),
-                DButton(title: '한스피크자료', dark: true, func: () {}),
-                SizedBox(width: kDSpace),
-                DButton(title: '구독', dark: true, func: () {}),
-                SizedBox(width: kDSpace),
-                DIconButton(
-                    icon: Icons.more_horiz, title: '', dark: true, func: () {}),
-                Spacer(),
-                DUserBar(darkBg: true),
-                // DButton(
-                //   title: '로그인',
-                //   dark: true,
-                //   transparent: true,
-                //   func: () {
-                //     context.go('/sign-in');
-                //   },
-                // ),
-                // SizedBox(width: kDSpace),
-                // DButton(
-                //     title: '가입',
-                //     dark: false,
-                //     func: () {
-                //       context.go('/sign-up');
-                //     }),
-                SizedBox(width: kSpace),
-              ],
-            ),
+            child: MenuBar(dark: true),
           ),
           Expanded(
             child: Column(
@@ -193,56 +211,57 @@ class DExtendedContentAppBar extends StatelessWidget {
           SizedBox(height: kDMargin),
           Container(
             constraints: BoxConstraints(maxWidth: kMaxWidth),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // SizedBox(width: kSpace),
-                DIconButton(
-                    icon: Icons.home, title: '', dark: false, func: () {}),
-                SizedBox(width: kDSpace),
-                DButton(
-                    title: '상징',
-                    dark: false,
-                    func: () {
-                      context.go('/content/symbols');
-                    }),
-                SizedBox(width: kDSpace),
-                DButton(
-                    title: '의사소통판',
-                    dark: false,
-                    func: () {
-                      context.go('/content/board');
-                    }),
-                SizedBox(width: kDSpace),
-                DButton(title: '한스피크자료', dark: false, func: () {}),
-                SizedBox(width: kDSpace),
-                DButton(title: '구독', dark: false, func: () {}),
-                SizedBox(width: kDSpace),
-                DIconButton(
-                    icon: Icons.more_horiz,
-                    title: '',
-                    dark: false,
-                    func: () {}),
-                Spacer(),
-                DUserBar(darkBg: false),
-                // DButton(
-                //   title: '로그인',
-                //   dark: true,
-                //   transparent: true,
-                //   func: () {
-                //     context.go('/sign-in');
-                //   },
-                // ),
-                // SizedBox(width: kDSpace),
-                // DButton(
-                //     title: '가입',
-                //     dark: false,
-                //     func: () {
-                //       context.go('/sign-up');
-                //     }),
-                SizedBox(width: kSpace),
-              ],
-            ),
+            child: MenuBar(dark: false),
+            // child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     // SizedBox(width: kSpace),
+            //     DIconButton(
+            //         icon: Icons.home, title: '', dark: false, func: () {}),
+            //     SizedBox(width: kDSpace),
+            //     DButton(
+            //         title: '상징',
+            //         dark: false,
+            //         func: () {
+            //           context.go('/content/symbols');
+            //         }),
+            //     SizedBox(width: kDSpace),
+            //     DButton(
+            //         title: '의사소통판',
+            //         dark: false,
+            //         func: () {
+            //           context.go('/content/board');
+            //         }),
+            //     SizedBox(width: kDSpace),
+            //     DButton(title: '한스피크자료', dark: false, func: () {}),
+            //     SizedBox(width: kDSpace),
+            //     DButton(title: '구독', dark: false, func: () {}),
+            //     SizedBox(width: kDSpace),
+            //     DIconButton(
+            //         icon: Icons.more_horiz,
+            //         title: '',
+            //         dark: false,
+            //         func: () {}),
+            //     Spacer(),
+            //     DUserBar(darkBg: false),
+            //     // DButton(
+            //     //   title: '로그인',
+            //     //   dark: true,
+            //     //   transparent: true,
+            //     //   func: () {
+            //     //     context.go('/sign-in');
+            //     //   },
+            //     // ),
+            //     // SizedBox(width: kDSpace),
+            //     // DButton(
+            //     //     title: '가입',
+            //     //     dark: false,
+            //     //     func: () {
+            //     //       context.go('/sign-up');
+            //     //     }),
+            //     SizedBox(width: kSpace),
+            //   ],
+            // ),
           ),
           SizedBox(height: kDMargin),
           Expanded(

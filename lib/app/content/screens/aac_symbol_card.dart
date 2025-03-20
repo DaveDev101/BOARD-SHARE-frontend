@@ -1,5 +1,4 @@
 import 'package:boardshare/app/content/controllers/symbol_at_index.dart';
-import 'package:boardshare/packages/core/consts.dart';
 import 'package:boardshare/packages/ui_components/loading_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -61,13 +60,10 @@ class AACSymbolCard extends HookConsumerWidget {
                           width: constraints.maxWidth,
                           height: constraints.maxHeight,
                           child: Center(
-                            child: Hero(
-                              tag: 'm-${s.medium!.id!}',
-                              child: LoadingImage(
-                                url: s.medium!.mediumUrl!,
-                                width: constraints.maxWidth * 0.7,
-                                height: constraints.maxWidth * 0.7,
-                              ),
+                            child: LoadingImage(
+                              url: s.medium!.mediumUrl!,
+                              width: constraints.maxWidth * 0.7,
+                              height: constraints.maxWidth * 0.7,
                             ),
                           ),
                         ),
@@ -92,7 +88,9 @@ class AACSymbolCard extends HookConsumerWidget {
           }
           return Text('ERR!');
         },
-        loading: () {},
+        loading: () {
+          return null;
+        },
       ),
     );
   }

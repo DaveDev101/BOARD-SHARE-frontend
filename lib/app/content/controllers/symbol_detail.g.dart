@@ -6,7 +6,7 @@ part of 'symbol_detail.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$symbolDetailHash() => r'ec7762f7485b6ff822353f97431187cc04d4ffd6';
+String _$symbolDetailHash() => r'7e167228a263c1bc14728a67e2f90ca895d84615';
 
 /// Copied from Dart SDK
 class _SystemHash {

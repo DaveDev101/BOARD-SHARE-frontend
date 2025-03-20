@@ -21,7 +21,9 @@ class DioApiClient {
   DioApiClient(this.ref, {Dio? dio}) {
     _dio = dio ?? Dio();
 
-    _dio.options.baseUrl = "http://localhost:8080/api/v1";
+    // _dio.options.baseUrl = "http://localhost:8080/api/v1";
+    _dio.options.baseUrl =
+        "http://ec2-3-38-188-144.ap-northeast-2.compute.amazonaws.com:8080/api/v1";
     _dio.options.headers['Accept'] = 'application/json';
     _dio.options.headers['Content-Type'] = 'application/json';
 
