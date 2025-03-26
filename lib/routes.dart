@@ -118,7 +118,7 @@ GoRouter createRouter(WidgetRef ref) {
         // when NOT signed in or UNAUTHENTICATED --> goes to HOME('/')
         // if (!isAuthenticated && !loggingIn && !signingUp) return '/';
         // when having signed in successfully but remaining in sign in screen
-        // if (isAuthenticated && loggingIn) return '/content/symbols';
+        if (isAuthenticated && loggingIn) return '/';
       }
 
       if (kDebugMode) {
