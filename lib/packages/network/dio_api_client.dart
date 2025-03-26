@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:boardshare/app_env.dart';
 import 'package:boardshare/packages/network/query_json_response.dart';
+import 'package:boardshare/packages/network/rest_api_wrapper.dart';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
@@ -21,9 +23,8 @@ class DioApiClient {
   DioApiClient(this.ref, {Dio? dio}) {
     _dio = dio ?? Dio();
 
-    // _dio.options.baseUrl = "http://localhost:8080/api/v1";
-    _dio.options.baseUrl =
-        "http://ec2-3-38-188-144.ap-northeast-2.compute.amazonaws.com:8080/api/v1";
+    _dio.options.baseUrl = kApiLocalUrl;
+    if (kAppEnv == "test") _dio.options.baseUrl = kApiTestUrl;
     _dio.options.headers['Accept'] = 'application/json';
     _dio.options.headers['Content-Type'] = 'application/json';
 
