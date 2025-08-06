@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../packages/core/colors.dart';
+import '../../../packages/ui_components/loading_image.dart';
 
 final boardAtIndex = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),
@@ -107,8 +108,13 @@ class AACBoardCard extends HookConsumerWidget {
                                     //     '${constraints.maxWidth} : ${con.maxWidth}');
                                     return Stack(
                                       children: [
-                                        Image.network(
-                                          b.media![index].mediumUrl!,
+                                        // Image.network(
+                                        //   b.media![index].mediumUrl!,
+                                        //   width: con.maxWidth,
+                                        //   height: con.maxHeight,
+                                        // ),
+                                        LoadingImage(
+                                          url: b.media![index].mediumUrl!,
                                           width: con.maxWidth,
                                           height: con.maxHeight,
                                         ),
