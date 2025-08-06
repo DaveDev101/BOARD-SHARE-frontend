@@ -9,7 +9,7 @@ part 'user_org.freezed.dart';
 part 'user_org.g.dart';
 
 @freezed
-class UserOrg with _$UserOrg {
+sealed class UserOrg with _$UserOrg {
   const factory UserOrg({
     @JsonKey(includeIfNull: false) int? userId,
     @JsonKey(includeIfNull: false) int? orgId,

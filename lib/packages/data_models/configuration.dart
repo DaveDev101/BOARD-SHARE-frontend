@@ -8,20 +8,18 @@ part 'configuration.freezed.dart';
 part 'configuration.g.dart';
 
 @freezed
-class Configuration with _$Configuration {
+sealed class Configuration with _$Configuration {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Configuration({
-    required String apiBaseUrl,
-  }) = _Configuration;
+  factory Configuration({required String apiBaseUrl}) = _Configuration;
 
   factory Configuration.fromJson(Map<String, Object?> json) =>
       _$ConfigurationFromJson(json);
 }
 
 final configurationsProvider = FutureProvider<Configuration>((_) async {
-  final content = json.decode(
-    await rootBundle.loadString('assets/config.json'),
-  ) as Map<String, Object?>;
+  final content =
+      json.decode(await rootBundle.loadString('assets/config.json'))
+          as Map<String, Object?>;
 
   return Configuration.fromJson(content);
 });

@@ -6,157 +6,82 @@ part of 'symbol_detail.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$symbolDetailHash() => r'7e167228a263c1bc14728a67e2f90ca895d84615';
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-/// See also [symbolDetail].
 @ProviderFor(symbolDetail)
-const symbolDetailProvider = SymbolDetailFamily();
+const symbolDetailProvider = SymbolDetailFamily._();
 
-/// See also [symbolDetail].
-class SymbolDetailFamily extends Family<AsyncValue<(String, AACSymbol?)>> {
-  /// See also [symbolDetail].
-  const SymbolDetailFamily();
+final class SymbolDetailProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<(String, AACSymbol?)>,
+          (String, AACSymbol?),
+          FutureOr<(String, AACSymbol?)>
+        >
+    with
+        $FutureModifier<(String, AACSymbol?)>,
+        $FutureProvider<(String, AACSymbol?)> {
+  const SymbolDetailProvider._({
+    required SymbolDetailFamily super.from,
+    required int super.argument,
+  }) : super(
+         retry: null,
+         name: r'symbolDetailProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
-  /// See also [symbolDetail].
-  SymbolDetailProvider call(
-    int id,
-  ) {
-    return SymbolDetailProvider(
-      id,
-    );
+  @override
+  String debugGetCreateSourceHash() => _$symbolDetailHash();
+
+  @override
+  String toString() {
+    return r'symbolDetailProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  SymbolDetailProvider getProviderOverride(
-    covariant SymbolDetailProvider provider,
-  ) {
-    return call(
-      provider.id,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
+  $FutureProviderElement<(String, AACSymbol?)> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'symbolDetailProvider';
-}
-
-/// See also [symbolDetail].
-class SymbolDetailProvider
-    extends AutoDisposeFutureProvider<(String, AACSymbol?)> {
-  /// See also [symbolDetail].
-  SymbolDetailProvider(
-    int id,
-  ) : this._internal(
-          (ref) => symbolDetail(
-            ref as SymbolDetailRef,
-            id,
-          ),
-          from: symbolDetailProvider,
-          name: r'symbolDetailProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$symbolDetailHash,
-          dependencies: SymbolDetailFamily._dependencies,
-          allTransitiveDependencies:
-              SymbolDetailFamily._allTransitiveDependencies,
-          id: id,
-        );
-
-  SymbolDetailProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.id,
-  }) : super.internal();
-
-  final int id;
-
-  @override
-  Override overrideWith(
-    FutureOr<(String, AACSymbol?)> Function(SymbolDetailRef provider) create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: SymbolDetailProvider._internal(
-        (ref) => create(ref as SymbolDetailRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        id: id,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeFutureProviderElement<(String, AACSymbol?)> createElement() {
-    return _SymbolDetailProviderElement(this);
+  FutureOr<(String, AACSymbol?)> create(Ref ref) {
+    final argument = this.argument as int;
+    return symbolDetail(ref, argument);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is SymbolDetailProvider && other.id == id;
+    return other is SymbolDetailProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, id.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin SymbolDetailRef on AutoDisposeFutureProviderRef<(String, AACSymbol?)> {
-  /// The parameter `id` of this provider.
-  int get id;
-}
+String _$symbolDetailHash() => r'5965a6ddf154d93b18a8c8aa9bf66e1d750f221a';
 
-class _SymbolDetailProviderElement
-    extends AutoDisposeFutureProviderElement<(String, AACSymbol?)>
-    with SymbolDetailRef {
-  _SymbolDetailProviderElement(super.provider);
+final class SymbolDetailFamily extends $Family
+    with $FunctionalFamilyOverride<FutureOr<(String, AACSymbol?)>, int> {
+  const SymbolDetailFamily._()
+    : super(
+        retry: null,
+        name: r'symbolDetailProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  SymbolDetailProvider call(int id) =>
+      SymbolDetailProvider._(argument: id, from: this);
 
   @override
-  int get id => (origin as SymbolDetailProvider).id;
+  String toString() => r'symbolDetailProvider';
 }
+
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

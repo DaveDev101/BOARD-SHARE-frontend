@@ -1,0 +1,4634 @@
+{
+  "ok": true,
+  "err": null,
+  "data": [
+    {
+      "id": 6996,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "개",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 1",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 6996,
+          "sequence": 1,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 5866,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "국",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 6",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 5866,
+          "sequence": 1,
+          "medium_id": 4423,
+          "medium": {
+            "id": 4423,
+            "medium_title": "가지",
+            "medium_path": "assets/symbols/hanspeak/190817-A-A-25-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-A-A-25-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "가지",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 2,
+          "medium_id": 3241,
+          "medium": {
+            "id": 3241,
+            "medium_title": "가요",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-63.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-63.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "가요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 3,
+          "medium_id": 5382,
+          "medium": {
+            "id": 5382,
+            "medium_title": "요가",
+            "medium_path": "assets/symbols/hanspeak/202003-D-D-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-D-D-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "요가",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 4,
+          "medium_id": 425,
+          "medium": {
+            "id": 425,
+            "medium_title": "가방",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-67-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-67-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "가방",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 5,
+          "medium_id": 1122,
+          "medium": {
+            "id": 1122,
+            "medium_title": "바닷가재",
+            "medium_path": "assets/symbols/hanspeak/MM-A203.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MM-A203.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.16666667,
+          "custom_title": "가재",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 6,
+          "medium_id": 1468,
+          "medium": {
+            "id": 1468,
+            "medium_title": "가위",
+            "medium_path": "assets/symbols/hanspeak/SSS-A-35-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/SSS-A-35-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.16666667,
+          "custom_title": "가위",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 7,
+          "medium_id": 1907,
+          "medium": {
+            "id": 1907,
+            "medium_title": "고구마",
+            "medium_path": "assets/symbols/hanspeak/BBBBB-A-09-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBB-A-09-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.16666667,
+          "custom_title": "고구마",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 8,
+          "medium_id": 2533,
+          "medium": {
+            "id": 2533,
+            "medium_title": "소고기",
+            "medium_path": "assets/symbols/hanspeak/KKKKKKK-A-11-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKKKK-A-11-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.16666667,
+          "custom_title": "고기",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 9,
+          "medium_id": 2362,
+          "medium": {
+            "id": 2362,
+            "medium_title": "고양이",
+            "medium_path": "assets/symbols/hanspeak/IIII-A-02-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/IIII-A-02-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.33333334,
+          "custom_title": "고양이",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 10,
+          "medium_id": 2371,
+          "medium": {
+            "id": 2371,
+            "medium_title": "고리",
+            "medium_path": "assets/symbols/hanspeak/IIII-A-11-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/IIII-A-11-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.33333334,
+          "custom_title": "고리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 11,
+          "medium_id": 6048,
+          "medium": {
+            "id": 6048,
+            "medium_title": "고로케",
+            "medium_path": "assets/symbols/hanspeak/202005-L-L-15-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202005-L-L-15-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.33333334,
+          "custom_title": "고로케",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 12,
+          "medium_id": 2600,
+          "medium": {
+            "id": 2600,
+            "medium_title": "기린",
+            "medium_path": "assets/symbols/hanspeak/LLLLLLL-A-08-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LLLLLLL-A-08-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.33333334,
+          "custom_title": "기린",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 13,
+          "medium_id": 1861,
+          "medium": {
+            "id": 1861,
+            "medium_title": "개나리",
+            "medium_path": "assets/symbols/hanspeak/H-A_203.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/H-A_203.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5,
+          "custom_title": "개나리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 14,
+          "medium_id": 1144,
+          "medium": {
+            "id": 1144,
+            "medium_title": "너구리",
+            "medium_path": "assets/symbols/hanspeak/MM-A2034.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MM-A2034.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.5,
+          "custom_title": "너구리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 15,
+          "medium_id": 3206,
+          "medium": {
+            "id": 3206,
+            "medium_title": "곰",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-28.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-28.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.5,
+          "custom_title": "곰",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 16,
+          "medium_id": 2547,
+          "medium": {
+            "id": 2547,
+            "medium_title": "감자",
+            "medium_path": "assets/symbols/hanspeak/LLLL-A-02-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LLLL-A-02-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.5,
+          "custom_title": "감자",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 17,
+          "medium_id": 5738,
+          "medium": {
+            "id": 5738,
+            "medium_title": "공굴리기",
+            "medium_path": "assets/symbols/hanspeak/202004-B-B-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202004-B-B-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.6666667,
+          "custom_title": "공",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 18,
+          "medium_id": 3208,
+          "medium": {
+            "id": 3208,
+            "medium_title": "공원",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-30.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-30.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.6666667,
+          "custom_title": "공원",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 19,
+          "medium_id": 4526,
+          "medium": {
+            "id": 4526,
+            "medium_title": "과자",
+            "medium_path": "assets/symbols/hanspeak/190817-B-A-51-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-B-A-51-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.6666667,
+          "custom_title": "과자",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 20,
+          "medium_id": 2361,
+          "medium": {
+            "id": 2361,
+            "medium_title": "강아지",
+            "medium_path": "assets/symbols/hanspeak/IIII-A-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/IIII-A-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.6666667,
+          "custom_title": "강아지",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 21,
+          "medium_id": 5544,
+          "medium": {
+            "id": 5544,
+            "medium_title": "군만두",
+            "medium_path": "assets/symbols/hanspeak/202009-C-C-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202009-C-C-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.8333333,
+          "custom_title": "군만두",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 22,
+          "medium_id": 6039,
+          "medium": {
+            "id": 6039,
+            "medium_title": "망고 주스",
+            "medium_path": "assets/symbols/hanspeak/202005-L-L-05-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202005-L-L-05-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.8333333,
+          "custom_title": "망고",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 23,
+          "medium_id": 2526,
+          "medium": {
+            "id": 2526,
+            "medium_title": "국",
+            "medium_path": "assets/symbols/hanspeak/KKKKKKK-A-03-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKKKK-A-03-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.8333333,
+          "custom_title": "국",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 5866,
+          "sequence": 24,
+          "medium_id": 1649,
+          "medium": {
+            "id": 1649,
+            "medium_title": "꽃게",
+            "medium_path": "assets/symbols/hanspeak/W-A-07-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/W-A-07-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.8333333,
+          "custom_title": "꽃게",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3559,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "금",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 1",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3559,
+          "sequence": 1,
+          "medium_id": 5303,
+          "medium": {
+            "id": 5303,
+            "medium_title": "금",
+            "medium_path": "assets/symbols/hanspeak/201912-H-H-07-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-07-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "금요일",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3559,
+          "sequence": 2,
+          "medium_id": 5217,
+          "medium": {
+            "id": 5217,
+            "medium_title": "급식실",
+            "medium_path": "assets/symbols/hanspeak/201912-B-B-03-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-B-B-03-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "급식실",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3559,
+          "sequence": 3,
+          "medium_id": 3215,
+          "medium": {
+            "id": 3215,
+            "medium_title": "음식",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-37.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-37.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "음식",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3559,
+          "sequence": 4,
+          "medium_id": 3916,
+          "medium": {
+            "id": 3916,
+            "medium_title": "알아요",
+            "medium_path": "assets/symbols/hanspeak/190709-B-A-46-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190709-B-A-46-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "알아요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3566,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "금",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 7",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3566,
+          "sequence": 1,
+          "medium_id": 2543,
+          "medium": {
+            "id": 2543,
+            "medium_title": "콩밥",
+            "medium_path": "assets/symbols/hanspeak/KKKKKKK-A-21-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKKKK-A-21-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "완두콩밥",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 2,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 3,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 4,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 5,
+          "medium_id": 3273,
+          "medium": {
+            "id": 3273,
+            "medium_title": "생크림",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-95.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-95.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.14285715,
+          "custom_title": "크림",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 6,
+          "medium_id": 2526,
+          "medium": {
+            "id": 2526,
+            "medium_title": "국",
+            "medium_path": "assets/symbols/hanspeak/KKKKKKK-A-03-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKKKK-A-03-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.14285715,
+          "custom_title": "국",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 7,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.14285715,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 8,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.14285715,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 9,
+          "medium_id": 2604,
+          "medium": {
+            "id": 2604,
+            "medium_title": "돼지",
+            "medium_path": "assets/symbols/hanspeak/LLLLLLL-A-13-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LLLLLLL-A-13-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.2857143,
+          "custom_title": "돼지",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 10,
+          "medium_id": 2953,
+          "medium": {
+            "id": 2953,
+            "medium_title": "고기",
+            "medium_path": "assets/symbols/hanspeak/VVVV-A-06-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/VVVV-A-06-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.2857143,
+          "custom_title": "고기",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 11,
+          "medium_id": 2774,
+          "medium": {
+            "id": 2774,
+            "medium_title": "튀겨요",
+            "medium_path": "assets/symbols/hanspeak/QQQQQQ-A-14-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/QQQQQQ-A-14-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.2857143,
+          "custom_title": "튀겨요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 12,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.2857143,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 13,
+          "medium_id": 2089,
+          "medium": {
+            "id": 2089,
+            "medium_title": "소스",
+            "medium_path": "assets/symbols/hanspeak/EEEEEEE-A-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/EEEEEEE-A-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.42857143,
+          "custom_title": "소스",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 14,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.42857143,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 15,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.42857143,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 16,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.42857143,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 17,
+          "medium_id": 1910,
+          "medium": {
+            "id": 1910,
+            "medium_title": "시금치",
+            "medium_path": "assets/symbols/hanspeak/BBBBB-A-12-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBB-A-12-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5714286,
+          "custom_title": "시금치",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 18,
+          "medium_id": 2777,
+          "medium": {
+            "id": 2777,
+            "medium_title": "무쳐요",
+            "medium_path": "assets/symbols/hanspeak/QQQQQQ-A-17-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/QQQQQQ-A-17-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.5714286,
+          "custom_title": "무쳐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 19,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.5714286,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 20,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.5714286,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 21,
+          "medium_id": 2531,
+          "medium": {
+            "id": 2531,
+            "medium_title": "무",
+            "medium_path": "assets/symbols/hanspeak/KKKKKKK-A-09-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKKKK-A-09-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.71428573,
+          "custom_title": "무",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 22,
+          "medium_id": 3071,
+          "medium": {
+            "id": 3071,
+            "medium_title": "썰어요",
+            "medium_path": "assets/symbols/hanspeak/WWWWWWW-A-05-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/WWWWWWW-A-05-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.71428573,
+          "custom_title": "썰어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 23,
+          "medium_id": 1423,
+          "medium": {
+            "id": 1423,
+            "medium_title": "김치",
+            "medium_path": "assets/symbols/hanspeak/RRR-A-09-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/RRR-A-09-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.71428573,
+          "custom_title": "김치",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 24,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.71428573,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 25,
+          "medium_id": 3257,
+          "medium": {
+            "id": 3257,
+            "medium_title": "딸기",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-79.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-79.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.85714287,
+          "custom_title": "딸기",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 26,
+          "medium_id": 4524,
+          "medium": {
+            "id": 4524,
+            "medium_title": "쿠키",
+            "medium_path": "assets/symbols/hanspeak/190817-B-A-49-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-B-A-49-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.85714287,
+          "custom_title": "크런치",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3566,
+          "sequence": 27,
+          "medium_id": 2489,
+          "medium": {
+            "id": 2489,
+            "medium_title": "도넛",
+            "medium_path": "assets/symbols/hanspeak/JJJJJJJ-A-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/JJJJJJJ-A-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.85714287,
+          "custom_title": "도넛",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3937,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "김",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 1",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3937,
+          "sequence": 1,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3937,
+          "sequence": 2,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 2280,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "끝",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 6",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 2280,
+          "sequence": 1,
+          "medium_id": 5295,
+          "medium": {
+            "id": 5295,
+            "medium_title": "가족",
+            "medium_path": "assets/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "가족들과",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 2,
+          "medium_id": 5297,
+          "medium": {
+            "id": 5297,
+            "medium_title": "살아요",
+            "medium_path": "assets/symbols/hanspeak/201912-H-H-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "살고싶어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 3,
+          "medium_id": 2515,
+          "medium": {
+            "id": 2515,
+            "medium_title": "소리 질러요",
+            "medium_path": "assets/symbols/hanspeak/KKKKK-A-07-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KKKKK-A-07-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "소리 질러요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 4,
+          "medium_id": 1274,
+          "medium": {
+            "id": 1274,
+            "medium_title": "경찰차",
+            "medium_path": "assets/symbols/hanspeak/OOO-A-18-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/OOO-A-18-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "경찰에게",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 5,
+          "medium_id": 1046,
+          "medium": {
+            "id": 1046,
+            "medium_title": "전화 와요",
+            "medium_path": "assets/symbols/hanspeak/LL-A2020.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LL-A2020.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.16666667,
+          "custom_title": "전화 해요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 6,
+          "medium_id": 4934,
+          "medium": {
+            "id": 4934,
+            "medium_title": "옷 찾아가요",
+            "medium_path": "assets/symbols/hanspeak/201609-F-F-05-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201609-F-F-05-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.16666667,
+          "custom_title": "옷 을",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 7,
+          "medium_id": 1502,
+          "medium": {
+            "id": 1502,
+            "medium_title": "가리켜요",
+            "medium_path": "assets/symbols/hanspeak/T-A-20-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-20-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.16666667,
+          "custom_title": "고를수",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 8,
+          "medium_id": 6175,
+          "medium": {
+            "id": 6175,
+            "medium_title": "있어요?",
+            "medium_path": "assets/symbols/hanspeak/202310-A-A-33-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202310-A-A-33-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.16666667,
+          "custom_title": "있어요?",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 9,
+          "medium_id": 1049,
+          "medium": {
+            "id": 1049,
+            "medium_title": "일해요",
+            "medium_path": "assets/symbols/hanspeak/LL-A2023.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LL-A2023.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.33333334,
+          "custom_title": "직장을",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 10,
+          "medium_id": 1502,
+          "medium": {
+            "id": 1502,
+            "medium_title": "가리켜요",
+            "medium_path": "assets/symbols/hanspeak/T-A-20-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-20-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.33333334,
+          "custom_title": "선택하고",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 11,
+          "medium_id": 5744,
+          "medium": {
+            "id": 5744,
+            "medium_title": "생각해요",
+            "medium_path": "assets/symbols/hanspeak/202004-C-C-03-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202004-C-C-03-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.33333334,
+          "custom_title": "싶어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 12,
+          "medium_id": 4649,
+          "medium": {
+            "id": 4649,
+            "medium_title": "학교 가는 길",
+            "medium_path": "assets/symbols/hanspeak/190817-D-A-16-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-D-A-16-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.33333334,
+          "custom_title": "학교 갈수있게",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 13,
+          "medium_id": 5298,
+          "medium": {
+            "id": 5298,
+            "medium_title": "도와요",
+            "medium_path": "assets/symbols/hanspeak/201912-H-H-02-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-02-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5,
+          "custom_title": "도움을",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 14,
+          "medium_id": 5341,
+          "medium": {
+            "id": 5341,
+            "medium_title": "받아요",
+            "medium_path": "assets/symbols/hanspeak/202001-C-C-07-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202001-C-C-07-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.5,
+          "custom_title": "받아요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 15,
+          "medium_id": 3216,
+          "medium": {
+            "id": 3216,
+            "medium_title": "밥반찬",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-38.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-38.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.5,
+          "custom_title": "밥반찬",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 16,
+          "medium_id": 5340,
+          "medium": {
+            "id": 5340,
+            "medium_title": "받아요",
+            "medium_path": "assets/symbols/hanspeak/202001-C-C-06-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202001-C-C-06-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.5,
+          "custom_title": "받고싶어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 17,
+          "medium_id": 5295,
+          "medium": {
+            "id": 5295,
+            "medium_title": "가족",
+            "medium_path": "assets/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.6666667,
+          "custom_title": "가족들이",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 18,
+          "medium_id": 5274,
+          "medium": {
+            "id": 5274,
+            "medium_title": "이불빨래",
+            "medium_path": "assets/symbols/hanspeak/201912-G-G-13-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-G-G-13-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.6666667,
+          "custom_title": "집안일을",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 19,
+          "medium_id": 5298,
+          "medium": {
+            "id": 5298,
+            "medium_title": "도와요",
+            "medium_path": "assets/symbols/hanspeak/201912-H-H-02-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-02-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.6666667,
+          "custom_title": "도와요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 20,
+          "medium_id": 5295,
+          "medium": {
+            "id": 5295,
+            "medium_title": "가족",
+            "medium_path": "assets/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-G-G-34-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.6666667,
+          "custom_title": "가족들이",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 21,
+          "medium_id": 4860,
+          "medium": {
+            "id": 4860,
+            "medium_title": "사랑해요",
+            "medium_path": "assets/symbols/hanspeak/201604-B-B-05-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201604-B-B-05-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.8333333,
+          "custom_title": "사랑하는",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 22,
+          "medium_id": 1942,
+          "medium": {
+            "id": 1942,
+            "medium_title": "마음",
+            "medium_path": "assets/symbols/hanspeak/BBBBBB-A-23-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBBB-A-23-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.8333333,
+          "custom_title": "마음을",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 23,
+          "medium_id": 5340,
+          "medium": {
+            "id": 5340,
+            "medium_title": "받아요",
+            "medium_path": "assets/symbols/hanspeak/202001-C-C-06-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202001-C-C-06-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.8333333,
+          "custom_title": "받고싶어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 2280,
+          "sequence": 24,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.8333333,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3662,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "나",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 2",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3662,
+          "sequence": 1,
+          "medium_id": 1214,
+          "medium": {
+            "id": 1214,
+            "medium_title": "나",
+            "medium_path": "assets/symbols/hanspeak/N-A-10-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/N-A-10-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "나",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3662,
+          "sequence": 2,
+          "medium_id": 1213,
+          "medium": {
+            "id": 1213,
+            "medium_title": "나",
+            "medium_path": "assets/symbols/hanspeak/N-A-09-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/N-A-09-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "나",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3662,
+          "sequence": 3,
+          "medium_id": 1215,
+          "medium": {
+            "id": 1215,
+            "medium_title": "너",
+            "medium_path": "assets/symbols/hanspeak/N-A-11-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/N-A-11-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "너",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3662,
+          "sequence": 4,
+          "medium_id": 1216,
+          "medium": {
+            "id": 1216,
+            "medium_title": "우리",
+            "medium_path": "assets/symbols/hanspeak/N-A-12-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/N-A-12-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "우리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3662,
+          "sequence": 5,
+          "medium_id": 3852,
+          "medium": {
+            "id": 3852,
+            "medium_title": "빈 공간",
+            "medium_path": "assets/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/placeholder_dave_202.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5,
+          "custom_title": " ",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3719,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "네",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 4",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3719,
+          "sequence": 1,
+          "medium_id": 379,
+          "medium": {
+            "id": 379,
+            "medium_title": "인사해요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-21-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-21-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "안녕하세요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 2,
+          "medium_id": 408,
+          "medium": {
+            "id": 408,
+            "medium_title": "안녕",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-50-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-50-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "안녕",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 3,
+          "medium_id": 1493,
+          "medium": {
+            "id": 1493,
+            "medium_title": "예",
+            "medium_path": "assets/symbols/hanspeak/T-A-11-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-11-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "예",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 4,
+          "medium_id": 1494,
+          "medium": {
+            "id": 1494,
+            "medium_title": "아니요",
+            "medium_path": "assets/symbols/hanspeak/T-A-12-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-12-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "아니요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 5,
+          "medium_id": 2235,
+          "medium": {
+            "id": 2235,
+            "medium_title": "물",
+            "medium_path": "assets/symbols/hanspeak/GGGGGG-A-06-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/GGGGGG-A-06-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.25,
+          "custom_title": "물",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 6,
+          "medium_id": 6174,
+          "medium": {
+            "id": 6174,
+            "medium_title": "주세요",
+            "medium_path": "assets/symbols/hanspeak/202310-A-A-31-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202310-A-A-31-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.25,
+          "custom_title": "주세요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 7,
+          "medium_id": 3874,
+          "medium": {
+            "id": 3874,
+            "medium_title": "화장실",
+            "medium_path": "assets/symbols/hanspeak/190709-B-A-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190709-B-A-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.25,
+          "custom_title": "화장실",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 8,
+          "medium_id": 1450,
+          "medium": {
+            "id": 1450,
+            "medium_title": "씻어요",
+            "medium_path": "assets/symbols/hanspeak/SSS-A-13-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/SSS-A-13-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.25,
+          "custom_title": "씻어요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 9,
+          "medium_id": 3216,
+          "medium": {
+            "id": 3216,
+            "medium_title": "밥반찬",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-38.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-38.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5,
+          "custom_title": "반찬",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 10,
+          "medium_id": 2325,
+          "medium": {
+            "id": 2325,
+            "medium_title": "된장국",
+            "medium_path": "assets/symbols/hanspeak/HHHHHH-A-03-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/HHHHHH-A-03-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.5,
+          "custom_title": "국",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 11,
+          "medium_id": 379,
+          "medium": {
+            "id": 379,
+            "medium_title": "인사해요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-21-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-21-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.5,
+          "custom_title": "인사해요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 12,
+          "medium_id": 408,
+          "medium": {
+            "id": 408,
+            "medium_title": "안녕",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-50-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-50-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.5,
+          "custom_title": "안녕",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 13,
+          "medium_id": 4371,
+          "medium": {
+            "id": 4371,
+            "medium_title": "쌀밥",
+            "medium_path": "assets/symbols/hanspeak/190709-B-A-26-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190709-B-A-26-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.75,
+          "custom_title": "쌀밥",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 14,
+          "medium_id": 3238,
+          "medium": {
+            "id": 3238,
+            "medium_title": "더해요",
+            "medium_path": "assets/symbols/hanspeak/MMMMMM-A-60.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-60.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.75,
+          "custom_title": "더 주세요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 15,
+          "medium_id": 1493,
+          "medium": {
+            "id": 1493,
+            "medium_title": "예",
+            "medium_path": "assets/symbols/hanspeak/T-A-11-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-11-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.75,
+          "custom_title": "예",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3719,
+          "sequence": 16,
+          "medium_id": 1494,
+          "medium": {
+            "id": 1494,
+            "medium_title": "아니요",
+            "medium_path": "assets/symbols/hanspeak/T-A-12-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/T-A-12-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.75,
+          "custom_title": "아니요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 3628,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "눈",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 3",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 3628,
+          "sequence": 1,
+          "medium_id": 3823,
+          "medium": {
+            "id": 3823,
+            "medium_title": "검정색 눈동자",
+            "medium_path": "assets/symbols/hanspeak/191709-F-A-173-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/191709-F-A-173-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "눈",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 2,
+          "medium_id": 483,
+          "medium": {
+            "id": 483,
+            "medium_title": "코",
+            "medium_path": "assets/symbols/hanspeak/BBB-A-01-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBB-A-01-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "코",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 3,
+          "medium_id": 4809,
+          "medium": {
+            "id": 4809,
+            "medium_title": "입",
+            "medium_path": "assets/symbols/hanspeak/202003-BB-31-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-BB-31-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "입",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 4,
+          "medium_id": 3828,
+          "medium": {
+            "id": 3828,
+            "medium_title": "큰 귀",
+            "medium_path": "assets/symbols/hanspeak/191709-F-A-181-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/191709-F-A-181-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "귀",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 5,
+          "medium_id": 4806,
+          "medium": {
+            "id": 4806,
+            "medium_title": "머리",
+            "medium_path": "assets/symbols/hanspeak/202003-BB-28-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-BB-28-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.33333334,
+          "custom_title": "머리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 6,
+          "medium_id": 1449,
+          "medium": {
+            "id": 1449,
+            "medium_title": "손",
+            "medium_path": "assets/symbols/hanspeak/SSS-A-12-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/SSS-A-12-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.33333334,
+          "custom_title": "손",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 7,
+          "medium_id": 1841,
+          "medium": {
+            "id": 1841,
+            "medium_title": "배",
+            "medium_path": "assets/symbols/hanspeak/D-A_2015.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_2015.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.33333334,
+          "custom_title": "배",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 8,
+          "medium_id": 1459,
+          "medium": {
+            "id": 1459,
+            "medium_title": "발",
+            "medium_path": "assets/symbols/hanspeak/SSS-A-26-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/SSS-A-26-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.33333334,
+          "custom_title": "발",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 9,
+          "medium_id": 1849,
+          "medium": {
+            "id": 1849,
+            "medium_title": "엉덩이",
+            "medium_path": "assets/symbols/hanspeak/D-A_2023.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_2023.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.6666667,
+          "custom_title": "엉덩이",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 10,
+          "medium_id": 1834,
+          "medium": {
+            "id": 1834,
+            "medium_title": "목",
+            "medium_path": "assets/symbols/hanspeak/D-A_208.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_208.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.6666667,
+          "custom_title": "목",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 11,
+          "medium_id": 1854,
+          "medium": {
+            "id": 1854,
+            "medium_title": "팔",
+            "medium_path": "assets/symbols/hanspeak/D-A_2028.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_2028.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.6666667,
+          "custom_title": "팔",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 3628,
+          "sequence": 12,
+          "medium_id": 1830,
+          "medium": {
+            "id": 1830,
+            "medium_title": "다리",
+            "medium_path": "assets/symbols/hanspeak/D-A_204.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_204.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.6666667,
+          "custom_title": "다리",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    },
+    {
+      "id": 4187,
+      "post_author_id": 109,
+      "post_author_org_id": 2,
+    "post_author": "김재활",
+    "post_author_org": "김언어재활센터",
+      "post_type": 101,
+      "post_password": null,
+      "post_title": "눈",
+      "post_excerpt": null,
+      "post_status": {
+        "id": 2,
+        "status": "publish"
+      },
+      "is_comment_open": true,
+      "comment_count": 0,
+      "like_count": 0,
+      "post_parent": 0,
+      "post_content": null,
+      "description": null,
+      "created_at": "2025-03-25T14:03:33.140043+09:00",
+      "updated_at": "2025-03-25T14:03:33.140043+09:00",
+      "bg_color": "#6a62d2",
+      "grid_size": "4 by 4",
+      "m_bg_color": "#FFFFFF",
+      "m_font_size": "15.0",
+      "post_media": [
+        {
+          "post_id": 4187,
+          "sequence": 1,
+          "medium_id": 4676,
+          "medium": {
+            "id": 4676,
+            "medium_title": "전시물 봐요",
+            "medium_path": "assets/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 2,
+          "medium_id": 4957,
+          "medium": {
+            "id": 4957,
+            "medium_title": "텔레비전 봐요",
+            "medium_path": "assets/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 3,
+          "medium_id": 405,
+          "medium": {
+            "id": 405,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 4,
+          "medium_id": 400,
+          "medium": {
+            "id": 400,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 5,
+          "medium_id": 4676,
+          "medium": {
+            "id": 4676,
+            "medium_title": "전시물 봐요",
+            "medium_path": "assets/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.25,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 6,
+          "medium_id": 4957,
+          "medium": {
+            "id": 4957,
+            "medium_title": "텔레비전 봐요",
+            "medium_path": "assets/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.25,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 7,
+          "medium_id": 405,
+          "medium": {
+            "id": 405,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.25,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 8,
+          "medium_id": 400,
+          "medium": {
+            "id": 400,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.25,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 9,
+          "medium_id": 4676,
+          "medium": {
+            "id": 4676,
+            "medium_title": "전시물 봐요",
+            "medium_path": "assets/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.5,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 10,
+          "medium_id": 4957,
+          "medium": {
+            "id": 4957,
+            "medium_title": "텔레비전 봐요",
+            "medium_path": "assets/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.5,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 11,
+          "medium_id": 405,
+          "medium": {
+            "id": 405,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.5,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 12,
+          "medium_id": 400,
+          "medium": {
+            "id": 400,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.5,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 13,
+          "medium_id": 4676,
+          "medium": {
+            "id": 4676,
+            "medium_title": "전시물 봐요",
+            "medium_path": "assets/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-D-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0,
+          "screen_y": 0.75,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 14,
+          "medium_id": 4957,
+          "medium": {
+            "id": 4957,
+            "medium_title": "텔레비전 봐요",
+            "medium_path": "assets/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201609-G-G-10-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.25,
+          "screen_y": 0.75,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 15,
+          "medium_id": 405,
+          "medium": {
+            "id": 405,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-47-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.5,
+          "screen_y": 0.75,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        },
+        {
+          "post_id": 4187,
+          "sequence": 16,
+          "medium_id": 400,
+          "medium": {
+            "id": 400,
+            "medium_title": "봐요",
+            "medium_path": "assets/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_url": "assets/imgs/symbols/0621006_applemangoade-e1561130116494.png",
+"old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAA-A-42-1.png",
+            "medium_mime_type": "image/png",
+            "medium_status": {
+              "id": 2,
+              "status": "publish"
+            },
+            "user_id": 109,
+            "user_org_id": 2,
+            "description": null,
+            "created_at": "0025-03-04T00:00:00Z",
+            "updated_at": "0025-03-04T00:00:00Z"
+          },
+          "is_main": false,
+          "screen_x": 0.75,
+          "screen_y": 0.75,
+          "custom_title": "눈으로만 봐요",
+          "status": {
+            "id": 2,
+            "status": "publish"
+          },
+          "description": null,
+          "created_at": "2025-03-25T09:26:49.950993Z",
+          "updated_at": "2025-03-25T09:26:49.950993Z"
+        }
+      ]
+    }
+  ],
+  "search_term": "all",
+  "cnt": {
+    "total_count": 7195,
+    "limit_count": 10
+  },
+  "order": [
+    {
+      "order_by": "title",
+      "order_dir": "asc"
+    },
+    {
+      "order_by": "date",
+      "order_dir": "desc"
+    }
+  ]
+}

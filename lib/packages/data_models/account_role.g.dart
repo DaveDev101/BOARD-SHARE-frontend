@@ -6,14 +6,10 @@ part of 'account_role.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AccountRoleImpl _$$AccountRoleImplFromJson(Map<String, dynamic> json) =>
-    _$AccountRoleImpl(
-      roleId: (json['role_id'] as num).toInt(),
-      role: json['role'] as String? ?? "unknown",
-    );
+_AccountRole _$AccountRoleFromJson(Map<String, dynamic> json) => _AccountRole(
+  roleId: (json['role_id'] as num).toInt(),
+  role: json['role'] as String? ?? "unknown",
+);
 
-Map<String, dynamic> _$$AccountRoleImplToJson(_$AccountRoleImpl instance) =>
-    <String, dynamic>{
-      'role_id': instance.roleId,
-      'role': instance.role,
-    };
+Map<String, dynamic> _$AccountRoleToJson(_AccountRole instance) =>
+    <String, dynamic>{'role_id': instance.roleId, 'role': instance.role};

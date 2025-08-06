@@ -1,6 +1,13 @@
 import 'package:boardshare/packages/core/fonts.dart';
 import 'package:flutter/material.dart';
 
+Color hexToColor(String hexString) {
+  final buffer = StringBuffer();
+  if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
+  buffer.write(hexString.replaceFirst('#', ''));
+  return Color(int.parse(buffer.toString(), radix: 16));
+}
+
 // Themes
 final kThemeBright = ThemeData(
   useMaterial3: true,

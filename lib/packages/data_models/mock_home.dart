@@ -4,7 +4,7 @@ part 'mock_home.freezed.dart';
 part 'mock_home.g.dart';
 
 @freezed
-class MockHome with _$MockHome {
+sealed class MockHome with _$MockHome {
   const factory MockHome({
     @JsonKey(includeIfNull: false) int? id,
     required String status,

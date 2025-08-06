@@ -1,79 +1,288 @@
-import 'package:boardshare/app/user/controllers/signin_controller.dart';
-import 'package:boardshare/packages/core/portal_controller.dart';
-import 'package:flutter/foundation.dart';
+import 'package:boardshare/app/user/screens/ui_components/userbars.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_portal/flutter_portal.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../core/sizes.dart';
 import 'buttons.dart';
 import 'forms.dart';
 
+///
+/// Menu Bar
+///
 class MenuBar extends StatelessWidget {
-  const MenuBar({
-    super.key,
-    bool? dark,
-  }) : _dark = dark ?? false;
+  const MenuBar({super.key, bool? dark}) : _dark = dark ?? false;
 
   final bool _dark;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SizedBox(width: kSpace),
-        DIconButton(
-            icon: Icons.home,
-            title: '',
-            dark: _dark,
-            func: () => context.go('/')),
-        SizedBox(width: kDSpace),
-        DButton(
-            title: '상징',
-            dark: _dark,
-            func: () => context.go('/content/symbols')),
-        SizedBox(width: kDSpace),
-        DButton(
-            title: '의사소통판',
-            dark: _dark,
-            func: () => context.go('/content/boards')),
-        SizedBox(width: kDSpace),
-        DButton(title: '한스피크자료', dark: _dark, func: () {}),
-        SizedBox(width: kDSpace),
-        DButton(title: '구독', dark: _dark, func: () {}),
-        SizedBox(width: kDSpace),
-        DIconButton(
-            icon: Icons.more_horiz, title: '', dark: _dark, func: () {}),
-        Spacer(),
-        DUserBar(darkBg: _dark),
-        // DButton(
-        //   title: '로그인',
-        //   dark: true,
-        //   transparent: true,
-        //   func: () {
-        //     context.go('/sign-in');
-        //   },
-        // ),
-        // SizedBox(width: kDSpace),
-        // DButton(
-        //     title: '가입',
-        //     dark: false,
-        //     func: () {
-        //       context.go('/sign-up');
-        //     }),
-        SizedBox(width: kSpace),
-      ],
-    );
+    final sWidth = MediaQuery.of(context).size.width;
+    if (sWidth < kMaxMobileWidth) {
+      return _buildMobileMenuBar(context, _dark);
+    } else {
+      return _buildDesktopMenuBar(context, _dark);
+    }
+    // return Row(
+    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //   children: [
+    //     SizedBox(width: kSpace),
+    //     DIconButton(
+    //       icon: Icons.home,
+    //       title: '',
+    //       dark: _dark,
+    //       func: () => context.go('/'),
+    //     ),
+    //     SizedBox(width: kDSpace),
+    //     DButton(
+    //       title: '상징',
+    //       dark: _dark,
+    //       func: () => context.go('/content/symbols'),
+    //     ),
+    //     SizedBox(width: kDSpace),
+    //     DButton(
+    //       title: '의사소통판',
+    //       dark: _dark,
+    //       func: () => context.go('/content/boards'),
+    //     ),
+    //     SizedBox(width: kDSpace),
+    //     DButton(title: '한스피크자료', dark: _dark, func: () {}),
+    //     SizedBox(width: kDSpace),
+    //     DButton(title: '구독', dark: _dark, func: () {}),
+    //     SizedBox(width: kDSpace),
+    //     DIconButton(
+    //       icon: Icons.more_horiz,
+    //       title: '',
+    //       dark: _dark,
+    //       func: () {},
+    //     ),
+    //     Spacer(),
+    //     DUserBar(darkBg: _dark),
+    //     // DButton(
+    //     //   title: '로그인',
+    //     //   dark: true,
+    //     //   transparent: true,
+    //     //   func: () {
+    //     //     context.go('/sign-in');
+    //     //   },
+    //     // ),
+    //     // SizedBox(width: kDSpace),
+    //     // DButton(
+    //     //     title: '가입',
+    //     //     dark: false,
+    //     //     func: () {
+    //     //       context.go('/sign-up');
+    //     //     }),
+    //     SizedBox(width: kSpace),
+    //   ],
+    // );
   }
 }
 
+Widget _buildMobileMenuBar(BuildContext context, bool isDark) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      SizedBox(width: kSpace),
+      PopupMenuButton<String>(
+        tooltip: '메뉴',
+        icon: Icon(Icons.menu, color: isDark ? Colors.white : Colors.black87),
+        color: Colors.white,
+        surfaceTintColor: Colors.white,
+        elevation: 1.0,
+        position: PopupMenuPosition.over,
+        itemBuilder: (context) => [
+          PopupMenuItem(
+            value: 'home',
+            onTap: () => context.go('/'),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.home_filled),
+                  SizedBox(width: kSpace),
+                  Text('홈'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+          PopupMenuItem(
+            value: 'symbols',
+            onTap: () => context.go('/content/symbols'),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.crop_square),
+                  SizedBox(width: kSpace),
+                  Text('상징'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+          PopupMenuItem(
+            value: 'boards',
+            onTap: () => context.go('/content/boards'),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.dashboard),
+                  SizedBox(width: kSpace),
+                  Text('의사소통판'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+          PopupMenuItem(
+            value: 'hanspeakBook',
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.book_online),
+                  SizedBox(width: kSpace),
+                  Text('한스피크자료'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+          PopupMenuItem(
+            value: 'subscription',
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.credit_card),
+                  SizedBox(width: kSpace),
+                  Text('구독'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+          PopupMenuItem(
+            value: 'more',
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(kPadding),
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.more_vert),
+                  SizedBox(width: kSpace),
+                  Text('More...'),
+                  SizedBox(width: kESpace),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+      Spacer(),
+      DUserBar(darkBg: isDark),
+      // DButton(
+      //   title: '로그인',
+      //   dark: true,
+      //   transparent: true,
+      //   func: () {
+      //     context.go('/sign-in');
+      //   },
+      // ),
+      // SizedBox(width: kDSpace),
+      // DButton(
+      //     title: '가입',
+      //     dark: false,
+      //     func: () {
+      //       context.go('/sign-up');
+      //     }),
+      SizedBox(width: kSpace),
+    ],
+  );
+}
+
+Widget _buildDesktopMenuBar(BuildContext context, bool isDark) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      SizedBox(width: kSpace),
+      DIconButton(
+        icon: Icons.home,
+        title: '',
+        dark: isDark,
+        func: () => context.go('/'),
+      ),
+      SizedBox(width: kDSpace),
+      DButton(
+        title: '상징',
+        dark: isDark,
+        func: () => context.go('/content/symbols'),
+      ),
+      SizedBox(width: kDSpace),
+      DButton(
+        title: '의사소통판',
+        dark: isDark,
+        func: () => context.go('/content/boards'),
+      ),
+      SizedBox(width: kDSpace),
+      DButton(title: '한스피크자료', dark: isDark, func: () {}),
+      SizedBox(width: kDSpace),
+      DButton(title: '구독', dark: isDark, func: () {}),
+      SizedBox(width: kDSpace),
+      DIconButton(icon: Icons.more_horiz, title: '', dark: isDark, func: () {}),
+      Spacer(),
+      DUserBar(darkBg: isDark),
+      // DButton(
+      //   title: '로그인',
+      //   dark: true,
+      //   transparent: true,
+      //   func: () {
+      //     context.go('/sign-in');
+      //   },
+      // ),
+      // SizedBox(width: kDSpace),
+      // DButton(
+      //     title: '가입',
+      //     dark: false,
+      //     func: () {
+      //       context.go('/sign-up');
+      //     }),
+      SizedBox(width: kSpace),
+    ],
+  );
+}
+
+///
+/// Home AppBar
+///
 class DExtendedHomeAppBar extends StatelessWidget {
-  const DExtendedHomeAppBar({
-    super.key,
-  });
+  const DExtendedHomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -136,9 +345,7 @@ class DExtendedHomeAppBar extends StatelessWidget {
 }
 
 class DCollapsedHomeAppBar extends StatelessWidget {
-  const DCollapsedHomeAppBar({
-    super.key,
-  });
+  const DCollapsedHomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -153,12 +360,13 @@ class DCollapsedHomeAppBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(width: kSpace),
-              SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
+              _Logo(),
+              // SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
               // DIconButton(icon: Icons.menu, title: '', dark: false),
-              SizedBox(width: kESpace * 4),
+              // SizedBox(width: kESpace * 4),
               Expanded(child: DHomeSearchField(height: kEFHeight)),
-              SizedBox(width: kESpace * 4),
-              DUserBar(darkBg: false),
+              // SizedBox(width: kESpace * 4),
+              // DUserBar(darkBg: false),
               SizedBox(width: kSpace),
             ],
           ),
@@ -184,10 +392,11 @@ class DCollapsedHomeAppBar extends StatelessWidget {
   }
 }
 
+///
+/// Content AppBar
+///
 class DExtendedContentAppBar extends StatelessWidget {
-  const DExtendedContentAppBar({
-    super.key,
-  });
+  const DExtendedContentAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -272,11 +481,12 @@ class DExtendedContentAppBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(width: kSpace),
-                  SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
+                  _Logo(),
+                  // SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
                   // DIconButton(icon: Icons.menu, title: '', dark: false),
-                  SizedBox(width: kESpace * 4),
+                  // SizedBox(width: kESpace * 4),
                   Expanded(child: DHomeSearchField(height: kEFHeight)),
-                  SizedBox(width: kESpace * 10),
+                  SizedBox(width: kSpace),
                 ],
               ),
             ),
@@ -299,9 +509,7 @@ class DExtendedContentAppBar extends StatelessWidget {
 }
 
 class DCollapsedContentAppBar extends StatelessWidget {
-  const DCollapsedContentAppBar({
-    super.key,
-  });
+  const DCollapsedContentAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -316,12 +524,12 @@ class DCollapsedContentAppBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(width: kSpace),
-              SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
+              _Logo(),
+              // SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
               // DIconButton(icon: Icons.menu, title: '', dark: false),
-              SizedBox(width: kESpace * 4),
               Expanded(child: DHomeSearchField(height: kEFHeight)),
-              SizedBox(width: kESpace * 4),
-              DUserBar(darkBg: false),
+              // SizedBox(width: kESpace * 4),
+              // DUserBar(darkBg: false),
               SizedBox(width: kSpace),
             ],
           ),
@@ -346,146 +554,21 @@ class DCollapsedContentAppBar extends StatelessWidget {
   }
 }
 
-final _userDropDownItems = [
-  _UserDropDownItems(icon: Icons.account_circle, title: '사용자 정보'),
-  _UserDropDownItems(icon: Icons.logout, title: '로그아웃'),
-];
-
-class _UserDropDownItems {
-  const _UserDropDownItems({required this.icon, required this.title});
-
-  final IconData icon;
-  final String title;
-}
-
-class DUserBar extends HookConsumerWidget {
-  const DUserBar({
-    super.key,
-    required this.darkBg,
-  });
-
-  final bool darkBg;
+class _Logo extends StatelessWidget {
+  const _Logo({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // final isMenuDropped = useState(false);
-    final portalCtl = ref.watch(portalControllerProvider);
-    // final selectedItem = useState<_UserDropDownItems>(_userDropDownItems[0]);
-    final signinCtl = ref.watch(signinControllerProvider);
-
-    // ref.listen(portalControllerProvider, (previous, isVisible) {
-    //   if (kDebugMode) {
-    //     print(
-    //         '-------> ref.listen(portalControllerProvider: ($previous, $isVisible)');
-    //   }
-    //   isMenuDropped.value = isVisible;
-    // });
-
-    final unsignedWidget = Row(
-      children: [
-        DButton(
-          title: '로그인',
-          dark: darkBg ? true : false,
-          transparent: darkBg ? false : true,
-          func: () {
-            context.go('/sign-in');
-          },
-        ),
-        SizedBox(width: kDSpace),
-        DButton(
-          title: '가입',
-          dark: darkBg ? false : true,
-          func: () {
-            context.go('/sign-up');
-          },
-        ),
-      ],
-    );
-
-    return signinCtl.when(
-      data: (data) {
-        if (kDebugMode) {
-          print('🚩➞ $data');
-        }
-
-        if (data.$1.isEmpty) {
-          final userInfo = data.$2.user.user;
-
-          return PortalTarget(
-            // visible: isMenuDropped.value,
-            visible: portalCtl.$2,
-            anchor: Aligned(
-              follower: Alignment.topRight,
-              target: Alignment.bottomRight,
-              offset: Offset(0, kSpace * 2),
-            ),
-            portalFollower: _buildDropdownMenu((index) async {
-              // isMenuDropped.value = false;
-              ref.read(portalControllerProvider.notifier).makeAllInvisible();
-              // selectedItem.value = _userDropDownItems[index];
-              if (index == 1) {
-                await ref.read(signinControllerProvider.notifier).signOut();
-              }
-            }),
-            child: InkWell(
-              onTap: () {
-                // isMenuDropped.value = !isMenuDropped.value;
-                ref.read(portalControllerProvider.notifier).toggleVisibility(2);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: darkBg ? Colors.white : Colors.black,
-                    radius: 20,
-                    child: Text(
-                      userInfo?.displayName?.toUpperCase()[0] ?? '',
-                      style: TextStyle(
-                          color: darkBg ? Colors.black : Colors.white),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-        } else {
-          return unsignedWidget;
-        }
-      },
-      error: (err, stack) {
-        return Container();
-      },
-      loading: () => CircularProgressIndicator(
-          color: darkBg ? Colors.white : Colors.black12),
-    );
-  }
-
-  // Drop Down Menu
-  Widget _buildDropdownMenu(Function func) {
-    return Material(
-      elevation: 4.0,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(4.0),
-        ),
-        width: 180.0,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: List.generate(
-            _userDropDownItems.length,
-            (index) => DDropDownItem(
-              itemIndex: index,
-              icon: _userDropDownItems[index].icon,
-              text: _userDropDownItems[index].title,
-              func: (index) => func(index),
-            ),
-          ),
-        ),
-      ),
-    );
+  Widget build(BuildContext context) {
+    final sWidth = MediaQuery.of(context).size.width;
+    if (sWidth < kMaxTabletWidth) {
+      return Container();
+    } else {
+      return Row(
+        children: [
+          SvgPicture.asset('assets/imgs/logo/logo_b.svg'),
+          SizedBox(width: kESpace * 4),
+        ],
+      );
+    }
   }
 }

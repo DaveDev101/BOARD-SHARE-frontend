@@ -3,10 +3,7 @@ import 'dart:io';
 
 import 'package:boardshare/app_env.dart';
 import 'package:boardshare/packages/network/query_json_response.dart';
-import 'package:boardshare/packages/network/rest_api_wrapper.dart';
-import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -18,50 +15,56 @@ final dioProvider = Provider(DioApiClient.new);
 class DioApiClient {
   final Ref ref;
   late final Dio _dio;
-  CookieJar? _cookieJar; // ✅ cookie storage
+  // CookieJar? _cookieJar; // ✅ cookie storage
 
   DioApiClient(this.ref, {Dio? dio}) {
     _dio = dio ?? Dio();
 
     _dio.options.baseUrl = kApiLocalUrl;
-    if (kAppEnv == "test") _dio.options.baseUrl = kApiTestUrl;
+    if (kAppEnv == EnumAppEnv.mockup || kAppEnv == EnumAppEnv.test) {
+      _dio.options.baseUrl = kApiTestUrl;
+    }
     _dio.options.headers['Accept'] = 'application/json';
     _dio.options.headers['Content-Type'] = 'application/json';
+    _dio.options.extra['withCredentials'] = true;
 
-    if (kIsWeb) {
-      _dio.options.extra['withCredentials'] = true; // ✅ activate cookies
-    }
+    // if (kIsWeb) {
+    //   _dio.options.extra['withCredentials'] = true; // ✅ activate cookies
+    // }
+    //
+    // if (!kIsWeb) {
+    //   _cookieJar = CookieJar(); // ✅ initialize cookie storage
+    //   _dio.interceptors.add(CookieManager(_cookieJar!)); // ✅ cookie manager
+    // }
 
-    if (!kIsWeb) {
-      _cookieJar = CookieJar(); // ✅ initialize cookie storage
-      _dio.interceptors.add(CookieManager(_cookieJar!)); // ✅ cookie manager
-    }
-
-    _dio.interceptors.add(InterceptorsWrapper(
-      onRequest: (options, handler) {
-        if (kDebugMode) {
-          print("📡 Sending Request to: ${options.baseUrl}${options.path}");
-          print(options.headers);
-          print(options.method);
-          print(options.cancelToken);
-          print(options.queryParameters);
-        }
-        return handler.next(options);
-      },
-      onResponse: (response, handler) async {
-        // if (response.headers.map.containsKey('Set-Cookie')) {
-        //   print("Received Cookies: ${response.headers['Set-Cookie']}");
-        // }
-        if (kDebugMode) {
-          print("📌 Received Cookies: ${response.headers['Set-Cookie']}");
-          print(response.statusCode);
-          print(response.headers);
-          print(response.realUri);
-          print(response.data);
-        }
-        return handler.next(response);
-      },
-    ));
+    _dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          if (kDebugMode) {
+            print("📡 Sending Request to: ${options.baseUrl}${options.path}");
+            print(options.headers);
+            print(options.method);
+            print(options.cancelToken);
+            print(options.queryParameters);
+            print(options.extra);
+          }
+          return handler.next(options);
+        },
+        onResponse: (response, handler) async {
+          // if (response.headers.map.containsKey('Set-Cookie')) {
+          //   print("Received Cookies: ${response.headers['Set-Cookie']}");
+          // }
+          if (kDebugMode) {
+            print("📌 Received Cookies: ${response.headers['Set-Cookie']}");
+            print(response.statusCode);
+            print(response.headers);
+            print(response.realUri);
+            print(response.data);
+          }
+          return handler.next(response);
+        },
+      ),
+    );
   }
 
   Future<Response> _get(
@@ -126,7 +129,7 @@ class DioApiClient {
     String urlTemplate, {
     String? token,
     dynamic
-        requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
+    requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
     required T Function(Map<String, dynamic>) fromJsonT,
     CancelToken? cancelToken,
   }) async {
@@ -143,9 +146,11 @@ class DioApiClient {
         print('');
         print('');
         print(
-            'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}');
+          'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}',
+        );
         print(
-            'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}');
+          'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}',
+        );
         print('');
         print('');
         print('');
@@ -157,8 +162,10 @@ class DioApiClient {
 
       return QueryJsonResponseS.fromJson(jsonResponse, fromJsonT);
     } else {
-      throw ApiException(response.statusCode ?? 0,
-          '[http]Failed to GET data: ${response.data}');
+      throw ApiException(
+        response.statusCode ?? 0,
+        '[http]Failed to GET data: ${response.data}',
+      );
       // throw Exception(
       //     '[http]Failed to GET data: [${response.statusCode}] ${response.body}');
     }
@@ -168,7 +175,7 @@ class DioApiClient {
     String urlTemplate, {
     String? token,
     dynamic
-        requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
+    requestData, // Map<String, dynamic> or Freezed Model Class which must have toJson
     required T Function(Map<String, dynamic>) fromJsonT,
     CancelToken? cancelToken,
   }) async {
@@ -185,9 +192,11 @@ class DioApiClient {
         print('');
         print('');
         print(
-            'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}');
+          'fetchData().jsonResponse runtimeType: ${jsonResponse.runtimeType}',
+        );
         print(
-            'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}');
+          'fetchData().jsonResponse[data] runtimeType: ${jsonResponse['data'].runtimeType}',
+        );
         print('');
         print('');
         print('');
@@ -199,8 +208,10 @@ class DioApiClient {
 
       return QueryJsonResponseL.fromJson(jsonResponse, fromJsonT);
     } else {
-      throw ApiException(response.statusCode ?? 0,
-          '[http]Failed to GET data: ${response.data}');
+      throw ApiException(
+        response.statusCode ?? 0,
+        '[http]Failed to GET data: ${response.data}',
+      );
       // throw Exception(
       //     '[http]Failed to GET data: [${response.statusCode}] ${response.body}');
     }
@@ -292,8 +303,10 @@ class DioApiClient {
           return jsonResponse;
         }
       } else {
-        throw ApiException(response.statusCode ?? 0,
-            '[http]Failed to $method data: ${response.data}');
+        throw ApiException(
+          response.statusCode ?? 0,
+          '[http]Failed to $method data: ${response.data}',
+        );
         // throw Exception(
         //     '[http]Failed to $method data: [${response.statusCode}] ${response.body}');
       }
@@ -327,8 +340,10 @@ class DioApiClient {
     if (response.statusCode == HttpStatus.ok) {
       return true;
     } else {
-      throw ApiException(response.statusCode ?? 0,
-          '[http]Failed to DELETE data: ${response.data}');
+      throw ApiException(
+        response.statusCode ?? 0,
+        '[http]Failed to DELETE data: ${response.data}',
+      );
       // throw Exception(
       //     '[http]Failed to DELETE data: [${response.statusCode}] ${response.body}');
     }

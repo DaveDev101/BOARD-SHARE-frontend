@@ -1,6 +1,5 @@
 import 'dart:math' as math;
 import 'dart:html' as html;
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:boardshare/app/content/controllers/symbol_detail.dart';
@@ -40,11 +39,12 @@ class SymbolDetailScreen extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
     final sHeight = MediaQuery.of(context).size.height;
-    final horizontalPadding =
-        (sWidth > kMaxWidth) ? (sWidth - kMaxWidth) / 2 : 0.0;
+    final horizontalPadding = (sWidth > kMaxWidth)
+        ? (sWidth - kMaxWidth) / 2
+        : 0.0;
 
     final sId = ref.watch(selectedSymbolId);
-    final symbolData = ref.watch(SymbolDetailProvider(sId));
+    final symbolData = ref.watch(symbolDetailProvider(sId));
 
     final imgAngle = useState(_orgAngle);
     final imgSize = useState(_orgSize);
@@ -61,7 +61,7 @@ class SymbolDetailScreen extends HookConsumerWidget {
     final bgColor = useState(_orgBg);
     final borderColor = useState(_orgBr);
 
-    final makeTransparent = useState(false);
+    // final makeTransparent = useState(false);
 
     void resetCustomization(String title) {
       imgAngle.value = _orgAngle;
@@ -92,10 +92,7 @@ class SymbolDetailScreen extends HookConsumerWidget {
             s == null ||
             sm == null ||
             sm.mediumUrl == null) {
-          return Container(
-            // TODO: implement no data
-            child: Text('NO SUCH SYMBOL!!!'),
-          );
+          return Text('NO SUCH SYMBOL!!!');
         }
 
         // symbol title
@@ -121,7 +118,8 @@ class SymbolDetailScreen extends HookConsumerWidget {
                         color: Colors.black87,
                         child: Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: horizontalPadding),
+                            horizontal: horizontalPadding,
+                          ),
                           child: Center(
                             child: SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
@@ -182,7 +180,8 @@ class SymbolDetailScreen extends HookConsumerWidget {
                                                       CrossAxisAlignment.center,
                                                   children: [
                                                     const SizedBox(
-                                                        width: kESpace * 4),
+                                                      width: kESpace * 4,
+                                                    ),
 
                                                     // title modifier
                                                     DTitleModifier(
@@ -202,7 +201,8 @@ class SymbolDetailScreen extends HookConsumerWidget {
                                                       CrossAxisAlignment.center,
                                                   children: [
                                                     const SizedBox(
-                                                        width: kESpace * 4),
+                                                      width: kESpace * 4,
+                                                    ),
 
                                                     // symbol image rotation control
                                                     DRotationControl(
@@ -211,7 +211,8 @@ class SymbolDetailScreen extends HookConsumerWidget {
                                                     ),
 
                                                     const SizedBox(
-                                                        width: kSpace * 2),
+                                                      width: kSpace * 2,
+                                                    ),
 
                                                     // color picker
                                                     DColorPickerControl(
@@ -220,33 +221,37 @@ class SymbolDetailScreen extends HookConsumerWidget {
                                                     ),
 
                                                     const SizedBox(
-                                                        width: kESpace * 2),
+                                                      width: kESpace * 2,
+                                                    ),
 
                                                     // Reset button
                                                     IconButton(
-                                                      icon: Icon(Icons
-                                                          .settings_backup_restore_outlined),
+                                                      icon: Icon(
+                                                        Icons
+                                                            .settings_backup_restore_outlined,
+                                                      ),
                                                       onPressed: () {
                                                         resetCustomization(
-                                                            s.symbolTitle ??
-                                                                '');
+                                                          s.symbolTitle ?? '',
+                                                        );
                                                       },
                                                       iconSize: 24,
                                                       color: Colors.black54,
                                                       tooltip: "Reset",
                                                       style:
                                                           IconButton.styleFrom(
-                                                        backgroundColor:
-                                                            Colors.white,
-                                                        shape: CircleBorder(),
-                                                      ),
+                                                            backgroundColor:
+                                                                Colors.white,
+                                                            shape:
+                                                                CircleBorder(),
+                                                          ),
                                                     ),
 
                                                     const Spacer(),
                                                   ],
-                                                )
+                                                ),
                                               ],
-                                            )
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -263,69 +268,72 @@ class SymbolDetailScreen extends HookConsumerWidget {
                                       Text(
                                         s.symbolTitle ?? '',
                                         style: TextStyle(
-                                            fontSize: 24,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
+                                          fontSize: 24,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                       SizedBox(height: kSpace),
                                       Text(
-                                        "만든 이: ${s.symbolSystem?.Issuer}",
+                                        "만든 이: ${s.symbolSystem?.issuer}",
                                         style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.white70),
+                                          fontSize: 14,
+                                          color: Colors.white70,
+                                        ),
                                       ),
                                       SizedBox(height: kSpace * 2),
 
                                       // 라이선스 옵션
-                                      Container(
-                                        padding: EdgeInsets.all(12),
-                                        decoration: BoxDecoration(
-                                          color: Colors.grey[900],
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text("PNG & SVG icon formats",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                            Divider(color: Colors.white24),
-                                            Row(
-                                              children: [
-                                                Icon(Icons.check_circle,
-                                                    color: Colors.green,
-                                                    size: 20),
-                                                SizedBox(width: 8),
-                                                Text("Unlimited icon downloads",
-                                                    style: TextStyle(
-                                                        color: Colors.white)),
-                                              ],
-                                            ),
-                                            SizedBox(height: 8),
-                                            Row(
-                                              children: [
-                                                Icon(Icons.check_circle,
-                                                    color: Colors.green,
-                                                    size: 20),
-                                                SizedBox(width: 8),
-                                                Text(
-                                                    "Royalty-free, commercial licenses",
-                                                    style: TextStyle(
-                                                        color: Colors.white)),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-
+                                      // Container(
+                                      //   padding: EdgeInsets.all(12),
+                                      //   decoration: BoxDecoration(
+                                      //     color: Colors.grey[900],
+                                      //     borderRadius:
+                                      //         BorderRadius.circular(8),
+                                      //   ),
+                                      //   child: Column(
+                                      //     crossAxisAlignment:
+                                      //         CrossAxisAlignment.start,
+                                      //     children: [
+                                      //       Text("PNG & SVG icon formats",
+                                      //           style: TextStyle(
+                                      //               color: Colors.white,
+                                      //               fontWeight:
+                                      //                   FontWeight.bold)),
+                                      //       Divider(color: Colors.white24),
+                                      //       Row(
+                                      //         children: [
+                                      //           Icon(Icons.check_circle,
+                                      //               color: Colors.green,
+                                      //               size: 20),
+                                      //           SizedBox(width: 8),
+                                      //           Text("Unlimited icon downloads",
+                                      //               style: TextStyle(
+                                      //                   color: Colors.white)),
+                                      //         ],
+                                      //       ),
+                                      //       SizedBox(height: 8),
+                                      //       Row(
+                                      //         children: [
+                                      //           Icon(Icons.check_circle,
+                                      //               color: Colors.green,
+                                      //               size: 20),
+                                      //           SizedBox(width: 8),
+                                      //           Text(
+                                      //               "Royalty-free, commercial licenses",
+                                      //               style: TextStyle(
+                                      //                   color: Colors.white)),
+                                      //         ],
+                                      //       ),
+                                      //     ],
+                                      //   ),
+                                      // ),
                                       ElevatedButton(
                                         onPressed: () async {
                                           await captureAndDownload(
-                                              _previewContainer, 'capture.png');
+                                            _previewContainer,
+                                            '${s.symbolTitle}.png',
+                                          );
                                         },
                                         child: Text("이미지 다운로드 (PNG)"),
                                       ),
@@ -356,8 +364,9 @@ class SymbolDetailScreen extends HookConsumerWidget {
                   child: Container(
                     width: sWidth,
                     color: Colors.white,
-                    padding:
-                        EdgeInsets.symmetric(horizontal: horizontalPadding),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: horizontalPadding,
+                    ),
                     child: Wrap(
                       children: s.symbolExcerpt!
                           .split(',')
@@ -391,25 +400,26 @@ class SymbolDetailScreen extends HookConsumerWidget {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                   ),
-                  delegate: SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Icon(Icons.notifications,
-                            size: 40, color: Colors.black),
-                      );
-                    },
-                    childCount: 100,
-                  ),
+                  delegate: SliverChildBuilderDelegate((
+                    BuildContext context,
+                    int index,
+                  ) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(
+                        Icons.notifications,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                    );
+                  }, childCount: 100),
                 ),
               ),
               // Footer
-              SliverToBoxAdapter(
-                child: DFooter(dark: false),
-              ),
+              SliverToBoxAdapter(child: DFooter(dark: false)),
             ],
           ),
         );
@@ -426,9 +436,11 @@ class SymbolDetailScreen extends HookConsumerWidget {
     ByteData? byteData = await image.toByteData(format: ui.ImageByteFormat.png);
     if (byteData != null) {
       Uint8List pngBytes = byteData.buffer.asUint8List();
+
       // Blob 생성 후 URL 생성
       final blob = html.Blob([pngBytes], 'image/png');
       final url = html.Url.createObjectUrlFromBlob(blob);
+
       // 다운로드를 위한 AnchorElement 생성 및 자동 클릭
       final anchor = html.AnchorElement(href: url)
         ..setAttribute("download", fileName)
@@ -458,8 +470,9 @@ class DColorPickerControl extends HookConsumerWidget {
     final recentColors = useState([Color(0xFFFFFFFF)]);
     final selectedColor = useState(Color(0xFFFFFFFF));
 
-    final cControl =
-        useTextEditingController.fromValue(TextEditingValue(text: '#00000000'));
+    final cControl = useTextEditingController.fromValue(
+      TextEditingValue(text: '#00000000'),
+    );
     final cFocusNode = useFocusNode();
 
     return Column(
@@ -471,12 +484,7 @@ class DColorPickerControl extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(width: kSpace),
-            Text(
-              "배경과 테두리",
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
+            Text("배경과 테두리", style: TextStyle(fontSize: 16)),
           ],
         ),
         Row(
@@ -524,12 +532,7 @@ class DColorPickerControl extends HookConsumerWidget {
                 },
               ),
             ),
-            Text(
-              "배경색",
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-              ),
-            ),
+            Text("배경색", style: TextStyle(fontWeight: FontWeight.w300)),
 
             const SizedBox(width: kSpace * 2),
 
@@ -574,12 +577,7 @@ class DColorPickerControl extends HookConsumerWidget {
                 },
               ),
             ),
-            Text(
-              "테두리",
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-              ),
-            ),
+            Text("테두리", style: TextStyle(fontWeight: FontWeight.w300)),
           ],
         ),
       ],
@@ -714,10 +712,7 @@ class DColorPicker extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TextField(
-                              enabled: false,
-                              controller: cControl,
-                            ),
+                            TextField(enabled: false, controller: cControl),
                           ],
                         ),
                       ),
@@ -753,7 +748,6 @@ class DColorPicker extends StatelessWidget {
                   //       )
                   //   ],
                   // ),
-
                   const SizedBox(height: kSpace * 2),
 
                   // Palette
@@ -800,9 +794,7 @@ class DColorPicker extends StatelessWidget {
                               : Container(
                                   width: 24,
                                   height: 24,
-                                  decoration: BoxDecoration(
-                                    color: c,
-                                  ),
+                                  decoration: BoxDecoration(color: c),
                                 ),
                         );
                       }).toList(),
@@ -865,7 +857,7 @@ class DColorPicker extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
@@ -912,10 +904,7 @@ class _AlphaSliderPainter extends CustomPainter {
   final double alpha;
   final Color baseColor;
 
-  _AlphaSliderPainter({
-    required this.alpha,
-    required this.baseColor,
-  });
+  _AlphaSliderPainter({required this.alpha, required this.baseColor});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -925,10 +914,7 @@ class _AlphaSliderPainter extends CustomPainter {
     final gradient = LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
-      colors: [
-        baseColor.withAlpha(1),
-        baseColor.withAlpha(255),
-      ],
+      colors: [baseColor.withAlpha(1), baseColor.withAlpha(255)],
     );
 
     final paint = Paint()..shader = gradient.createShader(rect);
@@ -988,12 +974,7 @@ class DRotationControl extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(width: kSpace),
-            Text(
-              "이미지",
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
+            Text("이미지", style: TextStyle(fontSize: 16)),
           ],
         ),
         Row(
@@ -1002,11 +983,12 @@ class DRotationControl extends StatelessWidget {
           children: [
             // Rotation buttons
             IconButton(
-                icon: Icon(Icons.rotate_right),
-                onPressed: () {
-                  var previousValue = imgAngle.value;
-                  imgAngle.value = previousValue + math.pi / 8;
-                }),
+              icon: Icon(Icons.rotate_right),
+              onPressed: () {
+                var previousValue = imgAngle.value;
+                imgAngle.value = previousValue + math.pi / 8;
+              },
+            ),
             IconButton(
               icon: Icon(Icons.rotate_left),
               onPressed: () {
@@ -1082,8 +1064,9 @@ class DTitleModifier extends HookConsumerWidget {
     final recentColors = useState([Color(0xFFFFFFFF)]);
     final selectedColor = useState(Color(0xFFFFFFFF));
 
-    final cControl =
-        useTextEditingController.fromValue(TextEditingValue(text: '#00000000'));
+    final cControl = useTextEditingController.fromValue(
+      TextEditingValue(text: '#00000000'),
+    );
     final cFocusNode = useFocusNode();
 
     return Column(
@@ -1095,12 +1078,7 @@ class DTitleModifier extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(width: kSpace),
-            Text(
-              "어휘 (상징 제목)",
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
+            Text("어휘 (상징 제목)", style: TextStyle(fontSize: 16)),
           ],
         ),
         Row(
@@ -1144,12 +1122,7 @@ class DTitleModifier extends HookConsumerWidget {
                     },
                   ),
                 ),
-                Text(
-                  "글자색",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
+                Text("글자색", style: TextStyle(fontWeight: FontWeight.w300)),
               ],
             ),
             const SizedBox(width: kSpace * 2),
@@ -1269,17 +1242,14 @@ class AACSymbolPreview extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final portalCtl = ref.watch(portalControllerProvider);
+    // final portalCtl = ref.watch(portalControllerProvider);
 
     return Container(
       width: _orgSize,
       height: _orgSize,
       decoration: BoxDecoration(
         color: bgColor.value,
-        border: Border.all(
-          color: borderColor.value,
-          width: 8.0,
-        ),
+        border: Border.all(color: borderColor.value, width: 8.0),
       ),
       child: Stack(
         alignment: Alignment.center,
@@ -1326,9 +1296,7 @@ class AACSymbolPreview extends ConsumerWidget {
                       fontSize: titleSize.value,
                       fontWeight: FontWeight.bold,
                     ),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                    ),
+                    decoration: InputDecoration(border: InputBorder.none),
                   ),
                 ),
                 Spacer(),

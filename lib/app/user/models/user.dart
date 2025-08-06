@@ -5,7 +5,7 @@ part 'user.freezed.dart';
 part 'user.g.dart';
 
 @freezed
-class User with _$User {
+sealed class User with _$User {
   const factory User({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? email,
@@ -13,6 +13,9 @@ class User with _$User {
     @JsonKey(includeIfNull: false) String? displayName,
     @JsonKey(includeIfNull: false) AccountStatus? status,
     @JsonKey(includeIfNull: false) String? notes,
+    @JsonKey(includeIfNull: false) String? zipCode,
+    @JsonKey(includeIfNull: false) String? address1,
+    @JsonKey(includeIfNull: false) String? address2,
     @JsonKey(includeIfNull: false) DateTime? createdAt,
     @JsonKey(includeIfNull: false) DateTime? updatedAt,
   }) = _User;

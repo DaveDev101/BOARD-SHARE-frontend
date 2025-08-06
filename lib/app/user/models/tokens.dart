@@ -4,7 +4,7 @@ part 'tokens.freezed.dart';
 part 'tokens.g.dart';
 
 @freezed
-class Tokens with _$Tokens {
+sealed class Tokens with _$Tokens {
   const factory Tokens({
     required String accessToken,
     required String refreshToken,

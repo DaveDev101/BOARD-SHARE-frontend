@@ -1,4 +1,7 @@
+import 'package:boardshare/app/content/models/aac_post.dart';
+import 'package:boardshare/app/content/models/es_board.dart';
 import 'package:boardshare/app/content/services/aac_symbol_manager.dart';
+import 'package:boardshare/app/content/services/es_board_manager.dart';
 import 'package:boardshare/packages/network/query_json_response.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,7 +12,7 @@ import 'package:boardshare/app/content/models/aac_symbol.dart';
 
 final postServicesProvider = Provider(PostServices.new);
 
-class PostServices implements AACSymbolManager {
+class PostServices implements AACSymbolManager, ESBoardManager {
   PostServices(this.ref);
 
   final Ref ref;
@@ -88,6 +91,83 @@ class PostServices implements AACSymbolManager {
       rethrow;
     } catch (e) {
       if (kDebugMode) print('getSymbol error: $e');
+      rethrow;
+    }
+  }
+
+  @override
+  Future<QueryJsonResponseL<ESBoard>> searchBoards({
+    required String searchTerm,
+    List<String>? taxonomyTerms,
+    DCount? cnt,
+    List<DOrder>? orders,
+  }) async {
+    var rp = {"search": searchTerm};
+    if (taxonomyTerms != null && taxonomyTerms.isNotEmpty) {
+      rp = {
+        ...rp,
+        ...{"taxonomy_terms": taxonomyTerms.join(',')}
+      };
+    }
+    if (cnt != null) {
+      rp = {
+        ...rp,
+        ...{"limit": cnt.limitCount.toString(), "offset": cnt.offset.toString()}
+      };
+    }
+    if (orders != null && orders.isNotEmpty) {
+      for (var e in orders) {
+        rp = {
+          ...rp,
+          ...{"order_by": e.orderBy!, "order_dir": e.orderDir!}
+        };
+      }
+    }
+
+    if (kDebugMode) print(rp);
+
+    try {
+      final res = await ref.read(dioProvider).fetchList<ESBoard>(
+            '/content/es-boards',
+            requestData: rp,
+            fromJsonT: ESBoard.fromJson,
+          );
+
+      if (kDebugMode) {
+        print('-==> searchBoards().res.runtimeType: ${res.runtimeType}');
+      }
+
+      return res;
+    } on ApiException catch (ae) {
+      if (kDebugMode) print('searchBoards ApiException: $ae');
+      rethrow;
+    } catch (e) {
+      if (kDebugMode) print('searchBoards error: $e');
+      rethrow;
+    }
+  }
+
+  @override
+  Future<QueryJsonResponseS<AACPost>> getBoard({required int boardId}) async {
+    final rp = {"id": boardId};
+
+    try {
+      final res = await ref.read(dioProvider).fetchSingle<AACPost>(
+            '/content/aacexchange-boards/:id',
+            requestData: rp,
+            fromJsonT: AACPost.fromJson,
+          );
+
+      if (kDebugMode) {
+        print('-==> getBoard().res.runtimeType: ${res.runtimeType}');
+      }
+
+      return res;
+    } on ApiException catch (ae) {
+      if (kDebugMode) print('getBoard ApiException: $ae');
+      rethrow;
+    } catch (e) {
+      if (kDebugMode) print('getBoard error: $e');
       rethrow;
     }
   }

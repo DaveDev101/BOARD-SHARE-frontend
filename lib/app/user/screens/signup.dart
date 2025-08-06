@@ -62,10 +62,10 @@ class Signup extends HookConsumerWidget {
       Future.microtask(
           () => FocusScope.of(context).requestFocus(emailFocusNode));
       return () {
-        emailFocusNode.dispose();
-        passwordFocusNode.dispose();
-        nameFocusNode.dispose();
-        codeFocusNode.dispose();
+        // emailFocusNode.dispose();
+        // passwordFocusNode.dispose();
+        // nameFocusNode.dispose();
+        // codeFocusNode.dispose();
       };
     }, []);
 

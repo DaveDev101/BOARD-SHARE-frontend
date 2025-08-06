@@ -1,5 +1,7 @@
 // global
 const kMaxWidth = 1320.0;
+const kMaxMobileWidth = 600.0;
+const kMaxTabletWidth = 1024.0;
 
 // app bar
 const kAppBarExtendedHeight = 540.0;
@@ -22,3 +24,4 @@ const kDMargin = 10.0;
 const kFHeight = 40.0;
 const kEFHeight = 48.0;
 const kEEFHeight = 60.0;
+const kFWidth = 300.0;

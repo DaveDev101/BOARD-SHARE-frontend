@@ -1,8 +1,18 @@
+import 'package:boardshare/app/content/screens/board_detail_screen.dart';
 import 'package:boardshare/app/content/screens/board_list_screen.dart';
 import 'package:boardshare/app/content/screens/content_layout.dart';
 import 'package:boardshare/app/content/screens/symbol_detail_screen.dart';
 import 'package:boardshare/app/content/screens/symbol_list_screen.dart';
 import 'package:boardshare/app/user/controllers/signin_controller.dart';
+import 'package:boardshare/app/user/screens/change_password.dart';
+import 'package:boardshare/app/user/screens/download_history.dart';
+import 'package:boardshare/app/user/screens/favorite_boards_screen.dart';
+import 'package:boardshare/app/user/screens/favorite_symbols_screen.dart';
+import 'package:boardshare/app/user/screens/group_members.dart';
+import 'package:boardshare/app/user/screens/group_mgt.dart';
+import 'package:boardshare/app/user/screens/my_boards_screen.dart';
+import 'package:boardshare/app/user/screens/user_layout.dart';
+import 'package:boardshare/app/user/screens/user_profile_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -113,7 +123,7 @@ GoRouter createRouter(WidgetRef ref) {
         final isAuthenticated =
             authState.$1.isEmpty && authState.$2.user.user != null;
         final loggingIn = state.matchedLocation == '/sign-in';
-        final signingUp = state.matchedLocation == '/sign-up';
+        // final signingUp = state.matchedLocation == '/sign-up';
 
         // when NOT signed in or UNAUTHENTICATED --> goes to HOME('/')
         // if (!isAuthenticated && !loggingIn && !signingUp) return '/';
@@ -123,23 +133,19 @@ GoRouter createRouter(WidgetRef ref) {
 
       if (kDebugMode) {
         print(
-            '🚏🚏🚏🥤🥤redirect.state.matchedLocation: ${state.matchedLocation}, fullPath: ${state.fullPath}');
+          '🚏🚏🚏🥤🥤redirect.state.matchedLocation: ${state.matchedLocation}, fullPath: ${state.fullPath}',
+        );
       }
 
       return null;
     },
     routes: [
+      GoRoute(path: '/', builder: (context, state) => HomeScreen()),
+      GoRoute(path: '/sign-up', builder: (context, state) => Signup()),
+      GoRoute(path: '/sign-in', builder: (context, state) => Signin()),
       GoRoute(
-        path: '/',
-        builder: (context, state) => HomeScreen(),
-      ),
-      GoRoute(
-        path: '/sign-up',
-        builder: (context, state) => Signup(),
-      ),
-      GoRoute(
-        path: '/sign-in',
-        builder: (context, state) => Signin(),
+        path: '/change-password',
+        builder: (context, state) => ChangePasswordScreen(),
       ),
       // ShellRoute(
       //   builder: (context, state, child) {
@@ -161,7 +167,7 @@ GoRouter createRouter(WidgetRef ref) {
             path: '/content/symbols',
             builder: (context, state) => ProviderScope(
               overrides: [
-                symbolListInitialCondition.overrideWithValue((1, 'all'))
+                symbolListInitialCondition.overrideWithValue((1, 'all')),
               ],
               child: SymbolListScreen(),
             ),
@@ -174,24 +180,112 @@ GoRouter createRouter(WidgetRef ref) {
                       ? int.parse(idStr)
                       : null;
                   return ProviderScope(
-                      overrides: [selectedSymbolId.overrideWithValue(id ?? 0)],
-                      child: SymbolDetailScreen());
+                    overrides: [selectedSymbolId.overrideWithValue(id ?? 0)],
+                    child: SymbolDetailScreen(),
+                  );
                 },
               ),
             ],
           ),
           GoRoute(
             path: '/content/boards',
-            builder: (context, state) => BoardListScreen(),
+            builder: (context, state) => ProviderScope(
+              overrides: [
+                boardListInitialCondition.overrideWithValue((1, 'all')),
+              ],
+              child: BoardListScreen(),
+            ),
+            routes: [
+              GoRoute(
+                path: '/:id',
+                builder: (context, state) {
+                  final idStr = state.pathParameters['id'];
+                  final id = (idStr != null && idStr.isNotEmpty)
+                      ? int.parse(idStr)
+                      : null;
+                  return ProviderScope(
+                    overrides: [selectedBoardId.overrideWithValue(id ?? 0)],
+                    child: BoardDetailScreen(),
+                  );
+                },
+              ),
+            ],
           ),
         ],
-      )
-    ],
-    errorBuilder: (context, state) => Scaffold(
-      body: Center(
-        child: Text(state.error.toString()),
       ),
-    ),
+      ShellRoute(
+        builder: (context, state, child) {
+          return UserLayout(child: child);
+        },
+        routes: <RouteBase>[
+          GoRoute(
+            path: '/user/download-history',
+            builder: (context, state) => DownloadHistoryPage(),
+            // routes: [
+            //   GoRoute(
+            //     path: '/:id',
+            //     builder: (context, state) {
+            //       final idStr = state.pathParameters['id'];
+            //       final id = (idStr != null && idStr.isNotEmpty)
+            //           ? int.parse(idStr)
+            //           : null;
+            //       return ProviderScope(
+            //           overrides: [selectedSymbolId.overrideWithValue(id ?? 0)],
+            //           child: SymbolDetailScreen());
+            //     },
+            //   ),
+            // ],
+          ),
+          GoRoute(
+            path: '/user/my-boards',
+            builder: (context, state) {
+              return ProviderScope(
+                overrides: [
+                  myBoardsInitialCondition.overrideWithValue((1, 'all')),
+                ],
+                child: MyBoardsScreen(),
+              );
+            },
+          ),
+          GoRoute(
+            path: '/user/favorite-symbols',
+            builder: (context, state) {
+              return ProviderScope(
+                overrides: [
+                  favoriteSymbolsInitialCondition.overrideWithValue((1, 'all')),
+                ],
+                child: FavoriteSymbolsScreen(),
+              );
+            },
+          ),
+          GoRoute(
+            path: '/user/favorite-boards',
+            builder: (context, state) {
+              return ProviderScope(
+                overrides: [
+                  favoriteBoardsInitialCondition.overrideWithValue((1, 'all')),
+                ],
+                child: FavoriteBoardsScreen(),
+              );
+            },
+          ),
+          GoRoute(
+            path: '/user/user-profile',
+            builder: (context, state) => UserProfileScreen(),
+          ),
+          GoRoute(
+            path: '/user/group-mgt',
+            builder: (context, state) => GroupManagementScreen(),
+          ),
+          GoRoute(
+            path: '/user/group-members',
+            builder: (context, state) => GroupMembersScreen(),
+          ),
+        ],
+      ),
+    ],
+    errorBuilder: (context, state) =>
+        Scaffold(body: Center(child: Text(state.error.toString()))),
   );
 }
 
@@ -200,12 +294,12 @@ class RouterRefreshNotifier extends ChangeNotifier {
   AsyncValue<(String, SigninResult)>? currentState;
 
   RouterRefreshNotifier(WidgetRef ref) {
-    ref.listen<AsyncValue<(String, SigninResult)>>(
-      signinControllerProvider,
-      (previous, next) {
-        currentState = next;
-        notifyListeners();
-      },
-    );
+    ref.listen<AsyncValue<(String, SigninResult)>>(signinControllerProvider, (
+      previous,
+      next,
+    ) {
+      currentState = next;
+      notifyListeners();
+    });
   }
 }
