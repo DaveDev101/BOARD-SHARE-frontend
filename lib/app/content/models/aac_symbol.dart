@@ -5,7 +5,7 @@ part 'aac_symbol.freezed.dart';
 part 'aac_symbol.g.dart';
 
 @freezed
-class AACSymbol with _$AACSymbol {
+sealed class AACSymbol with _$AACSymbol {
   const factory AACSymbol({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? symbolTitle,
@@ -26,7 +26,7 @@ class AACSymbol with _$AACSymbol {
 }
 
 @freezed
-class AACSymbolStatus with _$AACSymbolStatus {
+sealed class AACSymbolStatus with _$AACSymbolStatus {
   const factory AACSymbolStatus({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? status,
@@ -37,12 +37,12 @@ class AACSymbolStatus with _$AACSymbolStatus {
 }
 
 @freezed
-class AACSymbolSystem with _$AACSymbolSystem {
+sealed class AACSymbolSystem with _$AACSymbolSystem {
   const factory AACSymbolSystem({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? systemName,
-    @JsonKey(includeIfNull: false) String? Issuer,
-    @JsonKey(includeIfNull: false) String? Description,
+    @JsonKey(includeIfNull: false) String? issuer,
+    @JsonKey(includeIfNull: false) String? description,
   }) = _AACSymbolSystem;
 
   factory AACSymbolSystem.fromJson(Map<String, Object?> json) =>

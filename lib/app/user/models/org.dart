@@ -5,7 +5,7 @@ part 'org.freezed.dart';
 part 'org.g.dart';
 
 @freezed
-class Org with _$Org {
+sealed class Org with _$Org {
   const factory Org({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? name,
@@ -13,9 +13,10 @@ class Org with _$Org {
     @JsonKey(includeIfNull: false) AccountStatus? status,
     @JsonKey(includeIfNull: false) String? phone,
     @JsonKey(includeIfNull: false) String? email,
-    @JsonKey(includeIfNull: false) String? zipcode,
-    @JsonKey(includeIfNull: false) String? address,
-    @JsonKey(includeIfNull: false) String? description,
+    @JsonKey(includeIfNull: false) String? notes,
+    @JsonKey(includeIfNull: false) String? zipCode,
+    @JsonKey(includeIfNull: false) String? address1,
+    @JsonKey(includeIfNull: false) String? address2,
     @JsonKey(includeIfNull: false) String? adminNotes,
     @JsonKey(includeIfNull: false) DateTime? createdAt,
     @JsonKey(includeIfNull: false) DateTime? updatedAt,

@@ -5,8 +5,8 @@ part 'portal_controller.g.dart';
 @riverpod
 class PortalController extends _$PortalController {
   @override
-  (bool, bool, bool, bool, bool) build() {
-    return (false, false, false, false, false);
+  (bool, bool, bool, bool, bool, bool) build() {
+    return (false, false, false, false, false, false);
   }
 
   void toggleVisibility(int number) {
@@ -17,7 +17,8 @@ class PortalController extends _$PortalController {
         !previousState.$2,
         !previousState.$3,
         !previousState.$4,
-        !previousState.$5
+        !previousState.$5,
+        !previousState.$6,
       );
     }
     if (number == 1) {
@@ -26,7 +27,8 @@ class PortalController extends _$PortalController {
         previousState.$2,
         previousState.$3,
         previousState.$4,
-        previousState.$5
+        previousState.$5,
+        previousState.$6,
       );
     } else if (number == 2) {
       state = (
@@ -34,7 +36,8 @@ class PortalController extends _$PortalController {
         !previousState.$2,
         previousState.$3,
         previousState.$4,
-        previousState.$5
+        previousState.$5,
+        previousState.$6,
       );
     } else if (number == 3) {
       state = (
@@ -42,7 +45,8 @@ class PortalController extends _$PortalController {
         previousState.$2,
         !previousState.$3,
         previousState.$4,
-        previousState.$5
+        previousState.$5,
+        previousState.$6,
       );
     } else if (number == 4) {
       state = (
@@ -50,20 +54,31 @@ class PortalController extends _$PortalController {
         previousState.$2,
         previousState.$3,
         !previousState.$4,
-        previousState.$5
+        previousState.$5,
+        previousState.$6,
       );
-    } else {
+    } else if (number == 5) {
       state = (
         previousState.$1,
         previousState.$2,
         previousState.$3,
         previousState.$4,
-        !previousState.$5
+        !previousState.$5,
+        previousState.$6,
+      );
+    } else if (number == 6) {
+      state = (
+        previousState.$1,
+        previousState.$2,
+        previousState.$3,
+        previousState.$4,
+        previousState.$5,
+        !previousState.$6,
       );
     }
   }
 
   void makeAllInvisible() {
-    state = (false, false, false, false, false);
+    state = (false, false, false, false, false, false);
   }
 }

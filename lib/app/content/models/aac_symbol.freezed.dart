@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,903 +9,894 @@ part of 'aac_symbol.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-AACSymbol _$AACSymbolFromJson(Map<String, dynamic> json) {
-  return _AACSymbol.fromJson(json);
-}
 
 /// @nodoc
 mixin _$AACSymbol {
-  @JsonKey(includeIfNull: false)
-  int? get id => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get symbolTitle => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get symbolExcerpt => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  AACSymbolStatus? get symbolStatus => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  bool? get isCommentOpen => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  Medium? get medium => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  int? get commentCount => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  int? get likeCount => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  AACSymbolSystem? get symbolSystem => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get description => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  DateTime? get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
+
+@JsonKey(includeIfNull: false) int? get id;@JsonKey(includeIfNull: false) String? get symbolTitle;@JsonKey(includeIfNull: false) String? get symbolExcerpt;@JsonKey(includeIfNull: false) AACSymbolStatus? get symbolStatus;@JsonKey(includeIfNull: false) bool? get isCommentOpen;@JsonKey(includeIfNull: false) Medium? get medium;@JsonKey(includeIfNull: false) int? get commentCount;@JsonKey(includeIfNull: false) int? get likeCount;@JsonKey(includeIfNull: false) AACSymbolSystem? get symbolSystem;@JsonKey(includeIfNull: false) String? get description;@JsonKey(includeIfNull: false) DateTime? get createdAt;@JsonKey(includeIfNull: false) DateTime? get updatedAt;
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AACSymbolCopyWith<AACSymbol> get copyWith => _$AACSymbolCopyWithImpl<AACSymbol>(this as AACSymbol, _$identity);
 
   /// Serializes this AACSymbol to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AACSymbolCopyWith<AACSymbol> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AACSymbol&&(identical(other.id, id) || other.id == id)&&(identical(other.symbolTitle, symbolTitle) || other.symbolTitle == symbolTitle)&&(identical(other.symbolExcerpt, symbolExcerpt) || other.symbolExcerpt == symbolExcerpt)&&(identical(other.symbolStatus, symbolStatus) || other.symbolStatus == symbolStatus)&&(identical(other.isCommentOpen, isCommentOpen) || other.isCommentOpen == isCommentOpen)&&(identical(other.medium, medium) || other.medium == medium)&&(identical(other.commentCount, commentCount) || other.commentCount == commentCount)&&(identical(other.likeCount, likeCount) || other.likeCount == likeCount)&&(identical(other.symbolSystem, symbolSystem) || other.symbolSystem == symbolSystem)&&(identical(other.description, description) || other.description == description)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,symbolTitle,symbolExcerpt,symbolStatus,isCommentOpen,medium,commentCount,likeCount,symbolSystem,description,createdAt,updatedAt);
+
+@override
+String toString() {
+  return 'AACSymbol(id: $id, symbolTitle: $symbolTitle, symbolExcerpt: $symbolExcerpt, symbolStatus: $symbolStatus, isCommentOpen: $isCommentOpen, medium: $medium, commentCount: $commentCount, likeCount: $likeCount, symbolSystem: $symbolSystem, description: $description, createdAt: $createdAt, updatedAt: $updatedAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AACSymbolCopyWith<$Res> {
-  factory $AACSymbolCopyWith(AACSymbol value, $Res Function(AACSymbol) then) =
-      _$AACSymbolCopyWithImpl<$Res, AACSymbol>;
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? symbolTitle,
-      @JsonKey(includeIfNull: false) String? symbolExcerpt,
-      @JsonKey(includeIfNull: false) AACSymbolStatus? symbolStatus,
-      @JsonKey(includeIfNull: false) bool? isCommentOpen,
-      @JsonKey(includeIfNull: false) Medium? medium,
-      @JsonKey(includeIfNull: false) int? commentCount,
-      @JsonKey(includeIfNull: false) int? likeCount,
-      @JsonKey(includeIfNull: false) AACSymbolSystem? symbolSystem,
-      @JsonKey(includeIfNull: false) String? description,
-      @JsonKey(includeIfNull: false) DateTime? createdAt,
-      @JsonKey(includeIfNull: false) DateTime? updatedAt});
+abstract mixin class $AACSymbolCopyWith<$Res>  {
+  factory $AACSymbolCopyWith(AACSymbol value, $Res Function(AACSymbol) _then) = _$AACSymbolCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? symbolTitle,@JsonKey(includeIfNull: false) String? symbolExcerpt,@JsonKey(includeIfNull: false) AACSymbolStatus? symbolStatus,@JsonKey(includeIfNull: false) bool? isCommentOpen,@JsonKey(includeIfNull: false) Medium? medium,@JsonKey(includeIfNull: false) int? commentCount,@JsonKey(includeIfNull: false) int? likeCount,@JsonKey(includeIfNull: false) AACSymbolSystem? symbolSystem,@JsonKey(includeIfNull: false) String? description,@JsonKey(includeIfNull: false) DateTime? createdAt,@JsonKey(includeIfNull: false) DateTime? updatedAt
+});
 
-  $AACSymbolStatusCopyWith<$Res>? get symbolStatus;
-  $MediumCopyWith<$Res>? get medium;
-  $AACSymbolSystemCopyWith<$Res>? get symbolSystem;
+
+$AACSymbolStatusCopyWith<$Res>? get symbolStatus;$MediumCopyWith<$Res>? get medium;$AACSymbolSystemCopyWith<$Res>? get symbolSystem;
+
 }
-
 /// @nodoc
-class _$AACSymbolCopyWithImpl<$Res, $Val extends AACSymbol>
+class _$AACSymbolCopyWithImpl<$Res>
     implements $AACSymbolCopyWith<$Res> {
-  _$AACSymbolCopyWithImpl(this._value, this._then);
+  _$AACSymbolCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AACSymbol _self;
+  final $Res Function(AACSymbol) _then;
 
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? symbolTitle = freezed,
-    Object? symbolExcerpt = freezed,
-    Object? symbolStatus = freezed,
-    Object? isCommentOpen = freezed,
-    Object? medium = freezed,
-    Object? commentCount = freezed,
-    Object? likeCount = freezed,
-    Object? symbolSystem = freezed,
-    Object? description = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      symbolTitle: freezed == symbolTitle
-          ? _value.symbolTitle
-          : symbolTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolExcerpt: freezed == symbolExcerpt
-          ? _value.symbolExcerpt
-          : symbolExcerpt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolStatus: freezed == symbolStatus
-          ? _value.symbolStatus
-          : symbolStatus // ignore: cast_nullable_to_non_nullable
-              as AACSymbolStatus?,
-      isCommentOpen: freezed == isCommentOpen
-          ? _value.isCommentOpen
-          : isCommentOpen // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      medium: freezed == medium
-          ? _value.medium
-          : medium // ignore: cast_nullable_to_non_nullable
-              as Medium?,
-      commentCount: freezed == commentCount
-          ? _value.commentCount
-          : commentCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      likeCount: freezed == likeCount
-          ? _value.likeCount
-          : likeCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      symbolSystem: freezed == symbolSystem
-          ? _value.symbolSystem
-          : symbolSystem // ignore: cast_nullable_to_non_nullable
-              as AACSymbolSystem?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? symbolTitle = freezed,Object? symbolExcerpt = freezed,Object? symbolStatus = freezed,Object? isCommentOpen = freezed,Object? medium = freezed,Object? commentCount = freezed,Object? likeCount = freezed,Object? symbolSystem = freezed,Object? description = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,symbolTitle: freezed == symbolTitle ? _self.symbolTitle : symbolTitle // ignore: cast_nullable_to_non_nullable
+as String?,symbolExcerpt: freezed == symbolExcerpt ? _self.symbolExcerpt : symbolExcerpt // ignore: cast_nullable_to_non_nullable
+as String?,symbolStatus: freezed == symbolStatus ? _self.symbolStatus : symbolStatus // ignore: cast_nullable_to_non_nullable
+as AACSymbolStatus?,isCommentOpen: freezed == isCommentOpen ? _self.isCommentOpen : isCommentOpen // ignore: cast_nullable_to_non_nullable
+as bool?,medium: freezed == medium ? _self.medium : medium // ignore: cast_nullable_to_non_nullable
+as Medium?,commentCount: freezed == commentCount ? _self.commentCount : commentCount // ignore: cast_nullable_to_non_nullable
+as int?,likeCount: freezed == likeCount ? _self.likeCount : likeCount // ignore: cast_nullable_to_non_nullable
+as int?,symbolSystem: freezed == symbolSystem ? _self.symbolSystem : symbolSystem // ignore: cast_nullable_to_non_nullable
+as AACSymbolSystem?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AACSymbolStatusCopyWith<$Res>? get symbolStatus {
+    if (_self.symbolStatus == null) {
+    return null;
   }
 
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AACSymbolStatusCopyWith<$Res>? get symbolStatus {
-    if (_value.symbolStatus == null) {
-      return null;
-    }
-
-    return $AACSymbolStatusCopyWith<$Res>(_value.symbolStatus!, (value) {
-      return _then(_value.copyWith(symbolStatus: value) as $Val);
-    });
+  return $AACSymbolStatusCopyWith<$Res>(_self.symbolStatus!, (value) {
+    return _then(_self.copyWith(symbolStatus: value));
+  });
+}/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MediumCopyWith<$Res>? get medium {
+    if (_self.medium == null) {
+    return null;
   }
 
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $MediumCopyWith<$Res>? get medium {
-    if (_value.medium == null) {
-      return null;
-    }
-
-    return $MediumCopyWith<$Res>(_value.medium!, (value) {
-      return _then(_value.copyWith(medium: value) as $Val);
-    });
+  return $MediumCopyWith<$Res>(_self.medium!, (value) {
+    return _then(_self.copyWith(medium: value));
+  });
+}/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AACSymbolSystemCopyWith<$Res>? get symbolSystem {
+    if (_self.symbolSystem == null) {
+    return null;
   }
 
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AACSymbolSystemCopyWith<$Res>? get symbolSystem {
-    if (_value.symbolSystem == null) {
-      return null;
-    }
-
-    return $AACSymbolSystemCopyWith<$Res>(_value.symbolSystem!, (value) {
-      return _then(_value.copyWith(symbolSystem: value) as $Val);
-    });
-  }
+  return $AACSymbolSystemCopyWith<$Res>(_self.symbolSystem!, (value) {
+    return _then(_self.copyWith(symbolSystem: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$AACSymbolImplCopyWith<$Res>
-    implements $AACSymbolCopyWith<$Res> {
-  factory _$$AACSymbolImplCopyWith(
-          _$AACSymbolImpl value, $Res Function(_$AACSymbolImpl) then) =
-      __$$AACSymbolImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? symbolTitle,
-      @JsonKey(includeIfNull: false) String? symbolExcerpt,
-      @JsonKey(includeIfNull: false) AACSymbolStatus? symbolStatus,
-      @JsonKey(includeIfNull: false) bool? isCommentOpen,
-      @JsonKey(includeIfNull: false) Medium? medium,
-      @JsonKey(includeIfNull: false) int? commentCount,
-      @JsonKey(includeIfNull: false) int? likeCount,
-      @JsonKey(includeIfNull: false) AACSymbolSystem? symbolSystem,
-      @JsonKey(includeIfNull: false) String? description,
-      @JsonKey(includeIfNull: false) DateTime? createdAt,
-      @JsonKey(includeIfNull: false) DateTime? updatedAt});
 
-  @override
-  $AACSymbolStatusCopyWith<$Res>? get symbolStatus;
-  @override
-  $MediumCopyWith<$Res>? get medium;
-  @override
-  $AACSymbolSystemCopyWith<$Res>? get symbolSystem;
+/// Adds pattern-matching-related methods to [AACSymbol].
+extension AACSymbolPatterns on AACSymbol {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AACSymbol value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AACSymbol() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AACSymbol value)  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbol():
+return $default(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AACSymbol value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbol() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? symbolTitle, @JsonKey(includeIfNull: false)  String? symbolExcerpt, @JsonKey(includeIfNull: false)  AACSymbolStatus? symbolStatus, @JsonKey(includeIfNull: false)  bool? isCommentOpen, @JsonKey(includeIfNull: false)  Medium? medium, @JsonKey(includeIfNull: false)  int? commentCount, @JsonKey(includeIfNull: false)  int? likeCount, @JsonKey(includeIfNull: false)  AACSymbolSystem? symbolSystem, @JsonKey(includeIfNull: false)  String? description, @JsonKey(includeIfNull: false)  DateTime? createdAt, @JsonKey(includeIfNull: false)  DateTime? updatedAt)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AACSymbol() when $default != null:
+return $default(_that.id,_that.symbolTitle,_that.symbolExcerpt,_that.symbolStatus,_that.isCommentOpen,_that.medium,_that.commentCount,_that.likeCount,_that.symbolSystem,_that.description,_that.createdAt,_that.updatedAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? symbolTitle, @JsonKey(includeIfNull: false)  String? symbolExcerpt, @JsonKey(includeIfNull: false)  AACSymbolStatus? symbolStatus, @JsonKey(includeIfNull: false)  bool? isCommentOpen, @JsonKey(includeIfNull: false)  Medium? medium, @JsonKey(includeIfNull: false)  int? commentCount, @JsonKey(includeIfNull: false)  int? likeCount, @JsonKey(includeIfNull: false)  AACSymbolSystem? symbolSystem, @JsonKey(includeIfNull: false)  String? description, @JsonKey(includeIfNull: false)  DateTime? createdAt, @JsonKey(includeIfNull: false)  DateTime? updatedAt)  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbol():
+return $default(_that.id,_that.symbolTitle,_that.symbolExcerpt,_that.symbolStatus,_that.isCommentOpen,_that.medium,_that.commentCount,_that.likeCount,_that.symbolSystem,_that.description,_that.createdAt,_that.updatedAt);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? symbolTitle, @JsonKey(includeIfNull: false)  String? symbolExcerpt, @JsonKey(includeIfNull: false)  AACSymbolStatus? symbolStatus, @JsonKey(includeIfNull: false)  bool? isCommentOpen, @JsonKey(includeIfNull: false)  Medium? medium, @JsonKey(includeIfNull: false)  int? commentCount, @JsonKey(includeIfNull: false)  int? likeCount, @JsonKey(includeIfNull: false)  AACSymbolSystem? symbolSystem, @JsonKey(includeIfNull: false)  String? description, @JsonKey(includeIfNull: false)  DateTime? createdAt, @JsonKey(includeIfNull: false)  DateTime? updatedAt)?  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbol() when $default != null:
+return $default(_that.id,_that.symbolTitle,_that.symbolExcerpt,_that.symbolStatus,_that.isCommentOpen,_that.medium,_that.commentCount,_that.likeCount,_that.symbolSystem,_that.description,_that.createdAt,_that.updatedAt);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$AACSymbolImplCopyWithImpl<$Res>
-    extends _$AACSymbolCopyWithImpl<$Res, _$AACSymbolImpl>
-    implements _$$AACSymbolImplCopyWith<$Res> {
-  __$$AACSymbolImplCopyWithImpl(
-      _$AACSymbolImpl _value, $Res Function(_$AACSymbolImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? symbolTitle = freezed,
-    Object? symbolExcerpt = freezed,
-    Object? symbolStatus = freezed,
-    Object? isCommentOpen = freezed,
-    Object? medium = freezed,
-    Object? commentCount = freezed,
-    Object? likeCount = freezed,
-    Object? symbolSystem = freezed,
-    Object? description = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-  }) {
-    return _then(_$AACSymbolImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      symbolTitle: freezed == symbolTitle
-          ? _value.symbolTitle
-          : symbolTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolExcerpt: freezed == symbolExcerpt
-          ? _value.symbolExcerpt
-          : symbolExcerpt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbolStatus: freezed == symbolStatus
-          ? _value.symbolStatus
-          : symbolStatus // ignore: cast_nullable_to_non_nullable
-              as AACSymbolStatus?,
-      isCommentOpen: freezed == isCommentOpen
-          ? _value.isCommentOpen
-          : isCommentOpen // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      medium: freezed == medium
-          ? _value.medium
-          : medium // ignore: cast_nullable_to_non_nullable
-              as Medium?,
-      commentCount: freezed == commentCount
-          ? _value.commentCount
-          : commentCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      likeCount: freezed == likeCount
-          ? _value.likeCount
-          : likeCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      symbolSystem: freezed == symbolSystem
-          ? _value.symbolSystem
-          : symbolSystem // ignore: cast_nullable_to_non_nullable
-              as AACSymbolSystem?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AACSymbolImpl implements _AACSymbol {
-  const _$AACSymbolImpl(
-      {@JsonKey(includeIfNull: false) this.id,
-      @JsonKey(includeIfNull: false) this.symbolTitle,
-      @JsonKey(includeIfNull: false) this.symbolExcerpt,
-      @JsonKey(includeIfNull: false) this.symbolStatus,
-      @JsonKey(includeIfNull: false) this.isCommentOpen,
-      @JsonKey(includeIfNull: false) this.medium,
-      @JsonKey(includeIfNull: false) this.commentCount,
-      @JsonKey(includeIfNull: false) this.likeCount,
-      @JsonKey(includeIfNull: false) this.symbolSystem,
-      @JsonKey(includeIfNull: false) this.description,
-      @JsonKey(includeIfNull: false) this.createdAt,
-      @JsonKey(includeIfNull: false) this.updatedAt});
 
-  factory _$AACSymbolImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AACSymbolImplFromJson(json);
+class _AACSymbol implements AACSymbol {
+  const _AACSymbol({@JsonKey(includeIfNull: false) this.id, @JsonKey(includeIfNull: false) this.symbolTitle, @JsonKey(includeIfNull: false) this.symbolExcerpt, @JsonKey(includeIfNull: false) this.symbolStatus, @JsonKey(includeIfNull: false) this.isCommentOpen, @JsonKey(includeIfNull: false) this.medium, @JsonKey(includeIfNull: false) this.commentCount, @JsonKey(includeIfNull: false) this.likeCount, @JsonKey(includeIfNull: false) this.symbolSystem, @JsonKey(includeIfNull: false) this.description, @JsonKey(includeIfNull: false) this.createdAt, @JsonKey(includeIfNull: false) this.updatedAt});
+  factory _AACSymbol.fromJson(Map<String, dynamic> json) => _$AACSymbolFromJson(json);
 
-  @override
-  @JsonKey(includeIfNull: false)
-  final int? id;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? symbolTitle;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? symbolExcerpt;
-  @override
-  @JsonKey(includeIfNull: false)
-  final AACSymbolStatus? symbolStatus;
-  @override
-  @JsonKey(includeIfNull: false)
-  final bool? isCommentOpen;
-  @override
-  @JsonKey(includeIfNull: false)
-  final Medium? medium;
-  @override
-  @JsonKey(includeIfNull: false)
-  final int? commentCount;
-  @override
-  @JsonKey(includeIfNull: false)
-  final int? likeCount;
-  @override
-  @JsonKey(includeIfNull: false)
-  final AACSymbolSystem? symbolSystem;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? description;
-  @override
-  @JsonKey(includeIfNull: false)
-  final DateTime? createdAt;
-  @override
-  @JsonKey(includeIfNull: false)
-  final DateTime? updatedAt;
+@override@JsonKey(includeIfNull: false) final  int? id;
+@override@JsonKey(includeIfNull: false) final  String? symbolTitle;
+@override@JsonKey(includeIfNull: false) final  String? symbolExcerpt;
+@override@JsonKey(includeIfNull: false) final  AACSymbolStatus? symbolStatus;
+@override@JsonKey(includeIfNull: false) final  bool? isCommentOpen;
+@override@JsonKey(includeIfNull: false) final  Medium? medium;
+@override@JsonKey(includeIfNull: false) final  int? commentCount;
+@override@JsonKey(includeIfNull: false) final  int? likeCount;
+@override@JsonKey(includeIfNull: false) final  AACSymbolSystem? symbolSystem;
+@override@JsonKey(includeIfNull: false) final  String? description;
+@override@JsonKey(includeIfNull: false) final  DateTime? createdAt;
+@override@JsonKey(includeIfNull: false) final  DateTime? updatedAt;
 
-  @override
-  String toString() {
-    return 'AACSymbol(id: $id, symbolTitle: $symbolTitle, symbolExcerpt: $symbolExcerpt, symbolStatus: $symbolStatus, isCommentOpen: $isCommentOpen, medium: $medium, commentCount: $commentCount, likeCount: $likeCount, symbolSystem: $symbolSystem, description: $description, createdAt: $createdAt, updatedAt: $updatedAt)';
-  }
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AACSymbolCopyWith<_AACSymbol> get copyWith => __$AACSymbolCopyWithImpl<_AACSymbol>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AACSymbolImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.symbolTitle, symbolTitle) ||
-                other.symbolTitle == symbolTitle) &&
-            (identical(other.symbolExcerpt, symbolExcerpt) ||
-                other.symbolExcerpt == symbolExcerpt) &&
-            (identical(other.symbolStatus, symbolStatus) ||
-                other.symbolStatus == symbolStatus) &&
-            (identical(other.isCommentOpen, isCommentOpen) ||
-                other.isCommentOpen == isCommentOpen) &&
-            (identical(other.medium, medium) || other.medium == medium) &&
-            (identical(other.commentCount, commentCount) ||
-                other.commentCount == commentCount) &&
-            (identical(other.likeCount, likeCount) ||
-                other.likeCount == likeCount) &&
-            (identical(other.symbolSystem, symbolSystem) ||
-                other.symbolSystem == symbolSystem) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      symbolTitle,
-      symbolExcerpt,
-      symbolStatus,
-      isCommentOpen,
-      medium,
-      commentCount,
-      likeCount,
-      symbolSystem,
-      description,
-      createdAt,
-      updatedAt);
-
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AACSymbolImplCopyWith<_$AACSymbolImpl> get copyWith =>
-      __$$AACSymbolImplCopyWithImpl<_$AACSymbolImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AACSymbolImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AACSymbolToJson(this, );
 }
 
-abstract class _AACSymbol implements AACSymbol {
-  const factory _AACSymbol(
-          {@JsonKey(includeIfNull: false) final int? id,
-          @JsonKey(includeIfNull: false) final String? symbolTitle,
-          @JsonKey(includeIfNull: false) final String? symbolExcerpt,
-          @JsonKey(includeIfNull: false) final AACSymbolStatus? symbolStatus,
-          @JsonKey(includeIfNull: false) final bool? isCommentOpen,
-          @JsonKey(includeIfNull: false) final Medium? medium,
-          @JsonKey(includeIfNull: false) final int? commentCount,
-          @JsonKey(includeIfNull: false) final int? likeCount,
-          @JsonKey(includeIfNull: false) final AACSymbolSystem? symbolSystem,
-          @JsonKey(includeIfNull: false) final String? description,
-          @JsonKey(includeIfNull: false) final DateTime? createdAt,
-          @JsonKey(includeIfNull: false) final DateTime? updatedAt}) =
-      _$AACSymbolImpl;
-
-  factory _AACSymbol.fromJson(Map<String, dynamic> json) =
-      _$AACSymbolImpl.fromJson;
-
-  @override
-  @JsonKey(includeIfNull: false)
-  int? get id;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get symbolTitle;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get symbolExcerpt;
-  @override
-  @JsonKey(includeIfNull: false)
-  AACSymbolStatus? get symbolStatus;
-  @override
-  @JsonKey(includeIfNull: false)
-  bool? get isCommentOpen;
-  @override
-  @JsonKey(includeIfNull: false)
-  Medium? get medium;
-  @override
-  @JsonKey(includeIfNull: false)
-  int? get commentCount;
-  @override
-  @JsonKey(includeIfNull: false)
-  int? get likeCount;
-  @override
-  @JsonKey(includeIfNull: false)
-  AACSymbolSystem? get symbolSystem;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get description;
-  @override
-  @JsonKey(includeIfNull: false)
-  DateTime? get createdAt;
-  @override
-  @JsonKey(includeIfNull: false)
-  DateTime? get updatedAt;
-
-  /// Create a copy of AACSymbol
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AACSymbolImplCopyWith<_$AACSymbolImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AACSymbol&&(identical(other.id, id) || other.id == id)&&(identical(other.symbolTitle, symbolTitle) || other.symbolTitle == symbolTitle)&&(identical(other.symbolExcerpt, symbolExcerpt) || other.symbolExcerpt == symbolExcerpt)&&(identical(other.symbolStatus, symbolStatus) || other.symbolStatus == symbolStatus)&&(identical(other.isCommentOpen, isCommentOpen) || other.isCommentOpen == isCommentOpen)&&(identical(other.medium, medium) || other.medium == medium)&&(identical(other.commentCount, commentCount) || other.commentCount == commentCount)&&(identical(other.likeCount, likeCount) || other.likeCount == likeCount)&&(identical(other.symbolSystem, symbolSystem) || other.symbolSystem == symbolSystem)&&(identical(other.description, description) || other.description == description)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt));
 }
 
-AACSymbolStatus _$AACSymbolStatusFromJson(Map<String, dynamic> json) {
-  return _AACSymbolStatus.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,symbolTitle,symbolExcerpt,symbolStatus,isCommentOpen,medium,commentCount,likeCount,symbolSystem,description,createdAt,updatedAt);
+
+@override
+String toString() {
+  return 'AACSymbol(id: $id, symbolTitle: $symbolTitle, symbolExcerpt: $symbolExcerpt, symbolStatus: $symbolStatus, isCommentOpen: $isCommentOpen, medium: $medium, commentCount: $commentCount, likeCount: $likeCount, symbolSystem: $symbolSystem, description: $description, createdAt: $createdAt, updatedAt: $updatedAt)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AACSymbolCopyWith<$Res> implements $AACSymbolCopyWith<$Res> {
+  factory _$AACSymbolCopyWith(_AACSymbol value, $Res Function(_AACSymbol) _then) = __$AACSymbolCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? symbolTitle,@JsonKey(includeIfNull: false) String? symbolExcerpt,@JsonKey(includeIfNull: false) AACSymbolStatus? symbolStatus,@JsonKey(includeIfNull: false) bool? isCommentOpen,@JsonKey(includeIfNull: false) Medium? medium,@JsonKey(includeIfNull: false) int? commentCount,@JsonKey(includeIfNull: false) int? likeCount,@JsonKey(includeIfNull: false) AACSymbolSystem? symbolSystem,@JsonKey(includeIfNull: false) String? description,@JsonKey(includeIfNull: false) DateTime? createdAt,@JsonKey(includeIfNull: false) DateTime? updatedAt
+});
+
+
+@override $AACSymbolStatusCopyWith<$Res>? get symbolStatus;@override $MediumCopyWith<$Res>? get medium;@override $AACSymbolSystemCopyWith<$Res>? get symbolSystem;
+
+}
+/// @nodoc
+class __$AACSymbolCopyWithImpl<$Res>
+    implements _$AACSymbolCopyWith<$Res> {
+  __$AACSymbolCopyWithImpl(this._self, this._then);
+
+  final _AACSymbol _self;
+  final $Res Function(_AACSymbol) _then;
+
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? symbolTitle = freezed,Object? symbolExcerpt = freezed,Object? symbolStatus = freezed,Object? isCommentOpen = freezed,Object? medium = freezed,Object? commentCount = freezed,Object? likeCount = freezed,Object? symbolSystem = freezed,Object? description = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,}) {
+  return _then(_AACSymbol(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,symbolTitle: freezed == symbolTitle ? _self.symbolTitle : symbolTitle // ignore: cast_nullable_to_non_nullable
+as String?,symbolExcerpt: freezed == symbolExcerpt ? _self.symbolExcerpt : symbolExcerpt // ignore: cast_nullable_to_non_nullable
+as String?,symbolStatus: freezed == symbolStatus ? _self.symbolStatus : symbolStatus // ignore: cast_nullable_to_non_nullable
+as AACSymbolStatus?,isCommentOpen: freezed == isCommentOpen ? _self.isCommentOpen : isCommentOpen // ignore: cast_nullable_to_non_nullable
+as bool?,medium: freezed == medium ? _self.medium : medium // ignore: cast_nullable_to_non_nullable
+as Medium?,commentCount: freezed == commentCount ? _self.commentCount : commentCount // ignore: cast_nullable_to_non_nullable
+as int?,likeCount: freezed == likeCount ? _self.likeCount : likeCount // ignore: cast_nullable_to_non_nullable
+as int?,symbolSystem: freezed == symbolSystem ? _self.symbolSystem : symbolSystem // ignore: cast_nullable_to_non_nullable
+as AACSymbolSystem?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AACSymbolStatusCopyWith<$Res>? get symbolStatus {
+    if (_self.symbolStatus == null) {
+    return null;
+  }
+
+  return $AACSymbolStatusCopyWith<$Res>(_self.symbolStatus!, (value) {
+    return _then(_self.copyWith(symbolStatus: value));
+  });
+}/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MediumCopyWith<$Res>? get medium {
+    if (_self.medium == null) {
+    return null;
+  }
+
+  return $MediumCopyWith<$Res>(_self.medium!, (value) {
+    return _then(_self.copyWith(medium: value));
+  });
+}/// Create a copy of AACSymbol
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AACSymbolSystemCopyWith<$Res>? get symbolSystem {
+    if (_self.symbolSystem == null) {
+    return null;
+  }
+
+  return $AACSymbolSystemCopyWith<$Res>(_self.symbolSystem!, (value) {
+    return _then(_self.copyWith(symbolSystem: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$AACSymbolStatus {
-  @JsonKey(includeIfNull: false)
-  int? get id => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get status => throw _privateConstructorUsedError;
+
+@JsonKey(includeIfNull: false) int? get id;@JsonKey(includeIfNull: false) String? get status;
+/// Create a copy of AACSymbolStatus
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AACSymbolStatusCopyWith<AACSymbolStatus> get copyWith => _$AACSymbolStatusCopyWithImpl<AACSymbolStatus>(this as AACSymbolStatus, _$identity);
 
   /// Serializes this AACSymbolStatus to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AACSymbolStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AACSymbolStatusCopyWith<AACSymbolStatus> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AACSymbolStatus&&(identical(other.id, id) || other.id == id)&&(identical(other.status, status) || other.status == status));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,status);
+
+@override
+String toString() {
+  return 'AACSymbolStatus(id: $id, status: $status)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AACSymbolStatusCopyWith<$Res> {
-  factory $AACSymbolStatusCopyWith(
-          AACSymbolStatus value, $Res Function(AACSymbolStatus) then) =
-      _$AACSymbolStatusCopyWithImpl<$Res, AACSymbolStatus>;
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? status});
-}
+abstract mixin class $AACSymbolStatusCopyWith<$Res>  {
+  factory $AACSymbolStatusCopyWith(AACSymbolStatus value, $Res Function(AACSymbolStatus) _then) = _$AACSymbolStatusCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? status
+});
 
+
+
+
+}
 /// @nodoc
-class _$AACSymbolStatusCopyWithImpl<$Res, $Val extends AACSymbolStatus>
+class _$AACSymbolStatusCopyWithImpl<$Res>
     implements $AACSymbolStatusCopyWith<$Res> {
-  _$AACSymbolStatusCopyWithImpl(this._value, this._then);
+  _$AACSymbolStatusCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AACSymbolStatus _self;
+  final $Res Function(AACSymbolStatus) _then;
 
-  /// Create a copy of AACSymbolStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? status = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of AACSymbolStatus
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? status = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AACSymbolStatusImplCopyWith<$Res>
-    implements $AACSymbolStatusCopyWith<$Res> {
-  factory _$$AACSymbolStatusImplCopyWith(_$AACSymbolStatusImpl value,
-          $Res Function(_$AACSymbolStatusImpl) then) =
-      __$$AACSymbolStatusImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? status});
 }
 
-/// @nodoc
-class __$$AACSymbolStatusImplCopyWithImpl<$Res>
-    extends _$AACSymbolStatusCopyWithImpl<$Res, _$AACSymbolStatusImpl>
-    implements _$$AACSymbolStatusImplCopyWith<$Res> {
-  __$$AACSymbolStatusImplCopyWithImpl(
-      _$AACSymbolStatusImpl _value, $Res Function(_$AACSymbolStatusImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AACSymbolStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? status = freezed,
-  }) {
-    return _then(_$AACSymbolStatusImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      status: freezed == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [AACSymbolStatus].
+extension AACSymbolStatusPatterns on AACSymbolStatus {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AACSymbolStatus value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AACSymbolStatus() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AACSymbolStatus value)  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbolStatus():
+return $default(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AACSymbolStatus value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbolStatus() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? status)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AACSymbolStatus() when $default != null:
+return $default(_that.id,_that.status);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? status)  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbolStatus():
+return $default(_that.id,_that.status);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? status)?  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbolStatus() when $default != null:
+return $default(_that.id,_that.status);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AACSymbolStatusImpl implements _AACSymbolStatus {
-  const _$AACSymbolStatusImpl(
-      {@JsonKey(includeIfNull: false) this.id,
-      @JsonKey(includeIfNull: false) this.status});
 
-  factory _$AACSymbolStatusImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AACSymbolStatusImplFromJson(json);
+class _AACSymbolStatus implements AACSymbolStatus {
+  const _AACSymbolStatus({@JsonKey(includeIfNull: false) this.id, @JsonKey(includeIfNull: false) this.status});
+  factory _AACSymbolStatus.fromJson(Map<String, dynamic> json) => _$AACSymbolStatusFromJson(json);
 
-  @override
-  @JsonKey(includeIfNull: false)
-  final int? id;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? status;
+@override@JsonKey(includeIfNull: false) final  int? id;
+@override@JsonKey(includeIfNull: false) final  String? status;
 
-  @override
-  String toString() {
-    return 'AACSymbolStatus(id: $id, status: $status)';
-  }
+/// Create a copy of AACSymbolStatus
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AACSymbolStatusCopyWith<_AACSymbolStatus> get copyWith => __$AACSymbolStatusCopyWithImpl<_AACSymbolStatus>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AACSymbolStatusImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.status, status) || other.status == status));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, status);
-
-  /// Create a copy of AACSymbolStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AACSymbolStatusImplCopyWith<_$AACSymbolStatusImpl> get copyWith =>
-      __$$AACSymbolStatusImplCopyWithImpl<_$AACSymbolStatusImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AACSymbolStatusImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AACSymbolStatusToJson(this, );
 }
 
-abstract class _AACSymbolStatus implements AACSymbolStatus {
-  const factory _AACSymbolStatus(
-          {@JsonKey(includeIfNull: false) final int? id,
-          @JsonKey(includeIfNull: false) final String? status}) =
-      _$AACSymbolStatusImpl;
-
-  factory _AACSymbolStatus.fromJson(Map<String, dynamic> json) =
-      _$AACSymbolStatusImpl.fromJson;
-
-  @override
-  @JsonKey(includeIfNull: false)
-  int? get id;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get status;
-
-  /// Create a copy of AACSymbolStatus
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AACSymbolStatusImplCopyWith<_$AACSymbolStatusImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AACSymbolStatus&&(identical(other.id, id) || other.id == id)&&(identical(other.status, status) || other.status == status));
 }
 
-AACSymbolSystem _$AACSymbolSystemFromJson(Map<String, dynamic> json) {
-  return _AACSymbolSystem.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,status);
+
+@override
+String toString() {
+  return 'AACSymbolStatus(id: $id, status: $status)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AACSymbolStatusCopyWith<$Res> implements $AACSymbolStatusCopyWith<$Res> {
+  factory _$AACSymbolStatusCopyWith(_AACSymbolStatus value, $Res Function(_AACSymbolStatus) _then) = __$AACSymbolStatusCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? status
+});
+
+
+
+
+}
+/// @nodoc
+class __$AACSymbolStatusCopyWithImpl<$Res>
+    implements _$AACSymbolStatusCopyWith<$Res> {
+  __$AACSymbolStatusCopyWithImpl(this._self, this._then);
+
+  final _AACSymbolStatus _self;
+  final $Res Function(_AACSymbolStatus) _then;
+
+/// Create a copy of AACSymbolStatus
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? status = freezed,}) {
+  return _then(_AACSymbolStatus(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$AACSymbolSystem {
-  @JsonKey(includeIfNull: false)
-  int? get id => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get systemName => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get Issuer => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
-  String? get Description => throw _privateConstructorUsedError;
+
+@JsonKey(includeIfNull: false) int? get id;@JsonKey(includeIfNull: false) String? get systemName;@JsonKey(includeIfNull: false) String? get issuer;@JsonKey(includeIfNull: false) String? get description;
+/// Create a copy of AACSymbolSystem
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AACSymbolSystemCopyWith<AACSymbolSystem> get copyWith => _$AACSymbolSystemCopyWithImpl<AACSymbolSystem>(this as AACSymbolSystem, _$identity);
 
   /// Serializes this AACSymbolSystem to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AACSymbolSystem
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AACSymbolSystemCopyWith<AACSymbolSystem> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AACSymbolSystem&&(identical(other.id, id) || other.id == id)&&(identical(other.systemName, systemName) || other.systemName == systemName)&&(identical(other.issuer, issuer) || other.issuer == issuer)&&(identical(other.description, description) || other.description == description));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,systemName,issuer,description);
+
+@override
+String toString() {
+  return 'AACSymbolSystem(id: $id, systemName: $systemName, issuer: $issuer, description: $description)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AACSymbolSystemCopyWith<$Res> {
-  factory $AACSymbolSystemCopyWith(
-          AACSymbolSystem value, $Res Function(AACSymbolSystem) then) =
-      _$AACSymbolSystemCopyWithImpl<$Res, AACSymbolSystem>;
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? systemName,
-      @JsonKey(includeIfNull: false) String? Issuer,
-      @JsonKey(includeIfNull: false) String? Description});
-}
+abstract mixin class $AACSymbolSystemCopyWith<$Res>  {
+  factory $AACSymbolSystemCopyWith(AACSymbolSystem value, $Res Function(AACSymbolSystem) _then) = _$AACSymbolSystemCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? systemName,@JsonKey(includeIfNull: false) String? issuer,@JsonKey(includeIfNull: false) String? description
+});
 
+
+
+
+}
 /// @nodoc
-class _$AACSymbolSystemCopyWithImpl<$Res, $Val extends AACSymbolSystem>
+class _$AACSymbolSystemCopyWithImpl<$Res>
     implements $AACSymbolSystemCopyWith<$Res> {
-  _$AACSymbolSystemCopyWithImpl(this._value, this._then);
+  _$AACSymbolSystemCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AACSymbolSystem _self;
+  final $Res Function(AACSymbolSystem) _then;
 
-  /// Create a copy of AACSymbolSystem
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? systemName = freezed,
-    Object? Issuer = freezed,
-    Object? Description = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      systemName: freezed == systemName
-          ? _value.systemName
-          : systemName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Issuer: freezed == Issuer
-          ? _value.Issuer
-          : Issuer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Description: freezed == Description
-          ? _value.Description
-          : Description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of AACSymbolSystem
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? systemName = freezed,Object? issuer = freezed,Object? description = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,systemName: freezed == systemName ? _self.systemName : systemName // ignore: cast_nullable_to_non_nullable
+as String?,issuer: freezed == issuer ? _self.issuer : issuer // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AACSymbolSystemImplCopyWith<$Res>
-    implements $AACSymbolSystemCopyWith<$Res> {
-  factory _$$AACSymbolSystemImplCopyWith(_$AACSymbolSystemImpl value,
-          $Res Function(_$AACSymbolSystemImpl) then) =
-      __$$AACSymbolSystemImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(includeIfNull: false) int? id,
-      @JsonKey(includeIfNull: false) String? systemName,
-      @JsonKey(includeIfNull: false) String? Issuer,
-      @JsonKey(includeIfNull: false) String? Description});
 }
 
-/// @nodoc
-class __$$AACSymbolSystemImplCopyWithImpl<$Res>
-    extends _$AACSymbolSystemCopyWithImpl<$Res, _$AACSymbolSystemImpl>
-    implements _$$AACSymbolSystemImplCopyWith<$Res> {
-  __$$AACSymbolSystemImplCopyWithImpl(
-      _$AACSymbolSystemImpl _value, $Res Function(_$AACSymbolSystemImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AACSymbolSystem
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? systemName = freezed,
-    Object? Issuer = freezed,
-    Object? Description = freezed,
-  }) {
-    return _then(_$AACSymbolSystemImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      systemName: freezed == systemName
-          ? _value.systemName
-          : systemName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Issuer: freezed == Issuer
-          ? _value.Issuer
-          : Issuer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      Description: freezed == Description
-          ? _value.Description
-          : Description // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [AACSymbolSystem].
+extension AACSymbolSystemPatterns on AACSymbolSystem {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AACSymbolSystem value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AACSymbolSystem() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AACSymbolSystem value)  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbolSystem():
+return $default(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AACSymbolSystem value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AACSymbolSystem() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? systemName, @JsonKey(includeIfNull: false)  String? issuer, @JsonKey(includeIfNull: false)  String? description)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AACSymbolSystem() when $default != null:
+return $default(_that.id,_that.systemName,_that.issuer,_that.description);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? systemName, @JsonKey(includeIfNull: false)  String? issuer, @JsonKey(includeIfNull: false)  String? description)  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbolSystem():
+return $default(_that.id,_that.systemName,_that.issuer,_that.description);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(includeIfNull: false)  int? id, @JsonKey(includeIfNull: false)  String? systemName, @JsonKey(includeIfNull: false)  String? issuer, @JsonKey(includeIfNull: false)  String? description)?  $default,) {final _that = this;
+switch (_that) {
+case _AACSymbolSystem() when $default != null:
+return $default(_that.id,_that.systemName,_that.issuer,_that.description);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AACSymbolSystemImpl implements _AACSymbolSystem {
-  const _$AACSymbolSystemImpl(
-      {@JsonKey(includeIfNull: false) this.id,
-      @JsonKey(includeIfNull: false) this.systemName,
-      @JsonKey(includeIfNull: false) this.Issuer,
-      @JsonKey(includeIfNull: false) this.Description});
 
-  factory _$AACSymbolSystemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AACSymbolSystemImplFromJson(json);
+class _AACSymbolSystem implements AACSymbolSystem {
+  const _AACSymbolSystem({@JsonKey(includeIfNull: false) this.id, @JsonKey(includeIfNull: false) this.systemName, @JsonKey(includeIfNull: false) this.issuer, @JsonKey(includeIfNull: false) this.description});
+  factory _AACSymbolSystem.fromJson(Map<String, dynamic> json) => _$AACSymbolSystemFromJson(json);
 
-  @override
-  @JsonKey(includeIfNull: false)
-  final int? id;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? systemName;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? Issuer;
-  @override
-  @JsonKey(includeIfNull: false)
-  final String? Description;
+@override@JsonKey(includeIfNull: false) final  int? id;
+@override@JsonKey(includeIfNull: false) final  String? systemName;
+@override@JsonKey(includeIfNull: false) final  String? issuer;
+@override@JsonKey(includeIfNull: false) final  String? description;
 
-  @override
-  String toString() {
-    return 'AACSymbolSystem(id: $id, systemName: $systemName, Issuer: $Issuer, Description: $Description)';
-  }
+/// Create a copy of AACSymbolSystem
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AACSymbolSystemCopyWith<_AACSymbolSystem> get copyWith => __$AACSymbolSystemCopyWithImpl<_AACSymbolSystem>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AACSymbolSystemImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.systemName, systemName) ||
-                other.systemName == systemName) &&
-            (identical(other.Issuer, Issuer) || other.Issuer == Issuer) &&
-            (identical(other.Description, Description) ||
-                other.Description == Description));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, systemName, Issuer, Description);
-
-  /// Create a copy of AACSymbolSystem
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AACSymbolSystemImplCopyWith<_$AACSymbolSystemImpl> get copyWith =>
-      __$$AACSymbolSystemImplCopyWithImpl<_$AACSymbolSystemImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AACSymbolSystemImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AACSymbolSystemToJson(this, );
 }
 
-abstract class _AACSymbolSystem implements AACSymbolSystem {
-  const factory _AACSymbolSystem(
-          {@JsonKey(includeIfNull: false) final int? id,
-          @JsonKey(includeIfNull: false) final String? systemName,
-          @JsonKey(includeIfNull: false) final String? Issuer,
-          @JsonKey(includeIfNull: false) final String? Description}) =
-      _$AACSymbolSystemImpl;
-
-  factory _AACSymbolSystem.fromJson(Map<String, dynamic> json) =
-      _$AACSymbolSystemImpl.fromJson;
-
-  @override
-  @JsonKey(includeIfNull: false)
-  int? get id;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get systemName;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get Issuer;
-  @override
-  @JsonKey(includeIfNull: false)
-  String? get Description;
-
-  /// Create a copy of AACSymbolSystem
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AACSymbolSystemImplCopyWith<_$AACSymbolSystemImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AACSymbolSystem&&(identical(other.id, id) || other.id == id)&&(identical(other.systemName, systemName) || other.systemName == systemName)&&(identical(other.issuer, issuer) || other.issuer == issuer)&&(identical(other.description, description) || other.description == description));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,systemName,issuer,description);
+
+@override
+String toString() {
+  return 'AACSymbolSystem(id: $id, systemName: $systemName, issuer: $issuer, description: $description)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AACSymbolSystemCopyWith<$Res> implements $AACSymbolSystemCopyWith<$Res> {
+  factory _$AACSymbolSystemCopyWith(_AACSymbolSystem value, $Res Function(_AACSymbolSystem) _then) = __$AACSymbolSystemCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(includeIfNull: false) int? id,@JsonKey(includeIfNull: false) String? systemName,@JsonKey(includeIfNull: false) String? issuer,@JsonKey(includeIfNull: false) String? description
+});
+
+
+
+
+}
+/// @nodoc
+class __$AACSymbolSystemCopyWithImpl<$Res>
+    implements _$AACSymbolSystemCopyWith<$Res> {
+  __$AACSymbolSystemCopyWithImpl(this._self, this._then);
+
+  final _AACSymbolSystem _self;
+  final $Res Function(_AACSymbolSystem) _then;
+
+/// Create a copy of AACSymbolSystem
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? systemName = freezed,Object? issuer = freezed,Object? description = freezed,}) {
+  return _then(_AACSymbolSystem(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,systemName: freezed == systemName ? _self.systemName : systemName // ignore: cast_nullable_to_non_nullable
+as String?,issuer: freezed == issuer ? _self.issuer : issuer // ignore: cast_nullable_to_non_nullable
+as String?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -4,7 +4,7 @@ part 'account_status.freezed.dart';
 part 'account_status.g.dart';
 
 @freezed
-class AccountStatus with _$AccountStatus {
+sealed class AccountStatus with _$AccountStatus {
   const factory AccountStatus({
     required int accountStatusId,
     @Default("unknown") String accountStatus,

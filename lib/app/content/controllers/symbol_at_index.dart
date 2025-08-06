@@ -1,7 +1,6 @@
 import 'package:boardshare/app/content/controllers/symbol_list.dart';
 import 'package:boardshare/app/content/models/aac_symbol.dart';
 import 'package:boardshare/packages/core/consts.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'symbol_at_index.g.dart';

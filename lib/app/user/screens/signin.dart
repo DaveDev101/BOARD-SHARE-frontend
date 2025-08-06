@@ -20,6 +20,7 @@ class Signin extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isSending = useState(false);
     final signedInMsg = useState('');
+    final forgottenPassword = useState(false);
     final notVerifiedUser = useState(false);
     final invalidCode = useState(false);
 
@@ -32,58 +33,69 @@ class Signin extends HookConsumerWidget {
     final codeFocusNode = useFocusNode();
 
     // final signinCtl = ref.watch(signinControllerProvider);
-    ref.listen(signinControllerProvider, (previous, signinCtl) {
-      // if (kDebugMode) print(signinCtl.runtimeType);
-      // if (kDebugMode) print(signinCtl);
+    ref.listen(
+      signinControllerProvider,
+      (previous, signinCtl) {
+        // if (kDebugMode) print(signinCtl.runtimeType);
+        // if (kDebugMode) print(signinCtl);
 
-      signinCtl.when(data: (signinResult) {
-        isSending.value = false;
-        if (signinResult.$1.isEmpty) {
-          signedInMsg.value = 'SUCCESS';
-          // context.go('/');
-          return;
-        } else if (signinResult.$1.contains('invalid credentials')) {
-          if (kDebugMode) {
-            print('=====> invalid credentials');
-          }
-          signedInMsg.value = 'invalid credentials';
-        } else if (signinResult.$1.contains('email not verified')) {
-          if (kDebugMode) {
-            print('=====> email not verified');
-          }
-          notVerifiedUser.value = true;
-          signedInMsg.value = 'email not verified';
-        } else if (signinResult.$1.contains('invalid code')) {
-          invalidCode.value = true;
-          signedInMsg.value = 'invalid verification code';
-        }
-      }, error: (err, stack) {
-        signedInMsg.value = 'ERROR:::$err';
-        isSending.value = false;
-        if (kDebugMode) {
-          print('signinResult ERROR ===>');
-          print(err);
-        }
-      }, loading: () {
-        signedInMsg.value = '...LOADING...';
-        isSending.value = true;
-      });
-    });
+        signinCtl.when(
+          data: (signinResult) {
+            isSending.value = false;
+            if (signinResult.$1.isEmpty) {
+              signedInMsg.value = 'SUCCESS';
+              // context.go('/');
+              return;
+            } else if (signinResult.$1.contains('invalid credentials')) {
+              if (kDebugMode) {
+                print('=====> invalid credentials');
+              }
+              signedInMsg.value = 'invalid credentials';
+            } else if (signinResult.$1.contains('email not verified')) {
+              if (kDebugMode) {
+                print('=====> email not verified');
+              }
+              notVerifiedUser.value = true;
+              signedInMsg.value = 'email not verified';
+            } else if (signinResult.$1.contains('invalid code')) {
+              invalidCode.value = true;
+              signedInMsg.value = 'invalid verification code';
+            }
+          },
+          error: (err, stack) {
+            signedInMsg.value = 'ERROR:::$err';
+            isSending.value = false;
+            if (kDebugMode) {
+              print('signinResult ERROR ===>');
+              print(err);
+            }
+          },
+          loading: () {
+            if (kDebugMode) {
+              print('');
+              print('LOADING --->');
+              print('');
+            }
+
+            signedInMsg.value = '...LOADING...';
+            isSending.value = true;
+          },
+        );
+      },
+    );
 
     useEffect(() {
       Future.microtask(
           () => FocusScope.of(context).requestFocus(emailFocusNode));
       return () {
-        emailFocusNode.dispose();
-        passwordFocusNode.dispose();
-        codeFocusNode.dispose();
+        // emailFocusNode.dispose();
+        // passwordFocusNode.dispose();
+        // codeFocusNode.dispose();
       };
     }, []);
 
     // submit data
     Future<void> handleSubmit() async {
-      if (kDebugMode) print('===> handleSubmit() start!!!!');
-
       if (!_formKey.currentState!.validate()) {
         return;
       }
@@ -92,9 +104,21 @@ class Signin extends HookConsumerWidget {
       isSending.value = true;
       _formKey.currentState!.save();
 
+      if (kDebugMode) {
+        print('');
+        print('handleSubmit --->');
+        print('');
+      }
+
       try {
         // sign in with email & password
         if (!notVerifiedUser.value) {
+          if (kDebugMode) {
+            print('');
+            print('!notVerifiedUser --->');
+            print('');
+          }
+
           await ref.read(signinControllerProvider.notifier).signIn(
                 emailController.text,
                 passwordController.text,
@@ -103,6 +127,12 @@ class Signin extends HookConsumerWidget {
 
         // verify first and then sign -- almost simultaneously
         else {
+          if (kDebugMode) {
+            print('');
+            print('notVerifiedUser --->');
+            print('');
+          }
+
           await ref.read(signinControllerProvider.notifier).verifyAndSignIn(
                 emailController.text,
                 passwordController.text,
@@ -110,8 +140,10 @@ class Signin extends HookConsumerWidget {
               );
         }
       } catch (e) {
+        isSending.value = false;
         if (kDebugMode) {
           print('');
+          print('handleSubmit catch');
           print(e);
           print('');
         }
@@ -187,6 +219,13 @@ class Signin extends HookConsumerWidget {
                       ),
                     ),
                     SizedBox(height: kSpace),
+                    if (forgottenPassword.value)
+                      Text(
+                        '비밀번호 초기화 안내 메일이 발송되었습니다.\n메일함을 확인하세요!',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, color: Colors.red),
+                      ),
+                    if (forgottenPassword.value) SizedBox(height: kESpace),
                     Row(
                       children: [
                         Text('아직 회원이 아니세요?',
@@ -333,6 +372,31 @@ class Signin extends HookConsumerWidget {
                         ),
                       ),
                     ),
+
+                    // Password recovery
+                    SizedBox(height: kESpace * 2),
+                    Row(
+                      children: [
+                        Text('비밀번호가 기억나지 않으세요?',
+                            style: TextStyle(
+                                // fontFamily: 'f-krn',
+                                fontWeight: FontWeight.w400)),
+                        SizedBox(width: kSpace),
+                        DButton(
+                            title: '비밀번호 초기화',
+                            dark: false,
+                            func: () {
+                              _forgottenPasswordBuilder(context).then((v) {
+                                if (kDebugMode) print(v);
+
+                                if (v != null && v.isNotEmpty) {
+                                  forgottenPassword.value = true;
+                                }
+                              });
+                            }),
+                      ],
+                    ),
+                    SizedBox(height: kESpace),
                     // Center(child: Text('or')),
                     // SizedBox(height: 8),
                     // ElevatedButton.icon(
@@ -365,4 +429,75 @@ class Signin extends HookConsumerWidget {
   //         (name == null) ? Text('익명으로 로그인 되었습니다.') : Text('$name 회원님, 환영합니다!'),
   //   );
   // }
+
+  Future<String?> _forgottenPasswordBuilder(BuildContext context) {
+    final passwordFormKey = GlobalKey<FormState>();
+    final controller = TextEditingController();
+    String returnValue = '';
+
+    return showDialog<String>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: Colors.white,
+          title: const Text('비밀번호 초기화'),
+          content: SizedBox(
+            height: 150.0,
+            child: Form(
+              key: passwordFormKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    '로그인 ID로 사용되는 이메일(Email) 주소를 입력한 후, 초기화 버튼을 누르세요.\n'
+                    '비밀번호 초기화를 안내하는 이메일이 발송됩니다. 메일함을 확인하세요!',
+                  ),
+                  const SizedBox(height: kESpace),
+                  TextFormField(
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    controller: controller,
+                    decoration: InputDecoration(
+                      hintText: 'email@domain.com',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return '이메일 주소를 입력하세요.';
+                      } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
+                          .hasMatch(value)) {
+                        return '이메일 주소가 잘못되었습니다!';
+                      }
+                      return null;
+                    },
+                    // onFieldSubmitted: (value) {},
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: Theme.of(context).textTheme.labelLarge),
+              child: const Text('취소'),
+              onPressed: () {
+                Navigator.of(context).pop('');
+              },
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: Theme.of(context).textTheme.labelLarge),
+              child: const Text('초기화'),
+              onPressed: () {
+                if (passwordFormKey.currentState!.validate()) {
+                  returnValue = controller.text;
+                  Navigator.of(context).pop(returnValue);
+                }
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 }

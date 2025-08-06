@@ -6,8 +6,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../packages/ui_components/footer.dart';
 import 'aac_symbol_card.dart';
 
-final symbolListInitialCondition =
-    Provider<(int, String)>((ref) => throw UnimplementedError());
+final symbolListInitialCondition = Provider<(int, String)>(
+  (ref) => throw UnimplementedError(),
+);
 
 class SymbolListScreen extends HookConsumerWidget {
   const SymbolListScreen({super.key});
@@ -15,9 +16,10 @@ class SymbolListScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
-    final sHeight = MediaQuery.of(context).size.height;
-    final horizontalPadding =
-        (sWidth > kMaxWidth) ? (sWidth - kMaxWidth) / 2 : 0.0;
+    // final sHeight = MediaQuery.of(context).size.height;
+    final horizontalPadding = (sWidth > kMaxWidth)
+        ? (sWidth - kMaxWidth) / 2
+        : 0.0;
 
     final (page, search) = ref.watch(symbolListInitialCondition);
     final aacSymbols = ref.watch(symbolListProvider(search, page: page));
@@ -27,46 +29,45 @@ class SymbolListScreen extends HookConsumerWidget {
       child: CustomScrollView(
         slivers: [
           aacSymbols.when(
-              data: (symbols) {
-                if (symbols.$1 == 'SUCCESS') {
-                  return SliverPadding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: horizontalPadding),
-                    sliver: SliverGrid(
-                      // padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-                      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 300.0, // 동적 크기 적용
-                        crossAxisSpacing: 8,
-                        mainAxisSpacing: 8,
-                        childAspectRatio: 1,
-                      ),
-                      delegate: SliverChildBuilderDelegate(
-                        (BuildContext context, int index) {
-                          return ProviderScope(
-                            overrides: [
-                              symbolAtIndex.overrideWithValue((index, search))
-                            ],
-                            child: AACSymbolCard(),
-                          );
-                        },
-                        childCount: symbols.$2,
-                      ),
+            data: (symbols) {
+              if (symbols.$1 == 'SUCCESS') {
+                return SliverPadding(
+                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+                  sliver: SliverGrid(
+                    // padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+                    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 300.0, // 동적 크기 적용
+                      crossAxisSpacing: 8,
+                      mainAxisSpacing: 8,
+                      childAspectRatio: 1,
                     ),
-                  );
-                } else {
-                  return SliverToBoxAdapter(
-                      child:
-                          Center(child: Text('Getting symbols has failed!!!')));
-                }
-              },
-              error: (err, stack) =>
-                  SliverToBoxAdapter(child: Center(child: Text('$err'))),
-              loading: () => SliverToBoxAdapter(
-                  child: Center(child: const CircularProgressIndicator()))),
-          // Footer
-          SliverToBoxAdapter(
-            child: DFooter(dark: false),
+                    delegate: SliverChildBuilderDelegate((
+                      BuildContext context,
+                      int index,
+                    ) {
+                      return ProviderScope(
+                        overrides: [
+                          symbolAtIndex.overrideWithValue((index, search)),
+                        ],
+                        child: AACSymbolCard(),
+                      );
+                    }, childCount: symbols.$2),
+                  ),
+                );
+              } else {
+                return SliverToBoxAdapter(
+                  child: Center(child: Text('Getting symbols has failed!!!')),
+                );
+              }
+            },
+            error: (err, stack) =>
+                SliverToBoxAdapter(child: Center(child: Text('$err'))),
+            loading: () => SliverToBoxAdapter(
+              child: Center(child: const CircularProgressIndicator()),
+            ),
           ),
+          // Footer
+          SliverToBoxAdapter(child: DFooter(dark: false)),
         ],
       ),
     );

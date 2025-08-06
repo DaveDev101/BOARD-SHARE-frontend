@@ -4,7 +4,7 @@ part 'medium.freezed.dart';
 part 'medium.g.dart';
 
 @freezed
-class Medium with _$Medium {
+sealed class Medium with _$Medium {
   const factory Medium({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? mediumTitle,
@@ -23,7 +23,7 @@ class Medium with _$Medium {
 }
 
 @freezed
-class MediumStatus with _$MediumStatus {
+sealed class MediumStatus with _$MediumStatus {
   const factory MediumStatus({
     @JsonKey(includeIfNull: false) int? id,
     @JsonKey(includeIfNull: false) String? status,

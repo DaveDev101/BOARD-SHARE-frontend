@@ -6,80 +6,68 @@ part of 'aac_symbol.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AACSymbolImpl _$$AACSymbolImplFromJson(Map<String, dynamic> json) =>
-    _$AACSymbolImpl(
-      id: (json['id'] as num?)?.toInt(),
-      symbolTitle: json['symbol_title'] as String?,
-      symbolExcerpt: json['symbol_excerpt'] as String?,
-      symbolStatus: json['symbol_status'] == null
-          ? null
-          : AACSymbolStatus.fromJson(
-              json['symbol_status'] as Map<String, dynamic>),
-      isCommentOpen: json['is_comment_open'] as bool?,
-      medium: json['medium'] == null
-          ? null
-          : Medium.fromJson(json['medium'] as Map<String, dynamic>),
-      commentCount: (json['comment_count'] as num?)?.toInt(),
-      likeCount: (json['like_count'] as num?)?.toInt(),
-      symbolSystem: json['symbol_system'] == null
-          ? null
-          : AACSymbolSystem.fromJson(
-              json['symbol_system'] as Map<String, dynamic>),
-      description: json['description'] as String?,
-      createdAt: json['created_at'] == null
-          ? null
-          : DateTime.parse(json['created_at'] as String),
-      updatedAt: json['updated_at'] == null
-          ? null
-          : DateTime.parse(json['updated_at'] as String),
-    );
+_AACSymbol _$AACSymbolFromJson(Map<String, dynamic> json) => _AACSymbol(
+  id: (json['id'] as num?)?.toInt(),
+  symbolTitle: json['symbol_title'] as String?,
+  symbolExcerpt: json['symbol_excerpt'] as String?,
+  symbolStatus: json['symbol_status'] == null
+      ? null
+      : AACSymbolStatus.fromJson(json['symbol_status'] as Map<String, dynamic>),
+  isCommentOpen: json['is_comment_open'] as bool?,
+  medium: json['medium'] == null
+      ? null
+      : Medium.fromJson(json['medium'] as Map<String, dynamic>),
+  commentCount: (json['comment_count'] as num?)?.toInt(),
+  likeCount: (json['like_count'] as num?)?.toInt(),
+  symbolSystem: json['symbol_system'] == null
+      ? null
+      : AACSymbolSystem.fromJson(json['symbol_system'] as Map<String, dynamic>),
+  description: json['description'] as String?,
+  createdAt: json['created_at'] == null
+      ? null
+      : DateTime.parse(json['created_at'] as String),
+  updatedAt: json['updated_at'] == null
+      ? null
+      : DateTime.parse(json['updated_at'] as String),
+);
 
-Map<String, dynamic> _$$AACSymbolImplToJson(_$AACSymbolImpl instance) =>
+Map<String, dynamic> _$AACSymbolToJson(_AACSymbol instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.symbolTitle case final value?) 'symbol_title': value,
-      if (instance.symbolExcerpt case final value?) 'symbol_excerpt': value,
-      if (instance.symbolStatus case final value?) 'symbol_status': value,
-      if (instance.isCommentOpen case final value?) 'is_comment_open': value,
-      if (instance.medium case final value?) 'medium': value,
-      if (instance.commentCount case final value?) 'comment_count': value,
-      if (instance.likeCount case final value?) 'like_count': value,
-      if (instance.symbolSystem case final value?) 'symbol_system': value,
-      if (instance.description case final value?) 'description': value,
-      if (instance.createdAt?.toIso8601String() case final value?)
-        'created_at': value,
-      if (instance.updatedAt?.toIso8601String() case final value?)
-        'updated_at': value,
+      'id': ?instance.id,
+      'symbol_title': ?instance.symbolTitle,
+      'symbol_excerpt': ?instance.symbolExcerpt,
+      'symbol_status': ?instance.symbolStatus,
+      'is_comment_open': ?instance.isCommentOpen,
+      'medium': ?instance.medium,
+      'comment_count': ?instance.commentCount,
+      'like_count': ?instance.likeCount,
+      'symbol_system': ?instance.symbolSystem,
+      'description': ?instance.description,
+      'created_at': ?instance.createdAt?.toIso8601String(),
+      'updated_at': ?instance.updatedAt?.toIso8601String(),
     };
 
-_$AACSymbolStatusImpl _$$AACSymbolStatusImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AACSymbolStatusImpl(
+_AACSymbolStatus _$AACSymbolStatusFromJson(Map<String, dynamic> json) =>
+    _AACSymbolStatus(
       id: (json['id'] as num?)?.toInt(),
       status: json['status'] as String?,
     );
 
-Map<String, dynamic> _$$AACSymbolStatusImplToJson(
-        _$AACSymbolStatusImpl instance) =>
-    <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.status case final value?) 'status': value,
-    };
+Map<String, dynamic> _$AACSymbolStatusToJson(_AACSymbolStatus instance) =>
+    <String, dynamic>{'id': ?instance.id, 'status': ?instance.status};
 
-_$AACSymbolSystemImpl _$$AACSymbolSystemImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AACSymbolSystemImpl(
+_AACSymbolSystem _$AACSymbolSystemFromJson(Map<String, dynamic> json) =>
+    _AACSymbolSystem(
       id: (json['id'] as num?)?.toInt(),
       systemName: json['system_name'] as String?,
-      Issuer: json['issuer'] as String?,
-      Description: json['description'] as String?,
+      issuer: json['issuer'] as String?,
+      description: json['description'] as String?,
     );
 
-Map<String, dynamic> _$$AACSymbolSystemImplToJson(
-        _$AACSymbolSystemImpl instance) =>
+Map<String, dynamic> _$AACSymbolSystemToJson(_AACSymbolSystem instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.systemName case final value?) 'system_name': value,
-      if (instance.Issuer case final value?) 'issuer': value,
-      if (instance.Description case final value?) 'description': value,
+      'id': ?instance.id,
+      'system_name': ?instance.systemName,
+      'issuer': ?instance.issuer,
+      'description': ?instance.description,
     };

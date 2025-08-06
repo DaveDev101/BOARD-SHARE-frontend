@@ -1,0 +1,1876 @@
+{
+    "ok": true,
+    "err": null,
+    "data": [
+        {
+            "id": 4965,
+            "symbol_title": "점수",
+            "symbol_excerpt": "성적, 득점, 수",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5306,
+                "medium_title": "점수",
+                "medium_path": "assets/symbols/hanspeak/201912-H-H-10-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-10-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1576,
+            "symbol_title": "점심",
+            "symbol_excerpt": "오후, 하루, 시간",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1917,
+                "medium_title": "점심",
+                "medium_path": "assets/symbols/hanspeak/BBBBB-A-19-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBB-A-19-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2913,
+            "symbol_title": "접시",
+            "symbol_excerpt": "그릇, 식기, 음식, 요리, 담다, 담아요, 주방, 부엌",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3254,
+                "medium_title": "접시",
+                "medium_path": "assets/symbols/hanspeak/MMMMMM-A-76.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/MMMMMM-A-76.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 3991,
+            "symbol_title": "접영",
+            "symbol_excerpt": "운동, 물놀이, 수영장, 수영해요, 수영법",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4332,
+                "medium_title": "접영",
+                "medium_path": "assets/symbols/hanspeak/190709-A-A-32-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190709-A-A-32-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 6097,
+            "symbol_title": "젖병",
+            "symbol_excerpt": "임신, 출산, 젖, 병, 우유병, 용기, 젖먹이, 분유, 우유, 이유식, 젖꼭지",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 6438,
+                "medium_title": "젖병",
+                "medium_path": "assets/symbols/hanspeak/202309-A-A-23-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202309-A-A-23-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1402,
+            "symbol_title": "젖병",
+            "symbol_excerpt": "젖병, 아기, 분유",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1743,
+                "medium_title": "젖병",
+                "medium_path": "assets/symbols/hanspeak/YYY-A-05-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/YYY-A-05-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 3675,
+            "symbol_title": "젠가",
+            "symbol_excerpt": "장난감, 놀이, 쌓다, 쌓아요, 빼다, 빼요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4016,
+                "medium_title": "젠가",
+                "medium_path": "assets/symbols/hanspeak/190611C-A-14-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190611C-A-14-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 178,
+            "symbol_title": "젤리",
+            "symbol_excerpt": "간식, 하리보",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 519,
+                "medium_title": "젤리",
+                "medium_path": "assets/symbols/hanspeak/C-A-20-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/C-A-20-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1868,
+            "symbol_title": "조개",
+            "symbol_excerpt": "동물, 조개껍데기, 바다, 민물",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2209,
+                "medium_title": "조개",
+                "medium_path": "assets/symbols/hanspeak/GGGGG-A-07-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/GGGGG-A-07-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 5915,
+            "symbol_title": "조금",
+            "symbol_excerpt": "적다, 적어요, 약간, 매우",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 6256,
+                "medium_title": "조금",
+                "medium_path": "assets/symbols/hanspeak/202310-E-E-55-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202310-E-E-55-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1750,
+            "symbol_title": "조금",
+            "symbol_excerpt": "적다, 적어요, 약간",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2091,
+                "medium_title": "조금",
+                "medium_path": "assets/symbols/hanspeak/EEEEEEE-A-03-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/EEEEEEE-A-03-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 3149,
+            "symbol_title": "족발",
+            "symbol_excerpt": "음식, 돼지, 돼지 발, 조리다, 조려요, 새우젓",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3490,
+                "medium_title": "족발",
+                "medium_path": "assets/symbols/hanspeak/EEEEEEEE-A-24-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/EEEEEEEE-A-24-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 5049,
+            "symbol_title": "족욕",
+            "symbol_excerpt": "발, 목욕, 물, 온수, 냉수, 마사지",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5390,
+                "medium_title": "족욕",
+                "medium_path": "assets/symbols/hanspeak/202003-D-D-09-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-D-D-09-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1816,
+            "symbol_title": "종이",
+            "symbol_excerpt": "종이, 용지",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2157,
+                "medium_title": "종이",
+                "medium_path": "assets/symbols/hanspeak/FFFFFF-A-01-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/FFFFFF-A-01-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1624,
+            "symbol_title": "종일",
+            "symbol_excerpt": "하루",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1965,
+                "medium_title": "종일",
+                "medium_path": "assets/symbols/hanspeak/CCCCCC-A-09-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/CCCCCC-A-09-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1587,
+            "symbol_title": "종일",
+            "symbol_excerpt": "하루 ",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1928,
+                "medium_title": "종일",
+                "medium_path": "assets/symbols/hanspeak/BBBBBB-A-09-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBBB-A-09-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1888,
+            "symbol_title": "좌약",
+            "symbol_excerpt": "요도, 항문, 질, 약",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2229,
+                "medium_title": "좌약",
+                "medium_path": "assets/symbols/hanspeak/GGGGG-A-30-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/GGGGG-A-30-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2695,
+            "symbol_title": "주걱",
+            "symbol_excerpt": "밥, 푸다, 퍼요, 식사, 주방, 부엌, 식기, 도구",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3036,
+                "medium_title": "주걱",
+                "medium_path": "assets/symbols/hanspeak/VVVVVVV-A-25-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/VVVVVVV-A-25-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2989,
+            "symbol_title": "주례",
+            "symbol_excerpt": "결혼, 신랑, 신부, 혼인, 예식, 결혼식, 주례사",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3330,
+                "medium_title": "주례",
+                "medium_path": "assets/symbols/hanspeak/BBBBBBBB-A-15-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBBBBB-A-15-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1581,
+            "symbol_title": "주름",
+            "symbol_excerpt": "얼굴, 나이, 늙다, 늙었어요, 피부, 노안, 노화",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1922,
+                "medium_title": "주름",
+                "medium_path": "assets/symbols/hanspeak/BBBBBB-A-03-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBBB-A-03-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1580,
+            "symbol_title": "주름",
+            "symbol_excerpt": "얼굴, 나이, 늙다, 늙었어요, 피부, 노안, 노화",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1921,
+                "medium_title": "주름",
+                "medium_path": "assets/symbols/hanspeak/BBBBBB-A-02-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/BBBBBB-A-02-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4984,
+            "symbol_title": "주방",
+            "symbol_excerpt": "부엌, 식당, 음식, 만들다, 만들어요, 요리하다, 요리해요, 조리하다, 조리해요, 준비하다, 준비해요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5325,
+                "medium_title": "주방",
+                "medium_path": "assets/symbols/hanspeak/202001-B-B-05-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202001-B-B-05-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 704,
+            "symbol_title": "주소",
+            "symbol_excerpt": "거주지, 살다, 살아요, 어디, 집, 장소, 위치",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1045,
+                "medium_title": "주소",
+                "medium_path": "assets/symbols/hanspeak/LL-A2019.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/LL-A2019.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4397,
+            "symbol_title": "주소",
+            "symbol_excerpt": "코로나, 사는 곳, 번지, 거주지, 소재지, 위치",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4738,
+                "medium_title": "주소",
+                "medium_path": "assets/symbols/hanspeak/202003-AA-23-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-AA-23-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4696,
+            "symbol_title": "주황",
+            "symbol_excerpt": "색, 색깔, 동그라미, 빛깔, 물감, 크레파스, 그림, 주황색, 오렌지색, 주황빛",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5037,
+                "medium_title": "주황",
+                "medium_path": "assets/symbols/hanspeak/20190820-A-A-03-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/20190820-A-A-03-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 3404,
+            "symbol_title": "줄기",
+            "symbol_excerpt": "식물, 가지, 덩굴, 넝쿨",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3745,
+                "medium_title": "줄기",
+                "medium_path": "assets/symbols/hanspeak/b019-stem-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/b019-stem-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4687,
+            "symbol_title": "중간",
+            "symbol_excerpt": "차례, 순서, 규칙, 열, 행, 라인, 선, 꼴등",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5028,
+                "medium_title": "중간",
+                "medium_path": "assets/symbols/hanspeak/201702-J-J-06-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201702-J-J-06-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4405,
+            "symbol_title": "중동",
+            "symbol_excerpt": "코로나, 서아시아",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4746,
+                "medium_title": "중동",
+                "medium_path": "assets/symbols/hanspeak/202003-AA-38-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-AA-38-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1684,
+            "symbol_title": "줘요",
+            "symbol_excerpt": "주다, 건네다, 건네요, 전달하다, 전하다, 전해요, 전달해요, 수여하다, 수여해요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2025,
+                "medium_title": "줘요",
+                "medium_path": "assets/symbols/hanspeak/DDDDDD-A-18-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/DDDDDD-A-18-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4069,
+            "symbol_title": "줘요",
+            "symbol_excerpt": "받아요, 친구, 공놀이, 교환, 놓아요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4410,
+                "medium_title": "줘요",
+                "medium_path": "assets/symbols/hanspeak/190817-A-A-10-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-A-A-10-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4068,
+            "symbol_title": "줘요",
+            "symbol_excerpt": "받아요, 친구, 공놀이, 교환, 놓아요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4409,
+                "medium_title": "줘요",
+                "medium_path": "assets/symbols/hanspeak/190817-A-A-09-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-A-A-09-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4966,
+            "symbol_title": "줘요",
+            "symbol_excerpt": "주다, 건네다, 수여하다, 수여해요, 건네요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5307,
+                "medium_title": "줘요",
+                "medium_path": "assets/symbols/hanspeak/201912-H-H-11-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201912-H-H-11-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2960,
+            "symbol_title": "지갑",
+            "symbol_excerpt": "돈주머니, 손지갑, 돈, 지폐, 동전, 신분증, 카드, 교통카드, 넣다, 넣어요, 보관하다, 보관해요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3301,
+                "medium_title": "지갑",
+                "medium_path": "assets/symbols/hanspeak/AAAAAAAA-A-22-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAAAAAA-A-22-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4559,
+            "symbol_title": "지구",
+            "symbol_excerpt": "행성, 과학, 대지, 땅덩이, 세계",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4900,
+                "medium_title": "지구",
+                "medium_path": "assets/symbols/hanspeak/201608-E-E-15-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201608-E-E-15-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4076,
+            "symbol_title": "지금",
+            "symbol_excerpt": "손목시계, 팔, 손, 가리켜요, 곧, 이제",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4417,
+                "medium_title": "지금",
+                "medium_path": "assets/symbols/hanspeak/190817-A-A-19-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/190817-A-A-19-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2503,
+            "symbol_title": "지네",
+            "symbol_excerpt": "동물",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 2844,
+                "medium_title": "지네",
+                "medium_path": "assets/symbols/hanspeak/SSSS-A-06-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/SSSS-A-06-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1511,
+            "symbol_title": "지문",
+            "symbol_excerpt": "신체부위, 손가락",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1852,
+                "medium_title": "지문",
+                "medium_path": "assets/symbols/hanspeak/D-A_2026.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/D-A_2026.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2964,
+            "symbol_title": "지붕",
+            "symbol_excerpt": "집, 꼭대기, 덮개",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3305,
+                "medium_title": "지붕",
+                "medium_path": "assets/symbols/hanspeak/AAAAAAAA-A-26-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAAAAAA-A-26-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 5483,
+            "symbol_title": "지읒",
+            "symbol_excerpt": "언어, 한글, 글자, 문자, 자모, 닿소리, 자음",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5824,
+                "medium_title": "지읒",
+                "medium_path": "assets/symbols/hanspeak/202005-C-C-09-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202005-C-C-09-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4665,
+            "symbol_title": "지진",
+            "symbol_excerpt": "재난, 지진, 땅, 대피, 건물, 안전",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5006,
+                "medium_title": "지진",
+                "medium_path": "assets/symbols/hanspeak/201611-A-A-18-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201611-A-A-18-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1534,
+            "symbol_title": "지폐",
+            "symbol_excerpt": "돈, 화폐, 종이돈 ",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1875,
+                "medium_title": "지폐",
+                "medium_path": "assets/symbols/hanspeak/AAAAA-A-03-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/AAAAA-A-03-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4400,
+            "symbol_title": "직업",
+            "symbol_excerpt": "코로나, 일, 벌이, 생업, 업무, 직장, 일터, 일하다, 일해요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4741,
+                "medium_title": "직업",
+                "medium_path": "assets/symbols/hanspeak/202003-AA-30-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202003-AA-30-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 1526,
+            "symbol_title": "직업",
+            "symbol_excerpt": "생계, 일, 일자리, 업무, 생업, 밥줄, 벌이",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 1867,
+                "medium_title": "직업",
+                "medium_path": "assets/symbols/hanspeak/H-A_209.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/H-A_209.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 519,
+            "symbol_title": "직진",
+            "symbol_excerpt": "방향, 앞, 앞으로, 똑바로, 가다, 가요, 직진하다, 직진해요, 교통, 차",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 860,
+                "medium_title": "직진",
+                "medium_path": "assets/symbols/hanspeak/JJJ-A-13-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/JJJ-A-13-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4781,
+            "symbol_title": "진로",
+            "symbol_excerpt": "주류, 술, 소주",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 5122,
+                "medium_title": "진로",
+                "medium_path": "assets/symbols/hanspeak/201909-E-E-29-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201909-E-E-29-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 6199,
+            "symbol_title": "질식",
+            "symbol_excerpt": "재난, 숨, 숨통, 호흡, 산소, 부족, 숨막히다, 질식하다, 숨막혀요, 질식해요, 숨쉬다, 숨쉬어요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 6540,
+                "medium_title": "질식",
+                "medium_path": "assets/symbols/hanspeak/202311-C-C-30-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202311-C-C-30-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 6200,
+            "symbol_title": "질식",
+            "symbol_excerpt": "재난, 숨, 숨통, 호흡, 산소, 부족, 숨막히다, 질식하다, 숨막혀요, 질식해요, 숨쉬다, 숨쉬어요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 6541,
+                "medium_title": "질식",
+                "medium_path": "assets/symbols/hanspeak/202311-C-C-31-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/202311-C-C-31-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 2697,
+            "symbol_title": "집게",
+            "symbol_excerpt": "집다, 집어요",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 3038,
+                "medium_title": "집게",
+                "medium_path": "assets/symbols/hanspeak/VVVVVVV-A-27-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/VVVVVVV-A-27-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 4566,
+            "symbol_title": "집게",
+            "symbol_excerpt": "집어요, 집다, 핀셋",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 4907,
+                "medium_title": "집게",
+                "medium_path": "assets/symbols/hanspeak/201608-E-E-22-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/201608-E-E-22-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        },
+        {
+            "id": 606,
+            "symbol_title": "집게",
+            "symbol_excerpt": "사무용품, 집다, 서류, 종이, 집어요, 도구",
+            "symbol_status": {
+                "id": 2,
+                "status": "publish"
+            },
+            "is_comment_open": true,
+            "medium": {
+                "id": 947,
+                "medium_title": "집게",
+                "medium_path": "assets/symbols/hanspeak/KK-A-25-1.png",
+                "medium_url": "assets/imgs/symbols/202408-B-B-36-1.png", "old_medium_url": "http://localhost:8080/static/symbols/hanspeak/KK-A-25-1.png",
+                "medium_mime_type": "image/png",
+                "medium_status": {
+                    "id": 2,
+                    "status": "publish"
+                },
+                "user_id": 109,
+                "user_org_id": 2,
+                "description": null,
+                "created_at": "0025-03-04T00:00:00Z",
+                "updated_at": "0025-03-04T00:00:00Z"
+            },
+            "comment_count": 0,
+            "like_count": 0,
+            "symbol_system": {
+                "id": 1,
+                "system_name": "HANSPEAK SYMBOLs",
+                "issuer": "HANSPEAK",
+                "description": "사람과소통 상징"
+            },
+            "description": null,
+            "created_at": "0025-03-24T08:27:52+08:27",
+            "updated_at": "0025-03-24T08:27:52+08:27"
+        }
+    ],
+    "search_term": "all",
+    "taxonomy_terms": [
+        "taxonomy1",
+        "term001"
+    ],
+    "cnt": {
+        "total_count": 6255,
+        "limit_count": 50,
+        "offset": 1000
+    },
+    "order": [
+        {
+            "order_by": "title",
+            "order_dir": "asc"
+        },
+        {
+            "order_by": "date",
+            "order_dir": "desc"
+        }
+    ]
+}

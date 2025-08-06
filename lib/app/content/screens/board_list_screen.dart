@@ -1,8 +1,14 @@
+import 'package:boardshare/app/content/controllers/board_list.dart';
+import 'package:boardshare/app/content/screens/aac_board_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../packages/core/sizes.dart';
+import '../../../packages/ui_components/footer.dart';
+
+final boardListInitialCondition =
+    Provider<(int, String)>((ref) => throw UnimplementedError());
 
 class BoardListScreen extends HookConsumerWidget {
   const BoardListScreen({super.key});
@@ -10,9 +16,12 @@ class BoardListScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
-    final sHeight = MediaQuery.of(context).size.height;
+    // final sHeight = MediaQuery.of(context).size.height;
     final horizontalPadding =
         (sWidth > kMaxWidth) ? (sWidth - kMaxWidth) / 2 : 0.0;
+
+    final (page, search) = ref.watch(boardListInitialCondition);
+    final boards = ref.watch(boardListProvider(search, page: page));
 
     final selectedIndex = useState(1);
     final List<String> segments = [
@@ -20,15 +29,43 @@ class BoardListScreen extends HookConsumerWidget {
       '의사소통판 (1,861)',
       '한스피크자료 (5,584)'
     ];
+    //
+    // final List<Map<String, dynamic>> categories = [
+    //   {'title': 'Medical & Hospital', 'icons': 218},
+    //   {'title': 'Hospital - Line', 'icons': 200},
+    //   {'title': 'Hospital - Solid', 'icons': 200},
+    //   {'title': 'Hospital', 'icons': 157},
+    //   {'title': 'Hospital', 'icons': 150},
+    //   {'title': 'Medical and Hospital', 'icons': 179},
+    // ];
 
-    final List<Map<String, dynamic>> categories = [
-      {'title': 'Medical & Hospital', 'icons': 218},
-      {'title': 'Hospital - Line', 'icons': 200},
-      {'title': 'Hospital - Solid', 'icons': 200},
-      {'title': 'Hospital', 'icons': 157},
-      {'title': 'Hospital', 'icons': 150},
-      {'title': 'Medical and Hospital', 'icons': 179},
-    ];
+    // final boards = useState(<ESBoard>[]);
+    // useEffect(() {
+    //   int maxRows = 15;
+    //   // ref
+    //   // .watch(postServicesProvider)
+    //   // .searchBoards(searchTerm: '언어치료실')
+    //   //     .then((value) {
+    //   //   if (maxRows > (value.cnt?.totalCount ?? 0)) {
+    //   //     maxRows = value.cnt?.totalCount ?? 0;
+    //   //   }
+    //   //
+    //   //   boards.value = value.data.sublist(0, maxRows);
+    //   // });
+    //
+    //   bs.whenData((data) {
+    //     if (kDebugMode) {
+    //       print(data.$1);
+    //     }
+    //     if (data.$1 == "SUCCESS") {
+    //       if (maxRows > data.$2) {
+    //         maxRows = data.$2;
+    //       }
+    //       boards.value = data.$3.sublist(0, maxRows);
+    //     }
+    //   });
+    //   return () {};
+    // }, [bs]);
 
     return Container(
       height: 1200,
@@ -89,46 +126,95 @@ class BoardListScreen extends HookConsumerWidget {
               ),
             ),
           ),
-          SliverPadding(
-            padding: EdgeInsets.symmetric(
-                horizontal: horizontalPadding, vertical: kESpace),
-            sliver: SliverGrid(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 44,
-                mainAxisSpacing: 44,
-                childAspectRatio: 1,
-              ),
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                    ),
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          categories[index]['title'],
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text('${categories[index]['icons']} icons',
-                            style: TextStyle(color: Colors.grey[700])),
-                      ],
+
+          boards.when(
+              data: (bs) {
+                if (bs.$1 == 'SUCCESS') {
+                  return SliverPadding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: horizontalPadding, vertical: kESpace),
+                    sliver: SliverGrid(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                        crossAxisSpacing: 44,
+                        mainAxisSpacing: 44,
+                        childAspectRatio: 1,
+                      ),
+                      delegate: SliverChildBuilderDelegate(
+                        (context, index) {
+                          return ProviderScope(
+                            overrides: [
+                              boardAtIndex.overrideWithValue((index, search))
+                            ],
+                            child: AACBoardCard(),
+                          );
+                        },
+                        childCount: bs.$2,
+                      ),
                     ),
                   );
-                },
-                childCount: categories.length,
-              ),
-            ),
+                } else {
+                  return SliverToBoxAdapter(
+                      child:
+                          Center(child: Text('Getting symbols has failed!!!')));
+                }
+              },
+              error: (err, stack) =>
+                  SliverToBoxAdapter(child: Center(child: Text('$err'))),
+              loading: () => SliverToBoxAdapter(
+                  child: Center(child: const CircularProgressIndicator()))),
+          // Footer
+          SliverToBoxAdapter(
+            child: DFooter(dark: false),
           ),
         ],
       ),
     );
   }
+
+  // Widget _buidBoardPreview(List<ESMedium> media) {
+  //   return GridView.builder(
+  //     itemCount: min(media.length, 1),
+  //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+  //       crossAxisCount: 4,
+  //       crossAxisSpacing: 4,
+  //       mainAxisSpacing: 4,
+  //       childAspectRatio: 1,
+  //     ),
+  //     itemBuilder: (BuildContext context, int index) => Container(
+  //       decoration: BoxDecoration(
+  //         color: Colors.white,
+  //       ),
+  //       padding: const EdgeInsets.all(4),
+  //       child:
+  //           (media[index].mediumUrl == null || media[index].mediumUrl!.isEmpty)
+  //               ? Container()
+  //               // : Image.network(media[index].mediumUrl!)
+  //               : Image.network(
+  //                   media[index].mediumUrl!,
+  //                   fit: BoxFit.cover,
+  //                   width: 10,
+  //                   height: 10,
+  //                   frameBuilder: (c, image, frame, sync) {
+  //                     if (!sync && frame == null) {
+  //                       return const Center(child: CircularProgressIndicator());
+  //                     }
+  //                     return image;
+  //                   },
+  //                   errorBuilder: (c, err, stack) {
+  //                     // if (err.toString().contains('429') && retryCount.value < _maxRetry) {
+  //                     // if (retryCount.value < _maxRetry) {
+  //                     //   Future.delayed(const Duration(seconds: 2), () {
+  //                     //     retryCount.value = retryCount.value + 1;
+  //                     //     imageKey.value = UniqueKey();
+  //                     //   });
+  //                     //   return const Center(child: CircularProgressIndicator());
+  //                     // }
+  //                     return const Center(child: Text('오류 발생!'));
+  //                   },
+  //                 ),
+  //     ),
+  //   );
+  // }
 }

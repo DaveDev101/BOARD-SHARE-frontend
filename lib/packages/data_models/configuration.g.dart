@@ -6,12 +6,8 @@ part of 'configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ConfigurationImpl _$$ConfigurationImplFromJson(Map<String, dynamic> json) =>
-    _$ConfigurationImpl(
-      apiBaseUrl: json['api_base_url'] as String,
-    );
+_Configuration _$ConfigurationFromJson(Map<String, dynamic> json) =>
+    _Configuration(apiBaseUrl: json['api_base_url'] as String);
 
-Map<String, dynamic> _$$ConfigurationImplToJson(_$ConfigurationImpl instance) =>
-    <String, dynamic>{
-      'api_base_url': instance.apiBaseUrl,
-    };
+Map<String, dynamic> _$ConfigurationToJson(_Configuration instance) =>
+    <String, dynamic>{'api_base_url': instance.apiBaseUrl};

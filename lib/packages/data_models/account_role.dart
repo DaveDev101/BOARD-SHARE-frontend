@@ -4,7 +4,7 @@ part 'account_role.freezed.dart';
 part 'account_role.g.dart';
 
 @freezed
-class AccountRole with _$AccountRole {
+sealed class AccountRole with _$AccountRole {
   const factory AccountRole({
     required int roleId,
     @Default("unknown") String role,
