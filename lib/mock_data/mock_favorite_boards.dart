@@ -1,3 +1,4 @@
+const mockFavoriteBoards = '''
 {
   "ok": true,
   "err": null,
@@ -4632,3 +4633,4 @@
     }
   ]
 }
+''';

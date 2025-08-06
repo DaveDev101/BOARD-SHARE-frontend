@@ -2,9 +2,12 @@ import 'dart:convert';
 
 import 'package:boardshare/app/content/models/aac_post.dart';
 import 'package:boardshare/app/user/models/my_board.dart';
+import 'package:boardshare/mock_data/mock_favorite_boards.dart';
+import 'package:boardshare/mock_data/mock_favorite_symbols.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../mock_data/mock_my_board.dart';
 import '../../../packages/network/query_json_response.dart';
 import '../../content/models/aac_symbol.dart';
 
@@ -20,10 +23,10 @@ class UserContentService {
     required int orgID,
     required String searchTerm,
   }) async {
-    final jsonString = await rootBundle.loadString(
-      'assets/mockdata/mock_my_board.json',
-    );
-    final jsonMap = jsonDecode(jsonString);
+    // final jsonString = await rootBundle.loadString(
+    //   'assets/mockdata/mock_my_board.dart',
+    // );
+    final jsonMap = jsonDecode(mockMyBoard);
 
     List<MyBoard> result = [];
     for (var board in jsonMap['data']) {
@@ -73,10 +76,10 @@ class UserContentService {
     DCount? cnt,
     List<DOrder>? orders,
   }) async {
-    final jsonString = await rootBundle.loadString(
-      'assets/mockdata/mock_favorite_symbols.json',
-    );
-    final jsonMap = jsonDecode(jsonString);
+    // final jsonString = await rootBundle.loadString(
+    //   'assets/mockdata/mock_favorite_symbols.dart',
+    // );
+    final jsonMap = jsonDecode(mockFavoriteSymbols);
 
     List<AACSymbol> result = [];
     for (var board in jsonMap['data']) {
@@ -135,10 +138,10 @@ class UserContentService {
     DCount? cnt,
     List<DOrder>? orders,
   }) async {
-    final jsonString = await rootBundle.loadString(
-      'assets/mockdata/mock_favorite_boards.json',
-    );
-    final jsonMap = jsonDecode(jsonString);
+    // final jsonString = await rootBundle.loadString(
+    //   'assets/mockdata/mock_favorite_boards.dart',
+    // );
+    final jsonMap = jsonDecode(mockFavoriteBoards);
 
     List<AACPost> result = [];
     for (var board in jsonMap['data']) {

@@ -1,3 +1,4 @@
+const mockFavoriteSymbols = '''
 {
     "ok": true,
     "err": null,
@@ -1874,3 +1875,4 @@
         }
     ]
 }
+''';
