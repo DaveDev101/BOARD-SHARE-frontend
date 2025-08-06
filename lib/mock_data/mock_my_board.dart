@@ -1,3 +1,4 @@
+const mockMyBoard = '''
 {
   "ok": true,
   "err": null,
@@ -11462,3 +11463,4 @@
     "total_count": 7194
   }
 }
+''';
