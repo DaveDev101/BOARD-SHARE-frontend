@@ -60,7 +60,7 @@ class FavoriteSymbolCard extends HookConsumerWidget {
                           width: constraints.maxWidth,
                           height: constraints.maxHeight,
                           child: Center(
-                            child: (kAppEnv == EnumAppEnv.mockup)
+                            child: (kAppEnv == AppEnvItems.mockup)
                                 ? Image.asset(
                                     s.medium!.mediumUrl!,
                                     width: constraints.maxWidth * 0.7,

@@ -12,7 +12,7 @@ part 'symbol_detail.g.dart';
 
 @riverpod
 Future<(String, AACSymbol?)> symbolDetail(Ref ref, int id) async {
-  if (kAppEnv == EnumAppEnv.mockup) {
+  if (kAppEnv == AppEnvItems.mockup) {
     await Future.delayed(const Duration(seconds: 1));
 
     final symbols = jsonDecode(mockResponseHanspeakSymbols);

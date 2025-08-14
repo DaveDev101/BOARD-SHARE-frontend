@@ -21,7 +21,7 @@ class DioApiClient {
     _dio = dio ?? Dio();
 
     _dio.options.baseUrl = kApiLocalUrl;
-    if (kAppEnv == EnumAppEnv.mockup || kAppEnv == EnumAppEnv.test) {
+    if (kAppEnv == AppEnvItems.mockup || kAppEnv == AppEnvItems.test) {
       _dio.options.baseUrl = kApiTestUrl;
     }
     _dio.options.headers['Accept'] = 'application/json';

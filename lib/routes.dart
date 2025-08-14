@@ -108,7 +108,8 @@ GoRouter createRouter(WidgetRef ref) {
   return GoRouter(
     initialLocation: '/',
     debugLogDiagnostics: kDebugMode,
-    refreshListenable: RouterRefreshNotifier(ref),
+    // refreshListenable: RouterRefreshNotifier(ref),
+    refreshListenable: routerRefreshNotifier,
     redirect: (context, state) async {
       final asyncState = routerRefreshNotifier.currentState;
       // when loading or state is yet set

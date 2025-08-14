@@ -312,11 +312,11 @@ class DExtendedHomeAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Symbols and Boards For AAC",
+                  'AAC 상징과 의사소통 도움판',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 const SizedBox(height: kESpace * 2),

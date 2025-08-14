@@ -18,7 +18,7 @@ class LoadingImage extends HookWidget {
     final retryCount = useState(0);
     final imageKey = useState(UniqueKey());
 
-    if (kAppEnv == EnumAppEnv.mockup) {
+    if (kAppEnv == AppEnvItems.mockup) {
       return Image.asset(
         _getSymbolImageUrl(),
         fit: BoxFit.cover,

@@ -24,8 +24,8 @@ const mockResponseBoards = '''
                     "medium_mime_type": "image/png",
                     "author_id": 0,
                     "author_org_id": 0,
-                    "created_at": "2025-03-25T09:26:49.950993Z",
-                    "updated_at": "2025-03-25T09:26:49.950993Z"
+                    "created_at": "2023-04-25T14:03:33.140043+09:00",
+                    "updated_at": "2023-12-25T14:03:33.140043+09:00"
                 },
                 {
                     "sequence": 2,

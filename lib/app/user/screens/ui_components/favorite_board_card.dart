@@ -197,7 +197,7 @@ class FavoriteBoardCard extends HookConsumerWidget {
                                             //     '${constraints.maxWidth} : ${con.maxWidth}');
                                             return Stack(
                                               children: [
-                                                kAppEnv == EnumAppEnv.mockup
+                                                kAppEnv == AppEnvItems.mockup
                                                     ? Image.asset(
                                                         b
                                                             .postMedia![index]

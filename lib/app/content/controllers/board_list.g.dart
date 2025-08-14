@@ -82,7 +82,7 @@ final class BoardListProvider
   }
 }
 
-String _$boardListHash() => r'b765f75c15d27d051509e178dedea3a2a48686a2';
+String _$boardListHash() => r'bee5176e3793cdc0c6b4afefa86e7d7af96ab86b';
 
 final class BoardListFamily extends $Family
     with
