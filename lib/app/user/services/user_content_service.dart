@@ -4,7 +4,6 @@ import 'package:boardshare/app/content/models/aac_post.dart';
 import 'package:boardshare/app/user/models/my_board.dart';
 import 'package:boardshare/mock_data/mock_favorite_boards.dart';
 import 'package:boardshare/mock_data/mock_favorite_symbols.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../mock_data/mock_my_board.dart';

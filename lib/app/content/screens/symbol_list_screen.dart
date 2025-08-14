@@ -1,6 +1,9 @@
 import 'package:boardshare/app/content/controllers/symbol_list.dart';
+import 'package:boardshare/app/content/screens/ui_components/content_segmented_button.dart';
+import 'package:boardshare/packages/core/colors.dart';
 import 'package:boardshare/packages/core/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../packages/ui_components/footer.dart';
@@ -16,35 +19,50 @@ class SymbolListScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
-    // final sHeight = MediaQuery.of(context).size.height;
-    final horizontalPadding = (sWidth > kMaxWidth)
-        ? (sWidth - kMaxWidth) / 2
-        : 0.0;
+    final hPadding = (sWidth > kMaxWidth)
+        ? (sWidth - kMaxWidth) / 2.0
+        : kPadding / 2.0;
 
     final (page, search) = ref.watch(symbolListInitialCondition);
     final aacSymbols = ref.watch(symbolListProvider(search, page: page));
 
+    final selectedIndex = useState(0);
+    final List<String> segments = [
+      '상징 (41,729)',
+      '의사소통판 (1,861)',
+      '한스피크자료 (5,584)',
+    ];
+
     return Container(
-      color: Colors.grey[200],
+      color: kBgColor,
       child: CustomScrollView(
         slivers: [
+          /// Segmented Button: [ Symbols | Boards | Materials ]
+          SliverToBoxAdapter(
+            child: ContentSegmentedButton(
+              horizontalPadding: hPadding,
+              segments: segments,
+              selectedIndex: selectedIndex,
+            ),
+          ),
+
+          /// Symbols: search results
           aacSymbols.when(
             data: (symbols) {
               if (symbols.$1 == 'SUCCESS') {
                 return SliverPadding(
-                  padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: hPadding,
+                    vertical: kESpace,
+                  ),
                   sliver: SliverGrid(
-                    // padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
                     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 300.0, // 동적 크기 적용
+                      maxCrossAxisExtent: 300.0, // Dynamic layout
                       crossAxisSpacing: 8,
                       mainAxisSpacing: 8,
                       childAspectRatio: 1,
                     ),
-                    delegate: SliverChildBuilderDelegate((
-                      BuildContext context,
-                      int index,
-                    ) {
+                    delegate: SliverChildBuilderDelegate((context, index) {
                       return ProviderScope(
                         overrides: [
                           symbolAtIndex.overrideWithValue((index, search)),
@@ -66,7 +84,8 @@ class SymbolListScreen extends HookConsumerWidget {
               child: Center(child: const CircularProgressIndicator()),
             ),
           ),
-          // Footer
+
+          /// Footer
           SliverToBoxAdapter(child: DFooter(dark: false)),
         ],
       ),
@@ -80,7 +99,7 @@ class SymbolListScreen extends HookConsumerWidget {
     //         data: (symbols) {
     //           if (symbols.$1 == 'SUCCESS') {
     //             return GridView.builder(
-    //               padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+    //               padding: EdgeInsets.symmetric(horizontal: hPadding),
     //               // physics: NeverScrollableScrollPhysics(),
     //               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
     //                 maxCrossAxisExtent: 300.0, // 동적 크기 적용

@@ -104,9 +104,9 @@ class DUserBar extends HookConsumerWidget {
 
     return signinCtl.when(
       data: (data) {
-        if (kDebugMode) {
-          print('🚩➞ $data');
-        }
+        // if (kDebugMode) {
+        //   print('🚩➞ $data');
+        // }
 
         User? userInfo;
         if (data.$1.isEmpty) {

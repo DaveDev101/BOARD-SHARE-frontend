@@ -82,7 +82,7 @@ final class SymbolListProvider
   }
 }
 
-String _$symbolListHash() => r'2d4d352d196dee483ec34e365d828a2ec22757e8';
+String _$symbolListHash() => r'7b9b4f1ea2ed883415fed2c2c2e1a9a9d8c3662e';
 
 final class SymbolListFamily extends $Family
     with

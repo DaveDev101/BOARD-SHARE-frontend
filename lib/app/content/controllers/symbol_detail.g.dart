@@ -63,7 +63,7 @@ final class SymbolDetailProvider
   }
 }
 
-String _$symbolDetailHash() => r'5965a6ddf154d93b18a8c8aa9bf66e1d750f221a';
+String _$symbolDetailHash() => r'c50e93b1ee4b24c69edd8fdc719f9c70ddd765b0';
 
 final class SymbolDetailFamily extends $Family
     with $FunctionalFamilyOverride<FutureOr<(String, AACSymbol?)>, int> {

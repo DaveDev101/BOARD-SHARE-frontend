@@ -1,3 +1,4 @@
+import 'package:boardshare/packages/core/colors.dart';
 import 'package:boardshare/packages/core/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -18,7 +19,8 @@ class ContentLayout extends HookConsumerWidget {
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(1), // 테두리 높이 조절
               child: Container(
-                color: Colors.grey[300], // 테두리 색상
+                // color: Colors.grey[300], // 테두리 색상
+                color: kBColor,
                 height: 2, // 테두리 두께
               ),
             ),

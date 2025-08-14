@@ -63,7 +63,7 @@ final class BoardDetailProvider
   }
 }
 
-String _$boardDetailHash() => r'1de2dac73a523125861b0c2546be672294c0003f';
+String _$boardDetailHash() => r'2e9c39de07066c94b118b5c94623ae875f36ef08';
 
 final class BoardDetailFamily extends $Family
     with $FunctionalFamilyOverride<FutureOr<(String, AACPost?)>, int> {

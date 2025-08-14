@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:boardshare/app/content/controllers/board_at_index.dart';
 import 'package:boardshare/packages/core/sizes.dart';
+import 'package:boardshare/packages/utils/datetime_format_helpers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -71,9 +72,13 @@ class AACBoardCard extends HookConsumerWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        '${b.media?.length ?? 0} symbols',
+                        '${"박민트"} | ${formatRelativeTime(b.updatedAt)}',
                         style: TextStyle(color: Colors.grey[700]),
                       ),
+                      // Text(
+                      //   '${b.media?.length ?? 0} symbols',
+                      //   style: TextStyle(color: Colors.grey[700]),
+                      // ),
                       const SizedBox(height: 12.0),
                       // _buidBoardPreview(boards.value[index].media ?? []),
                       ClipRect(

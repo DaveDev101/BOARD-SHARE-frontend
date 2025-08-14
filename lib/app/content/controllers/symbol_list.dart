@@ -25,7 +25,7 @@ Future<(String, int, List<AACSymbol>)> symbolList(
       ? orders.map((e) => DOrder(orderBy: e.$1, orderDir: e.$2)).toList()
       : null;
 
-  if (kAppEnv == EnumAppEnv.mockup) {
+  if (kAppEnv == AppEnvItems.mockup) {
     try {
       await Future.delayed(const Duration(seconds: 1));
 

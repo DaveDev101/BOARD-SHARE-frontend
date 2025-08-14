@@ -25,7 +25,7 @@ Future<(String, int, List<ESBoard>)> boardList(
       ? orders.map((e) => DOrder(orderBy: e.$1, orderDir: e.$2)).toList()
       : null;
 
-  if (kAppEnv == EnumAppEnv.mockup) {
+  if (kAppEnv == AppEnvItems.mockup) {
     await Future.delayed(const Duration(seconds: 1));
 
     final boardsData = jsonDecode(mockResponseBoards);

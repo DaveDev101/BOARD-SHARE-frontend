@@ -21,7 +21,7 @@ part 'signin_controller.g.dart';
 class SigninController extends _$SigninController {
   @override
   FutureOr<(String, SigninResult)> build() async {
-    if (kAppEnv == EnumAppEnv.mockup) {
+    if (kAppEnv == AppEnvItems.mockup) {
       return (
         '',
         SigninResult(
@@ -186,7 +186,7 @@ class SigninController extends _$SigninController {
   }
 
   Future<void> signIn(String email, String password) async {
-    if (kAppEnv == EnumAppEnv.mockup) {
+    if (kAppEnv == AppEnvItems.mockup) {
       state = AsyncData((
         '',
         SigninResult(

@@ -12,7 +12,7 @@ part 'board_detail.g.dart';
 
 @riverpod
 Future<(String, AACPost?)> boardDetail(Ref ref, int id) async {
-  if (kAppEnv == EnumAppEnv.mockup) {
+  if (kAppEnv == AppEnvItems.mockup) {
     await Future.delayed(const Duration(seconds: 1));
 
     final boardsData = jsonDecode(mockAacBoards);

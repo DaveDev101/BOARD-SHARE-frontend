@@ -1,6 +1,19 @@
+// Screen Type
+enum SType { mobile, tablet, smallWeb, largeWeb }
+
+SType getSType(double screenWidth) {
+  return (screenWidth > kMaxWidth)
+      ? SType.largeWeb
+      : (screenWidth > kMaxTabletWidth)
+      ? SType.smallWeb
+      : (screenWidth > kMaxMobileWidth)
+      ? SType.tablet
+      : SType.mobile;
+}
+
 // global
 const kMaxWidth = 1320.0;
-const kMaxMobileWidth = 600.0;
+const kMaxMobileWidth = 680.0;
 const kMaxTabletWidth = 1024.0;
 
 // app bar
@@ -9,7 +22,7 @@ const kAppBarHeightE = 144.0;
 const kAppBarHeight = 112.0;
 
 // footer
-const kFooterHeight = 160.0;
+const kFooterHeight = 560.0;
 
 // padding, margin
 const kPadding = 16.0;
