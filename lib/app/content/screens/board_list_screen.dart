@@ -1,5 +1,5 @@
 import 'package:boardshare/app/content/controllers/board_list.dart';
-import 'package:boardshare/app/content/screens/aac_board_card.dart';
+import 'package:boardshare/app/content/screens/ui_components/aac_board_card.dart';
 import 'package:boardshare/app/content/screens/ui_components/content_segmented_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';

@@ -1,5 +1,4 @@
 import 'package:boardshare/packages/core/sizes.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -13,24 +12,14 @@ class HomeScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final width = MediaQuery.of(context).size.width;
-    final contentsWidth = (width < kMaxMobileWidth)
-        ? width - kPadding * 10
-        : (width < kMaxWidth)
-        ? width - kPadding * 14
-        : kMaxWidth - kPadding * 20;
-    final padding = (width - contentsWidth) / 2;
-
-    if (kDebugMode) {
-      print('');
-      print(
-        'theme.headlineLarge font size: ${Theme.of(context).textTheme.headlineLarge?.fontSize}',
-      );
-      print(
-        'theme.headlineLarge font family string: ${Theme.of(context).textTheme.headlineLarge?.fontFamily}',
-      );
-      print('');
-    }
+    final sWidth = MediaQuery.of(context).size.width;
+    final contentsWidth = switch (getSType(sWidth)) {
+      SType.largeWeb => kMaxWidth - kPadding * 20,
+      SType.smallWeb => sWidth - kPadding * 14,
+      SType.tablet => sWidth - kPadding * 12,
+      SType.mobile => sWidth - kPadding * 10,
+    };
+    final padding = (sWidth - contentsWidth) / 2.0;
 
     return Scaffold(
       body: CustomScrollView(

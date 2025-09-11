@@ -1,7 +1,6 @@
 import 'package:boardshare/app/user/controllers/signin_controller.dart';
 import 'package:boardshare/packages/core/sizes.dart';
-import 'package:boardshare/packages/ui_components/buttons.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:boardshare/packages/ui_components/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
@@ -81,26 +80,26 @@ class DUserBar extends HookConsumerWidget {
     //   isMenuDropped.value = isVisible;
     // });
 
-    final unsignedWidget = Row(
-      children: [
-        DButton(
-          title: '로그인',
-          dark: darkBg ? true : false,
-          transparent: darkBg ? false : true,
-          func: () {
-            context.go('/sign-in');
-          },
-        ),
-        SizedBox(width: kDSpace),
-        DButton(
-          title: '가입',
-          dark: darkBg ? false : true,
-          func: () {
-            context.go('/sign-up');
-          },
-        ),
-      ],
-    );
+    // final unsignedWidget = Row(
+    //   children: [
+    //     DButton(
+    //       title: '로그인',
+    //       dark: darkBg ? true : false,
+    //       transparent: darkBg ? false : true,
+    //       func: () {
+    //         context.go('/sign-in');
+    //       },
+    //     ),
+    //     SizedBox(width: kDSpace),
+    //     DButton(
+    //       title: '가입',
+    //       dark: darkBg ? false : true,
+    //       func: () {
+    //         context.go('/sign-up');
+    //       },
+    //     ),
+    //   ],
+    // );
 
     return signinCtl.when(
       data: (data) {
@@ -372,40 +371,40 @@ class DUserBar extends HookConsumerWidget {
   }
 
   // Drop Down Menu
-  Widget _buildDropdownMenu(Function func) {
-    return Material(
-      elevation: 4.0,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(4.0),
-        ),
-        width: 260.0,
-        padding: const EdgeInsets.symmetric(
-          vertical: kESpace,
-          horizontal: kSpace,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ...List.generate(
-              _userDropDownItems.length,
-              (index) => _userDropDownItems[index].item != _It.divider
-                  ? DDropDownItem(
-                      itemIndex: index,
-                      icon: _userDropDownItems[index].icon,
-                      text: _userDropDownItems[index].title,
-                      func: (index) => func(index),
-                    )
-                  : Divider(),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget _buildDropdownMenu(Function func) {
+  //   return Material(
+  //     elevation: 4.0,
+  //     child: Container(
+  //       decoration: BoxDecoration(
+  //         color: Colors.white,
+  //         borderRadius: BorderRadius.circular(4.0),
+  //       ),
+  //       width: 260.0,
+  //       padding: const EdgeInsets.symmetric(
+  //         vertical: kESpace,
+  //         horizontal: kSpace,
+  //       ),
+  //       child: Column(
+  //         mainAxisAlignment: MainAxisAlignment.center,
+  //         crossAxisAlignment: CrossAxisAlignment.start,
+  //         mainAxisSize: MainAxisSize.min,
+  //         children: [
+  //           ...List.generate(
+  //             _userDropDownItems.length,
+  //             (index) => _userDropDownItems[index].item != _It.divider
+  //                 ? DDropDownItem(
+  //                     itemIndex: index,
+  //                     icon: _userDropDownItems[index].icon,
+  //                     text: _userDropDownItems[index].title,
+  //                     func: (index) => func(index),
+  //                   )
+  //                 : Divider(),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 
   // Drop Down Menu
   Widget _buildUserDropdownMenu(
@@ -418,7 +417,7 @@ class DUserBar extends HookConsumerWidget {
       color: Colors.white,
       surfaceTintColor: Colors.white,
       elevation: 1.0,
-      position: PopupMenuPosition.over,
+      position: PopupMenuPosition.under,
       child: child,
       itemBuilder: (context) {
         return List.generate(

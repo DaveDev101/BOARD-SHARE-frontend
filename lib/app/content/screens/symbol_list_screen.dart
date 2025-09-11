@@ -7,7 +7,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../packages/ui_components/footer.dart';
-import 'aac_symbol_card.dart';
+import 'ui_components/aac_symbol_card.dart';
 
 final symbolListInitialCondition = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),

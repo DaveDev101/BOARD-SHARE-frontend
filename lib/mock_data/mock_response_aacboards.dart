@@ -3269,7 +3269,7 @@ const mockAacBoards = '''
             "created_at": "2021-03-25T14:03:33.140043+09:00",
             "updated_at": "2021-03-25T14:03:33.140043+09:00",
             "bg_color": "#6a62d2",
-            "grid_size": "4 by 2",
+            "grid_size": "4 by 1",
             "m_bg_color": "#FFFFFF",
             "m_font_size": "15.0",
             "post_media": [

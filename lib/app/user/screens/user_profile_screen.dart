@@ -1,6 +1,7 @@
-import 'dart:html' as html;
-// import 'package:web/web.dart' as web;
-// import 'dart:js_interop';
+// import 'dart:html' as html;
+import 'dart:js_interop_unsafe';
+import 'dart:js_interop';
+import 'package:web/web.dart' as web;
 
 import 'package:boardshare/app/user/controllers/signin_controller.dart';
 import 'package:boardshare/app/user/screens/ui_components/user_content_title.dart';
@@ -77,25 +78,61 @@ class UserProfileScreen extends HookConsumerWidget {
     // }, []);
 
     useEffect(() {
-      final listener = html.window.onMessage.listen((event) {
-        final data = event.data;
-        if (data is Map) {
-          zipCodeController.text = data['zonecode'] ?? '';
-          roadAddressController.text = data['roadAddress'] ?? '';
+      final listener = web.window.onMessage.listen((web.MessageEvent event) {
+        // event is now web.MessageEvent
+        final JSAny? data = event.data; // event.data is JSAny?
+
+        // Type checking data from JavaScript requires care.
+        // If you expect a map-like structure (JS Object), you can try to convert/cast it.
+        // For simple cases, you might be able to use 'instanceof' if you know the exact JS type.
+        // Or, more robustly, use JS interop helpers if the structure is complex.
+
+        // Example: If data is expected to be a simple JS Object that can be treated like a Map
+        if (data != null && data.isA<JSObject>()) {
+          final jsObject = data as JSObject;
+          // Use jsObject.getProperty<JSString>('property_name'.toJS).toDart to get string properties
+          final zonecode = jsObject.getProperty('zonecode'.toJS);
+          final roadAddress = jsObject.getProperty('roadAddress'.toJS);
+
+          if (zonecode != null && zonecode.isA<JSString>()) {
+            zipCodeController.text = (zonecode as JSString).toDart;
+          } else {
+            zipCodeController.text = ''; // Or handle missing/wrong type
+          }
+
+          if (roadAddress != null && roadAddress.isA<JSString>()) {
+            roadAddressController.text = (roadAddress as JSString).toDart;
+          } else {
+            roadAddressController.text = ''; // Or handle missing/wrong type
+          }
         }
       });
 
-      // 클린업 함수 (컴포넌트 dispose 시 구독 해제)
       return () => listener.cancel();
+      // final listener = html.window.onMessage.listen((event) {
+      //   final data = event.data;
+      //   if (data is Map) {
+      //     zipCodeController.text = data['zonecode'] ?? '';
+      //     roadAddressController.text = data['roadAddress'] ?? '';
+      //   }
+      // });
+      //
+      // 클린업 함수 (컴포넌트 dispose 시 구독 해제)
+      // return () => listener.cancel();
     }, const []);
 
     void openAddressSearchPopup() {
       // 새 창으로 address_search.html 열기
-      html.window.open(
-        '/address_search.html',
-        '주소 검색',
-        'width=500,height=600,scrollbars=yes',
+      web.window.open(
+        '/address_search.html', // URL
+        '주소 검색', // target (use '_blank' for a new window/tab, or a specific name)
+        'width=500,height=600,scrollbars=yes', // features
       );
+      // html.window.open(
+      //   '/address_search.html',
+      //   '주소 검색',
+      //   'width=500,height=600,scrollbars=yes',
+      // );
     }
 
     // handle submit

@@ -33,60 +33,60 @@ class Signin extends HookConsumerWidget {
     final codeFocusNode = useFocusNode();
 
     // final signinCtl = ref.watch(signinControllerProvider);
-    ref.listen(
-      signinControllerProvider,
-      (previous, signinCtl) {
-        // if (kDebugMode) print(signinCtl.runtimeType);
-        // if (kDebugMode) print(signinCtl);
+    ref.listen(signinControllerProvider, (previous, signinCtl) {
+      // if (kDebugMode) print(signinCtl.runtimeType);
+      // if (kDebugMode) print(signinCtl);
 
-        signinCtl.when(
-          data: (signinResult) {
-            isSending.value = false;
-            if (signinResult.$1.isEmpty) {
-              signedInMsg.value = 'SUCCESS';
-              // context.go('/');
-              return;
-            } else if (signinResult.$1.contains('invalid credentials')) {
-              if (kDebugMode) {
-                print('=====> invalid credentials');
-              }
-              signedInMsg.value = 'invalid credentials';
-            } else if (signinResult.$1.contains('email not verified')) {
-              if (kDebugMode) {
-                print('=====> email not verified');
-              }
-              notVerifiedUser.value = true;
-              signedInMsg.value = 'email not verified';
-            } else if (signinResult.$1.contains('invalid code')) {
-              invalidCode.value = true;
-              signedInMsg.value = 'invalid verification code';
-            }
-          },
-          error: (err, stack) {
-            signedInMsg.value = 'ERROR:::$err';
-            isSending.value = false;
+      signinCtl.when(
+        data: (signinResult) {
+          isSending.value = false;
+          if (signinResult.$1.isEmpty) {
+            signedInMsg.value = 'SUCCESS';
+            // context.go('/');
+            return;
+          } else if (signinResult.$1.contains('invalid credentials')) {
             if (kDebugMode) {
-              print('signinResult ERROR ===>');
-              print(err);
+              print('=====> invalid credentials');
             }
-          },
-          loading: () {
+            signedInMsg.value = 'invalid credentials';
+          } else if (signinResult.$1.contains('email not verified')) {
             if (kDebugMode) {
-              print('');
-              print('LOADING --->');
-              print('');
+              print('=====> email not verified');
             }
+            notVerifiedUser.value = true;
+            signedInMsg.value = 'email not verified';
+          } else if (signinResult.$1.contains('invalid code')) {
+            invalidCode.value = true;
+            signedInMsg.value = 'invalid verification code';
+          }
+        },
+        error: (err, stack) {
+          signedInMsg.value = 'ERROR:::$err';
+          isSending.value = false;
+          if (kDebugMode) {
+            print('signinResult ERROR ===>');
+            print(err);
+          }
+        },
+        loading: () {
+          if (kDebugMode) {
+            print('');
+            print('LOADING --->');
+            print('');
+          }
 
-            signedInMsg.value = '...LOADING...';
-            isSending.value = true;
-          },
-        );
-      },
-    );
+          signedInMsg.value = '...LOADING...';
+          isSending.value = true;
+        },
+      );
+    });
 
     useEffect(() {
       Future.microtask(
-          () => FocusScope.of(context).requestFocus(emailFocusNode));
+        () => context.mounted
+            ? FocusScope.of(context).requestFocus(emailFocusNode)
+            : null,
+      );
       return () {
         // emailFocusNode.dispose();
         // passwordFocusNode.dispose();
@@ -119,12 +119,10 @@ class Signin extends HookConsumerWidget {
             print('');
           }
 
-          await ref.read(signinControllerProvider.notifier).signIn(
-                emailController.text,
-                passwordController.text,
-              );
+          await ref
+              .read(signinControllerProvider.notifier)
+              .signIn(emailController.text, passwordController.text);
         }
-
         // verify first and then sign -- almost simultaneously
         else {
           if (kDebugMode) {
@@ -133,7 +131,9 @@ class Signin extends HookConsumerWidget {
             print('');
           }
 
-          await ref.read(signinControllerProvider.notifier).verifyAndSignIn(
+          await ref
+              .read(signinControllerProvider.notifier)
+              .verifyAndSignIn(
                 emailController.text,
                 passwordController.text,
                 codeController.text,
@@ -223,20 +223,25 @@ class Signin extends HookConsumerWidget {
                       Text(
                         '비밀번호 초기화 안내 메일이 발송되었습니다.\n메일함을 확인하세요!',
                         style: TextStyle(
-                            fontWeight: FontWeight.w500, color: Colors.red),
+                          fontWeight: FontWeight.w500,
+                          color: Colors.red,
+                        ),
                       ),
                     if (forgottenPassword.value) SizedBox(height: kESpace),
                     Row(
                       children: [
-                        Text('아직 회원이 아니세요?',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(
+                          '아직 회원이 아니세요?',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                         SizedBox(width: kSpace),
                         DButton(
-                            title: '회원 가입',
-                            dark: false,
-                            func: () {
-                              context.go('/sign-up');
-                            }),
+                          title: '회원 가입',
+                          dark: false,
+                          func: () {
+                            context.go('/sign-up');
+                          },
+                        ),
                       ],
                     ),
                     SizedBox(height: kESpace),
@@ -255,20 +260,21 @@ class Signin extends HookConsumerWidget {
                     SizedBox(height: kESpace),
 
                     // field #1 email
-                    Text('이메일(Email)',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(
+                      '이메일(Email)',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       controller: emailController,
                       focusNode: emailFocusNode,
-                      decoration: InputDecoration(
-                        hintText: 'email@domain.com',
-                      ),
+                      decoration: InputDecoration(hintText: 'email@domain.com'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return '이메일 주소를 입력하세요.';
-                        } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
-                            .hasMatch(value)) {
+                        } else if (!RegExp(
+                          r'^[^@]+@[^@]+\.[^@]+',
+                        ).hasMatch(value)) {
                           return '이메일 주소가 잘못되었습니다!';
                         }
                         return null;
@@ -278,7 +284,8 @@ class Signin extends HookConsumerWidget {
                       // },
                       onFieldSubmitted: (value) {
                         FocusScope.of(context).requestFocus(
-                            passwordFocusNode); // focus to the password field
+                          passwordFocusNode,
+                        ); // focus to the password field
                       },
                     ),
                     SizedBox(height: kESpace),
@@ -326,10 +333,13 @@ class Signin extends HookConsumerWidget {
                           : SizedBox(height: kSpace),
                     SizedBox(height: kESpace),
                     if (notVerifiedUser.value)
-                      Text('인증 코드',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF007AFF))),
+                      Text(
+                        '인증 코드',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF007AFF),
+                        ),
+                      ),
                     if (notVerifiedUser.value)
                       TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -338,8 +348,9 @@ class Signin extends HookConsumerWidget {
                         decoration: InputDecoration(
                           hintText: '이메일로 전송받은 인증 코드를 입력하세요.',
                           focusedBorder: UnderlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.grey), // 비활성 상태의 밑줄 색상
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ), // 비활성 상태의 밑줄 색상
                           ),
                         ),
                         validator: (value) {
@@ -367,7 +378,8 @@ class Signin extends HookConsumerWidget {
                           onPressed: isSending.value ? () {} : handleSubmit,
                           child: isSending.value
                               ? const CircularProgressIndicator(
-                                  color: Colors.white)
+                                  color: Colors.white,
+                                )
                               : Text('로그인'),
                         ),
                       ),
@@ -377,23 +389,27 @@ class Signin extends HookConsumerWidget {
                     SizedBox(height: kESpace * 2),
                     Row(
                       children: [
-                        Text('비밀번호가 기억나지 않으세요?',
-                            style: TextStyle(
-                                // fontFamily: 'f-krn',
-                                fontWeight: FontWeight.w400)),
+                        Text(
+                          '비밀번호가 기억나지 않으세요?',
+                          style: TextStyle(
+                            // fontFamily: 'f-krn',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                         SizedBox(width: kSpace),
                         DButton(
-                            title: '비밀번호 초기화',
-                            dark: false,
-                            func: () {
-                              _forgottenPasswordBuilder(context).then((v) {
-                                if (kDebugMode) print(v);
+                          title: '비밀번호 초기화',
+                          dark: false,
+                          func: () {
+                            _forgottenPasswordBuilder(context).then((v) {
+                              if (kDebugMode) print(v);
 
-                                if (v != null && v.isNotEmpty) {
-                                  forgottenPassword.value = true;
-                                }
-                              });
-                            }),
+                              if (v != null && v.isNotEmpty) {
+                                forgottenPassword.value = true;
+                              }
+                            });
+                          },
+                        ),
                       ],
                     ),
                     SizedBox(height: kESpace),
@@ -457,14 +473,13 @@ class Signin extends HookConsumerWidget {
                   TextFormField(
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     controller: controller,
-                    decoration: InputDecoration(
-                      hintText: 'email@domain.com',
-                    ),
+                    decoration: InputDecoration(hintText: 'email@domain.com'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return '이메일 주소를 입력하세요.';
-                      } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
-                          .hasMatch(value)) {
+                      } else if (!RegExp(
+                        r'^[^@]+@[^@]+\.[^@]+',
+                      ).hasMatch(value)) {
                         return '이메일 주소가 잘못되었습니다!';
                       }
                       return null;
@@ -478,7 +493,8 @@ class Signin extends HookConsumerWidget {
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                  textStyle: Theme.of(context).textTheme.labelLarge),
+                textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
               child: const Text('취소'),
               onPressed: () {
                 Navigator.of(context).pop('');
@@ -486,7 +502,8 @@ class Signin extends HookConsumerWidget {
             ),
             TextButton(
               style: TextButton.styleFrom(
-                  textStyle: Theme.of(context).textTheme.labelLarge),
+                textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
               child: const Text('초기화'),
               onPressed: () {
                 if (passwordFormKey.currentState!.validate()) {

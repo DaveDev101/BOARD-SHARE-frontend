@@ -1,16 +1,17 @@
 import 'dart:math';
 
-import 'package:boardshare/app/content/controllers/board_at_index.dart';
-import 'package:boardshare/packages/core/sizes.dart';
-import 'package:boardshare/packages/utils/datetime_format_helpers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../packages/core/colors.dart';
-import '../../../packages/ui_components/loading_image.dart';
+import 'package:boardshare/app/content/controllers/board_at_index.dart';
+import 'package:boardshare/packages/core/sizes.dart';
+import 'package:boardshare/packages/utils/datetime_format_helpers.dart';
+
+import '../../../../packages/core/colors.dart';
+import '../../../../packages/ui_components/loading_image.dart';
 
 final boardAtIndex = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),
@@ -43,7 +44,8 @@ class AACBoardCard extends HookConsumerWidget {
                   if (kDebugMode) {
                     print('BOARD [${b.boardTitle}] is tapped!');
                   }
-                  context.go('/content/boards/${b.boardId ?? 0}');
+                  // context.go('/content/boards/${b.boardId ?? 0}');
+                  context.push('/content/boards/${b.boardId ?? 0}');
                 },
                 onHover: (hovering) => isHovered.value = hovering,
                 child: Container(
@@ -65,10 +67,11 @@ class AACBoardCard extends HookConsumerWidget {
                     children: [
                       Text(
                         b.boardTitle ?? '',
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextTheme.of(context).titleLarge,
+                        // style: const TextStyle(
+                        //   fontSize: 16,
+                        //   fontWeight: FontWeight.bold,
+                        // ),
                       ),
                       const SizedBox(height: 4),
                       Text(

@@ -5,6 +5,7 @@ import 'package:boardshare/app/content/controllers/symbol_detail.dart';
 import 'package:boardshare/app/content/screens/ui_components/symbol_modification.dart';
 import 'package:boardshare/app/content/screens/ui_components/symbol_title_download_button.dart';
 
+import '../../../packages/core/colors.dart';
 import '../../../packages/core/sizes.dart';
 import '../../../packages/ui_components/footer.dart';
 
@@ -21,9 +22,9 @@ class SymbolDetailScreen extends HookConsumerWidget {
     final sHeight = MediaQuery.of(context).size.height;
     final hPadding = (sWidth > kMaxWidth) ? (sWidth - kMaxWidth) / 2 : 0.0;
     final symbolHeight = 608.0;
-    final isHorizontal1 = (sWidth >= 1168);
+    // final isHorizontal1 = (sWidth >= 1168);
     final isHorizontal2 = (sWidth >= 1088);
-    final symbolBgHeight = isHorizontal1 ? 744.0 : 1224.0;
+    // final symbolBgHeight = isHorizontal1 ? 744.0 : 1224.0;
     final spaceBwSymbolAndButton = isHorizontal2 ? kESpace * 4.0 : kSpace / 5.0;
 
     final sId = ref.watch(selectedSymbolId);
@@ -46,21 +47,22 @@ class SymbolDetailScreen extends HookConsumerWidget {
           return Text('NO SUCH SYMBOL!!!');
         }
 
-        return CustomScrollView(
-          controller: PrimaryScrollController.of(context),
-          physics: ClampingScrollPhysics(),
-          slivers: [
-            /// symbol area incl. image controls, title & download button
-            SliverToBoxAdapter(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    // height: 688.0,
-                    height: symbolBgHeight,
-                    width: sWidth,
-                    color: Colors.black87,
-                    child: Padding(
+        return Container(
+          color: kBgColor,
+          child: CustomScrollView(
+            controller: PrimaryScrollController.of(context),
+            physics: ClampingScrollPhysics(),
+            slivers: [
+              /// symbol area incl. image controls, title & download button
+              SliverToBoxAdapter(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      // height: 688.0,
+                      // height: symbolBgHeight,
+                      width: sWidth,
+                      color: Colors.black87,
                       padding: EdgeInsets.symmetric(horizontal: hPadding),
                       child: Center(
                         child: Wrap(
@@ -92,86 +94,86 @@ class SymbolDetailScreen extends HookConsumerWidget {
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: kESpace),
+                    SizedBox(height: kESpace),
 
-                  // 비슷한 아이콘 리스트
-                  // Text(
-                  //   "You may also like",
-                  //   style: TextStyle(
-                  //       fontSize: 18, fontWeight: FontWeight.bold),
-                  // ),
-                  // SizedBox(height: 8),
-                ],
+                    // 비슷한 아이콘 리스트
+                    // Text(
+                    //   "You may also like",
+                    //   style: TextStyle(
+                    //       fontSize: 18, fontWeight: FontWeight.bold),
+                    // ),
+                    // SizedBox(height: 8),
+                  ],
+                ),
               ),
-            ),
 
-            /// thesaurus buttons
-            if (s.symbolExcerpt != null && s.symbolExcerpt!.isNotEmpty)
-              SliverToBoxAdapter(
-                child: Container(
-                  width: sWidth,
-                  color: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: hPadding),
-                  child: Wrap(
-                    children: s.symbolExcerpt!
-                        .split(',')
-                        .map(
-                          (e) => Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ActionChip(
-                              label: Text(e),
-                              backgroundColor: Colors.grey[200],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero,
-                                side: BorderSide.none, // border
+              /// thesaurus buttons
+              if (s.symbolExcerpt != null && s.symbolExcerpt!.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: Container(
+                    width: sWidth,
+                    color: kBgColor,
+                    padding: EdgeInsets.symmetric(horizontal: hPadding),
+                    child: Wrap(
+                      children: s.symbolExcerpt!
+                          .split(',')
+                          .map(
+                            (e) => Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ActionChip(
+                                label: Text(e),
+                                backgroundColor: Colors.grey[200],
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide.none, // border
+                                ),
+                                side: BorderSide.none,
+                                onPressed: () {},
                               ),
-                              side: BorderSide.none,
-                              onPressed: () {},
                             ),
-                          ),
-                        )
-                        .toList(),
+                          )
+                          .toList(),
+                    ),
                   ),
                 ),
-              ),
 
-            /// similar symbols: GridView
-            SliverPadding(
-              padding: EdgeInsets.symmetric(
-                horizontal: hPadding,
-                vertical: kESpace,
-              ),
-              sliver: SliverGrid(
-                // padding:
-                // EdgeInsets.symmetric(horizontal: horizontalPadding),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 5,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
+              /// similar symbols: GridView
+              SliverPadding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: hPadding,
+                  vertical: kESpace,
                 ),
-                delegate: SliverChildBuilderDelegate((
-                  BuildContext context,
-                  int index,
-                ) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Colors.orangeAccent,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Icon(
-                      Icons.notifications,
-                      size: 40,
-                      color: Colors.black,
-                    ),
-                  );
-                }, childCount: 100),
+                sliver: SliverGrid(
+                  // padding:
+                  // EdgeInsets.symmetric(horizontal: horizontalPadding),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 5,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  delegate: SliverChildBuilderDelegate((
+                    BuildContext context,
+                    int index,
+                  ) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.orangeAccent,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(
+                        Icons.notifications,
+                        size: 40,
+                        color: Colors.black,
+                      ),
+                    );
+                  }, childCount: 100),
+                ),
               ),
-            ),
 
-            /// Footer
-            SliverToBoxAdapter(child: DFooter(dark: false)),
-          ],
+              /// Footer
+              SliverToBoxAdapter(child: DFooter(dark: false)),
+            ],
+          ),
         );
       },
     );

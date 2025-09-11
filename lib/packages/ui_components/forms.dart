@@ -1,5 +1,5 @@
 import 'package:boardshare/packages/core/colors.dart';
-import 'package:boardshare/packages/ui_components/buttons.dart';
+// import 'package:boardshare/packages/ui_components/buttons.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -92,29 +92,29 @@ class DHomeSearchField extends HookConsumerWidget {
 }
 
 // Drop Down Menu
-Widget _buildDropdownMenu(Function func) {
-  return Material(
-    elevation: 4.0,
-    child: Container(
-      color: Colors.white,
-      width: 180.0,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: List.generate(
-          _homeDropDownItems.length,
-          (index) => DDropDownItem(
-            itemIndex: index,
-            icon: _homeDropDownItems[index].icon,
-            text: _homeDropDownItems[index].title,
-            func: (index) => func(index),
-          ),
-        ),
-      ),
-    ),
-  );
-}
+// Widget _buildDropdownMenu(Function func) {
+//   return Material(
+//     elevation: 4.0,
+//     child: Container(
+//       color: Colors.white,
+//       width: 180.0,
+//       child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         mainAxisSize: MainAxisSize.min,
+//         children: List.generate(
+//           _homeDropDownItems.length,
+//           (index) => DDropDownItem(
+//             itemIndex: index,
+//             icon: _homeDropDownItems[index].icon,
+//             text: _homeDropDownItems[index].title,
+//             func: (index) => func(index),
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
+// }
 
 List<PopupMenuItem<String>> _buildSearchDropdownMenu(Function func) {
   return List.generate(

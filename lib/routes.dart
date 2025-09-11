@@ -18,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'app/content/screens/board_editor_screen.dart';
 import 'app/home/home.dart';
 import 'app/user/models/signin_result.dart';
 import 'app/user/screens/signin.dart';
@@ -209,10 +210,29 @@ GoRouter createRouter(WidgetRef ref) {
                     child: BoardDetailScreen(),
                   );
                 },
+                // routes: [
+                //   GoRoute(
+                //     path: '/editor',
+                //     builder: (context, state) => BoardEditor(),
+                //   ),
+                // ],
               ),
             ],
           ),
         ],
+      ),
+      GoRoute(
+        path: '/board-editor/:id',
+        builder: (context, state) {
+          final idStr = state.pathParameters['id'];
+          final id = (idStr != null && idStr.isNotEmpty)
+              ? int.parse(idStr)
+              : null;
+          return ProviderScope(
+            overrides: [boardIdBeingEdited.overrideWithValue(id ?? 0)],
+            child: BoardEditorScreen(),
+          );
+        },
       ),
       ShellRoute(
         builder: (context, state, child) {
