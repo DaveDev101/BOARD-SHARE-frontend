@@ -7,33 +7,36 @@ import 'package:boardshare/packages/core/sizes.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
+
+import '../../../../packages/utils/datetime_format_helpers.dart';
 
 final favoriteBoardAtIndexCondition = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),
 );
 
-enum _It { makePublic, makePrivate, edit, delete, divider }
+// enum _It { makePublic, makePrivate, edit, delete, divider }
 
-class _UserDropDownItems {
-  const _UserDropDownItems(_It it, IconData ic, String ti)
-    : item = it,
-      icon = ic,
-      title = ti;
+// class _UserDropDownItems {
+//   const _UserDropDownItems(_It it, IconData ic, String ti)
+//     : item = it,
+//       icon = ic,
+//       title = ti;
+//
+//   final _It item;
+//   final IconData icon;
+//   final String title;
+// }
 
-  final _It item;
-  final IconData icon;
-  final String title;
-}
-
-final _userDropDownItems = [
-  _UserDropDownItems(_It.makePublic, Icons.lock_open_outlined, '전체 공개'),
-  _UserDropDownItems(_It.makePrivate, Icons.lock_outlined, '전체 공개 취소'),
-  _UserDropDownItems(_It.divider, Icons.horizontal_rule_outlined, ''),
-  _UserDropDownItems(_It.edit, Icons.edit_outlined, '수정'),
-  _UserDropDownItems(_It.delete, Icons.delete_outlined, '삭제'),
-];
+// final _userDropDownItems = [
+//   _UserDropDownItems(_It.makePublic, Icons.lock_open_outlined, '전체 공개'),
+//   _UserDropDownItems(_It.makePrivate, Icons.lock_outlined, '전체 공개 취소'),
+//   _UserDropDownItems(_It.divider, Icons.horizontal_rule_outlined, ''),
+//   _UserDropDownItems(_It.edit, Icons.edit_outlined, '수정'),
+//   _UserDropDownItems(_It.delete, Icons.delete_outlined, '삭제'),
+// ];
 
 class FavoriteBoardCard extends HookConsumerWidget {
   const FavoriteBoardCard({super.key});
@@ -60,9 +63,10 @@ class FavoriteBoardCard extends HookConsumerWidget {
           return InkWell(
             onTap: () {
               if (kDebugMode) {
-                print('BOARD [${b.postTitle}] is tapped!');
+                print('BOARD [${b.id} - ${b.postTitle}] is tapped!');
               }
-              // context.go('/content/boards/${b.boardId ?? 0}');
+              // context.push('/content/boards/${b.id ?? 0}');
+              context.push('/content/boards/10');
             },
             onHover: (hovering) => isHovered.value = hovering,
             child: Container(
@@ -149,16 +153,21 @@ class FavoriteBoardCard extends HookConsumerWidget {
                   ),
                   const SizedBox(height: kSpace),
                   Text(
-                    '${b.postAuthor} | ${b.postAuthorOrg}',
+                    '${"박민트"} | ${formatRelativeTime(b.updatedAt)}',
                     style: TextStyle(color: Colors.grey[700]),
                   ),
-                  if (b.updatedAt != null) const SizedBox(height: 4),
-                  if (b.updatedAt != null)
-                    Text(
-                      DateFormat('yyyy-MM-dd HH:mm').format(b.updatedAt!),
-                      style: TextStyle(color: Colors.grey[700]),
-                    ),
-                  const SizedBox(height: kESpace),
+                  const SizedBox(height: 12.0),
+                  // Text(
+                  //   '${b.postAuthor} | ${b.postAuthorOrg}',
+                  //   style: TextStyle(color: Colors.grey[700]),
+                  // ),
+                  // if (b.updatedAt != null) const SizedBox(height: 4),
+                  // if (b.updatedAt != null)
+                  //   Text(
+                  //     DateFormat('yyyy-MM-dd HH:mm').format(b.updatedAt!),
+                  //     style: TextStyle(color: Colors.grey[700]),
+                  //   ),
+                  // const SizedBox(height: kESpace),
                   // _buidBoardPreview(boards.value[index].media ?? []),
                   LayoutBuilder(
                     builder: (context, constraints) {

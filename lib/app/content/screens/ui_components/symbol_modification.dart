@@ -61,7 +61,6 @@ class SymbolModification extends HookConsumerWidget {
       imgSize.value = _orgSize;
       imgOffset.value = _orgOffset;
       titleController.text = s?.symbolTitle ?? '';
-      ;
       titleModified.value = false;
       txtOffsetY.value = _orgTOffsetY;
       txtEditable.value = _orgTEditable;
@@ -175,6 +174,7 @@ class SymbolModification extends HookConsumerWidget {
             ],
           ),
         ),
+        SizedBox(height: kESpace * 2),
       ],
     );
   }

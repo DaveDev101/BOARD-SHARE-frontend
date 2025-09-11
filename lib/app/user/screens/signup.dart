@@ -60,7 +60,10 @@ class Signup extends HookConsumerWidget {
 
     useEffect(() {
       Future.microtask(
-          () => FocusScope.of(context).requestFocus(emailFocusNode));
+        () => context.mounted
+            ? FocusScope.of(context).requestFocus(emailFocusNode)
+            : null,
+      );
       return () {
         // emailFocusNode.dispose();
         // passwordFocusNode.dispose();
@@ -97,16 +100,18 @@ class Signup extends HookConsumerWidget {
           int userId;
           String code;
           try {
-            (userId, code) = await ref.read(userServicesProvider).signUp(
+            (userId, code) = await ref
+                .read(userServicesProvider)
+                .signUp(
                   email: emailController.text,
                   password: passwordController.text,
                   displayName: nameController.text,
                 );
 
             // snack bar notification
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text('인증코드가 전송되었습니다. 메일함을 확인하세요. [$code]'),
-            ));
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('인증코드가 전송되었습니다. 메일함을 확인하세요. [$code]')),
+            );
 
             uId.value = userId;
             showNext.value = true;
@@ -117,10 +122,11 @@ class Signup extends HookConsumerWidget {
             }
           }
         }
-
         // verify the code
         else {
-          final result = await ref.read(userServicesProvider).verifySignUpCode(
+          final result = await ref
+              .read(userServicesProvider)
+              .verifySignUpCode(
                 userId: uId.value,
                 orgId: 1,
                 code: codeController.text,
@@ -132,13 +138,12 @@ class Signup extends HookConsumerWidget {
           }
 
           // sign in
-          await ref.read(signinControllerProvider.notifier).signIn(
-                emailController.text,
-                passwordController.text,
-              );
+          await ref
+              .read(signinControllerProvider.notifier)
+              .signIn(emailController.text, passwordController.text);
 
           if (signedInMsg.value == 'SUCCESS') {
-            context.go('/');
+            if (context.mounted) context.go('/');
           }
         }
       } finally {
@@ -171,15 +176,18 @@ class Signup extends HookConsumerWidget {
                     SizedBox(height: kSpace),
                     Row(
                       children: [
-                        Text('이미 가입 하셨나요?',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(
+                          '이미 가입 하셨나요?',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                         SizedBox(width: kSpace),
                         DButton(
-                            title: '로그인',
-                            dark: false,
-                            func: () {
-                              context.go('/sign-in');
-                            }),
+                          title: '로그인',
+                          dark: false,
+                          func: () {
+                            context.go('/sign-in');
+                          },
+                        ),
                       ],
                     ),
                     SizedBox(height: kESpace),
@@ -198,21 +206,22 @@ class Signup extends HookConsumerWidget {
                     SizedBox(height: kESpace),
 
                     // field #1 email
-                    Text('이메일(Email)',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(
+                      '이메일(Email)',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       controller: emailController,
                       focusNode: emailFocusNode,
-                      decoration: InputDecoration(
-                        hintText: 'email@domain.com',
-                      ),
+                      decoration: InputDecoration(hintText: 'email@domain.com'),
                       enabled: !showNext.value,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return '이메일 주소를 입력하세요.';
-                        } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
-                            .hasMatch(value)) {
+                        } else if (!RegExp(
+                          r'^[^@]+@[^@]+\.[^@]+',
+                        ).hasMatch(value)) {
                           return '이메일 주소가 잘못되었습니다!';
                         }
                         return null;
@@ -227,8 +236,10 @@ class Signup extends HookConsumerWidget {
                     SizedBox(height: kESpace),
 
                     // field #2 password
-                    Text('비밀 번호',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(
+                      '비밀 번호',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     TextFormField(
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       controller: passwordController,
@@ -285,10 +296,11 @@ class Signup extends HookConsumerWidget {
                     Row(
                       children: [
                         Checkbox(
-                            value: agreed.value,
-                            onChanged: (value) {
-                              agreed.value = value ?? !agreed.value;
-                            }),
+                          value: agreed.value,
+                          onChanged: (value) {
+                            agreed.value = value ?? !agreed.value;
+                          },
+                        ),
                         Text('이용 약관에 동의합니다.'),
                         SizedBox(width: kSpace),
                         DButton(title: '이용 약관 보기', dark: false, func: () {}),
@@ -320,10 +332,13 @@ class Signup extends HookConsumerWidget {
                           : SizedBox(height: kSpace),
                     SizedBox(height: kESpace),
                     if (showNext.value)
-                      Text('인증 코드',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF007AFF))),
+                      Text(
+                        '인증 코드',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF007AFF),
+                        ),
+                      ),
                     if (showNext.value)
                       TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -332,8 +347,9 @@ class Signup extends HookConsumerWidget {
                         decoration: InputDecoration(
                           hintText: '이메일로 전송받은 인증 코드를 입력하세요.',
                           focusedBorder: UnderlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.grey), // 비활성 상태의 밑줄 색상
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ), // 비활성 상태의 밑줄 색상
                           ),
                         ),
                         validator: (value) {
@@ -358,17 +374,18 @@ class Signup extends HookConsumerWidget {
                         height: kFHeight,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: showNext.value
-                                  ? Color(0xFF007AFF)
-                                  : Colors.black),
+                            backgroundColor: showNext.value
+                                ? Color(0xFF007AFF)
+                                : Colors.black,
+                          ),
                           onPressed: isSending.value ? () {} : handleSubmit,
                           child: isSending.value
                               ? const CircularProgressIndicator(
                                   color: Colors.white,
                                 )
                               : showNext.value
-                                  ? Text('등록')
-                                  : Text('다음'),
+                              ? Text('등록')
+                              : Text('다음'),
                         ),
                       ),
                     ),
@@ -381,6 +398,7 @@ class Signup extends HookConsumerWidget {
       ),
     );
   }
+
   //
   // SnackBar _buildVerificationSnackBar(String code) {
   //   return SnackBar(

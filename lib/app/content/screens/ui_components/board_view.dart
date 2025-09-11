@@ -4,7 +4,6 @@ import '../../../../mock_data/mock_audio.dart';
 import '../../../../packages/core/colors.dart';
 import '../../../../packages/core/sizes.dart';
 import '../../../../packages/ui_components/loading_image.dart';
-import '../../../../packages/utils/datetime_format_helpers.dart';
 import '../../../../packages/utils/web_audio.dart';
 import '../../models/aac_post.dart';
 
@@ -20,23 +19,64 @@ class BoardView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: kESpace),
-        Text(
-          data?.postTitle ?? '',
-          style: Theme.of(context).textTheme.headlineLarge,
+        // Text(
+        //   data?.postTitle ?? '',
+        //   style: Theme.of(context).textTheme.headlineLarge,
+        // ),
+        // const SizedBox(height: kDSpace),
+        // Text(
+        //   '${data?.postAuthor ?? ''} | ${formatRelativeTime(data?.updatedAt)}',
+        //   style: Theme.of(
+        //     context,
+        //   ).textTheme.labelLarge?.copyWith(color: Colors.grey[700]),
+        // ),
+        // const SizedBox(height: kSpace * 2),
+        Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: hexToColor(data?.bgColor ?? '#ffffff'),
+          ),
+          padding: EdgeInsets.only(top: kPadding, left: kPadding * 2),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                final player = WebAudioQueuePlayer();
+
+                // await playBase64Audio(base64AudioStr);
+                // await playBase64Audio(base64AudioStr2);
+                // await playBase64Audio(base64AudioStr3);
+
+                player.playSequentially([
+                  base64AudioStr,
+                  base64AudioStr2,
+                  base64AudioStr3,
+                ]);
+              },
+              icon: Icon(
+                Icons.campaign_outlined,
+                color:
+                    ThemeData.estimateBrightnessForColor(
+                          hexToColor(data?.bgColor ?? '#ffffff'),
+                        ) ==
+                        Brightness.dark
+                    ? Colors.white
+                    : Colors.black87,
+                size: 36.0,
+              ),
+            ),
+          ),
         ),
-        const SizedBox(height: kDSpace),
-        Text(
-          '${"박민트"} | ${formatRelativeTime(data?.updatedAt)}',
-          style: Theme.of(
-            context,
-          ).textTheme.labelLarge?.copyWith(color: Colors.grey[700]),
-        ),
-        const SizedBox(height: kSpace * 2),
         Container(
           decoration: BoxDecoration(
             color: hexToColor(data?.bgColor ?? '#ffffff'),
           ),
-          padding: EdgeInsets.all(kPadding * 2),
+          padding: EdgeInsets.only(
+            top: 0.0,
+            left: kPadding * 2,
+            right: kPadding * 2,
+            bottom: kPadding * 2,
+          ),
           child: GridView.count(
             crossAxisCount: int.parse(
               data?.gridSize?.split('by').first.trim() ?? '1',
@@ -68,7 +108,7 @@ class BoardView extends StatelessWidget {
                     color: hexToColor(data?.mBgColor ?? '#FFFFFF'),
                   ),
                   child: LayoutBuilder(
-                    builder: (context, con) {
+                    builder: (context, constraints) {
                       return Stack(
                         children: [
                           // Image.network(
@@ -82,12 +122,12 @@ class BoardView extends StatelessWidget {
                           LoadingImage(
                             url:
                                 data?.postMedia?[index].medium?.mediumUrl ?? '',
-                            width: con.maxWidth,
-                            height: con.maxHeight,
+                            width: constraints.maxWidth,
+                            height: constraints.maxHeight,
                           ),
                           Positioned(
                             top: kDSpace,
-                            width: con.maxWidth,
+                            width: constraints.maxWidth,
                             child: Text(
                               data?.postMedia?[index].customTitle ?? '',
                               style: TextStyle(

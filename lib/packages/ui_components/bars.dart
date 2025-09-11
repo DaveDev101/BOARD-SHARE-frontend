@@ -1,3 +1,4 @@
+import 'package:boardshare/app/user/screens/ui_components/notification_badge.dart';
 import 'package:boardshare/app/user/screens/ui_components/userbars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -206,6 +207,8 @@ Widget _buildMobileMenuBar(BuildContext context, bool isDark) {
         ],
       ),
       Spacer(),
+      NotificationBadge(darkBg: isDark),
+      SizedBox(width: kPadding),
       DUserBar(darkBg: isDark),
       // DButton(
       //   title: '로그인',
@@ -257,6 +260,8 @@ Widget _buildDesktopMenuBar(BuildContext context, bool isDark) {
       SizedBox(width: kDSpace),
       DIconButton(icon: Icons.more_horiz, title: '', dark: isDark, func: () {}),
       Spacer(),
+      NotificationBadge(darkBg: isDark),
+      SizedBox(width: kPadding),
       DUserBar(darkBg: isDark),
       // DButton(
       //   title: '로그인',
@@ -555,7 +560,7 @@ class DCollapsedContentAppBar extends StatelessWidget {
 }
 
 class _Logo extends StatelessWidget {
-  const _Logo({super.key});
+  const _Logo();
 
   @override
   Widget build(BuildContext context) {

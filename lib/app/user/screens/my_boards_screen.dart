@@ -7,6 +7,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../packages/core/colors.dart';
+
 final myBoardsInitialCondition = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),
 );
@@ -17,32 +19,24 @@ class MyBoardsScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
-    // final sHeight = MediaQuery.of(context).size.height;
-    final horizontalPadding = (sWidth > kMaxWidth)
+    final hPadding = (sWidth > kMaxWidth)
         ? (sWidth - kMaxWidth) / 2
         : kESpace * 2;
 
     final (page, search) = ref.watch(myBoardsInitialCondition);
     final myBoards = ref.watch(myBoardsProvider(search, page: page));
 
-    // final selectedIndex = useState(1);
-    // final List<String> segments = [
-    //   '상징 (41,729)',
-    //   '의사소통판 (1,861)',
-    //   '한스피크자료 (5,584)'
-    // ];
-    //
-
     return Container(
-      height: 1200,
-      color: Colors.grey[200],
+      // height: 1200,
+      // color: Colors.grey[200],
+      color: kBgColor,
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserContentTitle(
               title: '내 의사소통판',
               notes: '내가 만든 의사소통판 목록이 표시됩니다.',
-              horizontalPadding: horizontalPadding,
+              horizontalPadding: hPadding,
             ),
           ),
           myBoards.when(
@@ -51,15 +45,15 @@ class MyBoardsScreen extends HookConsumerWidget {
                 if (kDebugMode) print(bs.$3);
                 return SliverPadding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: horizontalPadding,
+                    horizontal: hPadding,
                     vertical: kESpace,
                   ),
                   sliver: SliverGrid(
                     gridDelegate:
                         const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 480.0,
-                          crossAxisSpacing: 44,
-                          mainAxisSpacing: 44,
+                          crossAxisSpacing: kPadding,
+                          mainAxisSpacing: kPadding,
                           childAspectRatio: 1.0,
                         ),
                     delegate: SliverChildBuilderDelegate((context, index) {
@@ -88,7 +82,7 @@ class MyBoardsScreen extends HookConsumerWidget {
             ),
           ),
 
-          // Footer
+          /// Footer
           SliverToBoxAdapter(child: DFooter(dark: false)),
         ],
       ),

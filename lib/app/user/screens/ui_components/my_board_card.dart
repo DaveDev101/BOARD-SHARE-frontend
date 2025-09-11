@@ -9,6 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_portal/flutter_portal.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
@@ -64,7 +65,7 @@ class MyBoardCard extends HookConsumerWidget {
               if (kDebugMode) {
                 print('BOARD [${b.boardTitle}] is tapped!');
               }
-              // context.go('/content/boards/${b.boardId ?? 0}');
+              context.push('/content/boards/${b.boardId ?? 0}');
             },
             onHover: (hovering) => isHovered.value = hovering,
             child: Container(

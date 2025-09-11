@@ -1631,7 +1631,7 @@ const mockResponseBoards = '''
             "like_count": 0,
             "comment_count": 0,
             "bg_color": "#6a62d2",
-            "grid_size": "4 by 2",
+            "grid_size": "4 by 1",
             "m_bg_color": "#FFFFFF",
             "m_font_size": null,
             "taxonomy": null,

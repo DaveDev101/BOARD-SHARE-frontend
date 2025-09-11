@@ -7,6 +7,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../packages/core/colors.dart';
+
 final favoriteBoardsInitialCondition = Provider<(int, String)>(
   (ref) => throw UnimplementedError(),
 );
@@ -17,8 +19,7 @@ class FavoriteBoardsScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sWidth = MediaQuery.of(context).size.width;
-    // final sHeight = MediaQuery.of(context).size.height;
-    final horizontalPadding = (sWidth > kMaxWidth)
+    final hPadding = (sWidth > kMaxWidth)
         ? (sWidth - kMaxWidth) / 2
         : kESpace * 2;
 
@@ -27,24 +28,19 @@ class FavoriteBoardsScreen extends HookConsumerWidget {
       favoriteBoardsCtlProvider(search, page: page),
     );
 
-    // final selectedIndex = useState(1);
-    // final List<String> segments = [
-    //   '상징 (41,729)',
-    //   '의사소통판 (1,861)',
-    //   '한스피크자료 (5,584)'
-    // ];
-    //
-
     return Container(
-      height: 1200,
-      color: Colors.grey[200],
+      // height: 1200,
+      // color: Colors.grey[200],
+      color: kBgColor,
       child: CustomScrollView(
+        controller: PrimaryScrollController.of(context),
+        physics: ClampingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: UserContentTitle(
               title: '즐겨찾기 - 의사소통판',
               notes: '즐겨찾기에 추가한 의사소통판 목록(❤️ 표시한 의사소통판들)이 표시됩니다.',
-              horizontalPadding: horizontalPadding,
+              horizontalPadding: hPadding,
             ),
           ),
           favoriteBoards.when(
@@ -53,15 +49,15 @@ class FavoriteBoardsScreen extends HookConsumerWidget {
                 if (kDebugMode) print(bs.$3);
                 return SliverPadding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: horizontalPadding,
+                    horizontal: hPadding,
                     vertical: kESpace,
                   ),
                   sliver: SliverGrid(
                     gridDelegate:
                         const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 480.0,
-                          crossAxisSpacing: 44,
-                          mainAxisSpacing: 44,
+                          crossAxisSpacing: kPadding,
+                          mainAxisSpacing: kPadding,
                           childAspectRatio: 1.0,
                         ),
                     delegate: SliverChildBuilderDelegate((context, index) {
@@ -90,7 +86,7 @@ class FavoriteBoardsScreen extends HookConsumerWidget {
             ),
           ),
 
-          // Footer
+          /// Footer
           SliverToBoxAdapter(child: DFooter(dark: false)),
         ],
       ),

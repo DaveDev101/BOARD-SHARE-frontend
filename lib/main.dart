@@ -10,11 +10,7 @@ void main() {
   // delete '#' in the url
   usePathUrlStrategy();
   // ProviderScope for flutter riverpod
-  runApp(
-    ProviderScope(
-      child: const BoardShareApp(),
-    ),
-  );
+  runApp(ProviderScope(child: const BoardShareApp()));
 }
 
 class BoardShareApp extends ConsumerWidget {
@@ -29,10 +25,9 @@ class BoardShareApp extends ConsumerWidget {
         themeMode: ThemeMode.system,
         theme: kThemeBright,
         // darkTheme: kThemeDark,
+        debugShowCheckedModeBanner: false,
         builder: (context, child) {
-          return _Unfocus(
-            child: child!,
-          );
+          return _Unfocus(child: child!);
         },
         routerConfig: createRouter(ref),
       ),
